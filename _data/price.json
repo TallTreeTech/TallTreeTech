@@ -1,26 +1,26 @@
 [
   {
-    "name": "Server Desktop Offline",
-    "fitur": "Desktop Resto Cafe Software + Bantuan Installasi + Training + Settup + Support",
-    "price": "Rp.1.000.000/Device",
-    "link": "https://app.midtrans.com/payment-links/unipos-resto-server"
+    "name": "TallTree Shield Enterprise",
+    "fitur": "Full security orchestration platform + Implementation support + Security audits + Compliance automation + OTA management + 24/7 monitoring + Priority support",
+    "price": "£25,000/Year",
+    "link": "https://talltree.tech/services/shield-enterprise"
   },
   {
-    "name": "Client Desktop Offline",
-    "fitur": "Wajib memiliki server edition software ini hanya berjalan dengan server version + untuk divisi waiters + kasir + kitchen + Desktop Resto Cafe Software",
-    "price": "Rp.500.000/Device",
-    "link": "https://app.midtrans.com/payment-links/unipos-waiters-kitchen"
+    "name": "TallTree Edge Professional",
+    "fitur": "Edge AI optimization + Model deployment + Performance monitoring + Hardware adaptation + Implementation support + Technical consultation",
+    "price": "£15,000/Project",
+    "link": "https://talltree.tech/services/edge-professional"
   },
   {
-    "name": "Premium WebApp",
-    "fitur": "Wajib memiliki desktop software untuk order layanan ini. Cloud Database + Backadmin Web app + CMS Website+ website dot com + QRCode menu digital + Android App",
-    "price": "Rp.3.264.800/Tahun",
-    "link": "https://app.midtrans.com/payment-links/unipos-cloud-pro"
+    "name": "TallTree Advisory Premium",
+    "fitur": "Strategic technical consulting + Architecture design + Security assessment + Implementation planning + Monthly strategy sessions + Priority access",
+    "price": "£2,000/Day",
+    "link": "https://talltree.tech/services/advisory-premium"
   },
   {
-    "name": "Standard WebApp",
-    "fitur": "Wajib memiliki desktop software untuk order layanan ini. Cloud Database + Backadmin Web app + CMS Website+ website dot com",
-    "price": "Rp.1.564.800/Tahun",
-    "link": "https://app.midtrans.com/payment-links/unipos-resto-cloud-std"
+    "name": "TallTree Guardian Support",
+    "fitur": "Proactive monitoring + Performance optimization + Security updates + Technical support + Monthly reviews + Implementation assistance",
+    "price": "£5,000/Month",
+    "link": "https://talltree.tech/services/guardian-support"
   }
 ]

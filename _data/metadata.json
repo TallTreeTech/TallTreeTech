@@ -1,22 +1,12 @@
 {
-  "title": "Program Restoran",
-  "url": "https://programrestoran.axcora.com",
-  "language": "id",
-  "description": "Software restoran aplikasi restoran untuk mesin kasir restoran cafe rumah makan desktop offline dan online integrasi website app terbaru.",
-  "cover": "/img/programrestoran.svg",
-  "feed": {
-    "subtitle": "Software restoran aplikasi restoran untuk mesin kasir restoran cafe rumah makan desktop offline dan online integrasi website app terbaru.",
-    "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://programrestoran.axcora.com/"
-  },
-  "jsonfeed": {
-    "path": "/feed/feed.json",
-    "url": "https://programrestoran.axcora.com/"
-  },
+  "title": "TallTree Technologies",
+  "url": "https://www.talltree.tech",
+  "language": "en",
+  "description": "Enterprise-grade IoT solutions delivering secure, intelligent edge computing. Bridging hardware complexity with AI innovation for scalable IoT deployments.",
+  "cover": "/img/cover.svg",
   "author": {
-    "name": "programrestoran",
-    "email": "axcora@gmail.com",
-    "url": "https://www.fiverr.com/creativitas"
+    "name": "TallTree Technologies",
+    "email": "hello@talltree.tech",
+    "url": "https://www.talltree.tech"
   }
 }
