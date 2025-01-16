@@ -8,5 +8,8 @@
     "name": "TallTree Technologies",
     "email": "hello@talltree.tech",
     "url": "https://www.talltree.tech"
+  },
+  "csp": {
+    "header": "default-src 'self'; frame-ancestors 'none';"
   }
 }

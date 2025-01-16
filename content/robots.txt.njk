@@ -1,11 +1,20 @@
 ---
 permalink: /robots.txt
 ---
-
-User-agent: Googlebot
-Disallow: /nogooglebot/
-
 User-agent: *
 Allow: /
 
-Sitemap: https://programrestoran.axcora.com/sitemap.xml
+# Allow Googlebot specific access
+User-agent: Googlebot
+Allow: /
+
+# Allow Bingbot specific access
+User-agent: Bingbot
+Allow: /
+
+# Crawl delays to prevent server overload
+User-agent: *
+Crawl-delay: 10
+
+# Sitemap declaration
+Sitemap: https://www.talltree.tech/sitemap.xml
