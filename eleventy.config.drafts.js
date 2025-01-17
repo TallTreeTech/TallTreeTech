@@ -30,7 +30,6 @@ export default function(eleventyConfig) {
 	eleventyConfig.addGlobalData("eleventyComputed.permalink", eleventyComputedPermalink);
 	eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", eleventyComputedExcludeFromCollections);
 
-	let logged = false;
 	eleventyConfig.on("eleventy.before", ({runMode}) => {
 		let text = "Excluding";
 		// Only show drafts in serve/watch modes
@@ -39,11 +38,5 @@ export default function(eleventyConfig) {
 			text = "Including";
 		}
 
-		// Only log once.
-		if(!logged) {
-			console.log( `[Landingpage11ty by www.fiverr.com/creativitas] ${text} drafts.` );
-		}
-
-		logged = true;
 	});
 }
