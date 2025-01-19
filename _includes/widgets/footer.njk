@@ -1,17 +1,34 @@
 <footer class="col-md-12 p-3 p-md-5">
-<div class="p-3 p-md-5 grape rounded shadow-sm row">
-<h3 class="display-4 col-md-8 p-3 text-center"><a href="/" class="text-white">{{metadata.title}}</a></h3>
-<p class="col-md-2 col-6 p-3">
-Menu<br/>
- {%- for entry in collections.all | eleventyNavigation %}
- <a href="{{ entry.url | url }}" class="text-white ms-3"><small>{{ entry.title }}</small></a><br/>
- {%- endfor %}
-</p>
-<p class="col-md-2 col-6 p-3">
-Contact<br/>
-{% for call in contact %}
-<a href="{{call.link}}" class="text-white ms-3"><small>{{call.menu}}</small></a><br/>
-{% endfor %}
-</p>
-</div>
+  <div class="p-3 p-md-5 grape rounded shadow-sm row">
+    
+    <!-- Logo Section -->
+    <div class="col-md-3 col-12 p-3 text-center text-md-start">
+      <a href="/">
+        <img src="/img/logo1.svg" alt="{{metadata.title}} Logo" class="img-fluid" />
+      </a>
+    </div>
+    
+    <!-- Title Section -->
+    <div class="col-md-5 col-12 p-3 text-center text-md-start">
+      <h3 class="display-4">
+        <a href="/" class="text-white">{{metadata.title}}</a>
+      </h3>
+    </div>
+    
+    <!-- Menu Section -->
+    <div class="col-md-2 col-6 p-3 text-center text-md-start">
+      <h5 class="text-white">Menu</h5>
+      {%- for entry in collections.all | eleventyNavigation %}
+        <a href="{{ entry.url | url }}" class="text-white ms-3"><small>{{ entry.title }}</small></a><br/>
+      {%- endfor %}
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="col-md-2 col-6 p-3 text-center text-md-start">
+      <h5 class="text-white">Contact</h5>
+      {% for call in contact %}
+        <a href="{{call.link}}" class="text-white ms-3"><small>{{call.menu}}</small></a><br/>
+      {% endfor %}
+    </div>
+  </div>
 </footer>
