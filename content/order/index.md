@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+permalink: /Consultation/
 title: Free Consultation Session
 eleventyNavigation:
   key: Consultation
