@@ -1,15 +1,51 @@
 ---
 layout: layouts/base.njk
-permalink: /fitur/
+permalink: /About us/
 eleventyNavigation:
-  key: about us
+  key: About us
   order: 2
-title: Fitur Program Restoran
-description: Pelajari fitur dan modules software program restoran cafe rumah makan.
+title: Learn about our company, vision, mission, and values.
 ---
+
 <div class="col-md-8 offset-md-2 p-3 p-md-5 head">
-<h1><strong><a href="{{page.url}}">{{title}}</a></strong></h1>
-<h2>{{description}}</h2>
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+  <h1><strong><a href="{{page.url}}">{{title}}</a></strong></h1>
+  <h2>{{description}}</h2>
+  
+  <!-- About TallTree Technologies Section -->
+  <div style="margin-bottom: 40px;">
+    <p><strong>At TallTree Technologies, we are committed to transforming the way businesses design and deploy IoT solutions.</strong> Based in London with a global reach, we specialize in providing enterprise-grade IoT platforms that bridge the gap between hardware and intelligence. Our focus is on delivering secure, scalable, and intelligent IoT systems that drive innovation and solve real-world challenges.</p>
+  </div>
+
+  <!-- Vision and Mission -->
+  <div style="margin-bottom: 40px;">
+    <h3><strong>Our Vision</strong></h3>
+    <p>To be the foundational platform that enables businesses to build secure, intelligent, and scalable IoT solutions, bridging the gap between silicon and intelligence.</p>
+  
+    <h3><strong>Our Mission</strong></h3>
+    <p>We deliver enterprise-grade IoT solutions that simplify complexity, enhance security, and accelerate innovation across hardware boundaries, empowering businesses to thrive in the ever-evolving IoT landscape.</p>
+  </div>
+
+  <!-- Values Section with Bullet Points -->
+  <div style="margin-bottom: 40px;">
+    <h3><strong>Our Values</strong></h3>
+    <ul>
+      <li><strong>Security:</strong> We prioritize security at every level with zero-trust architecture and proactive protection.</li>
+      <li><strong>Privacy:</strong> Our solutions respect privacy through data minimization and local processing.</li>
+      <li><strong>Simplicity:</strong> We focus on intuitive designs and clear documentation, minimizing configuration complexities.</li>
+      <li><strong>Engineering Excellence:</strong> With deep technical expertise and research-driven development, we ensure performance optimization and quality code.</li>
+    </ul>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <div style="margin-bottom: 40px;">
+    <h3><strong>Why Choose TallTree Technologies?</strong></h3>
+    <p>Our products and services are designed with a deep understanding of the IoT ecosystem, ensuring they are not only secure but also highly efficient and scalable. Whether you're a developer, a manufacturer, or a system integrator, we provide tailored solutions that meet your unique needs.</p>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer p-3 text-center">
+  <h4><strong>{{footer}}</strong></h4>
+  <p>{{footertext}}</p>
+  <a href="{{footbtn1link}}" class="btn btn-primary">{{footbtn1}}</a>
 </div>
