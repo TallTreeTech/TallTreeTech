@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Standards - TallTree Technologies</title>
+    <link rel="stylesheet" href="css/talltree-styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Software Development Coding Standards</h1>
+            <p class="text-center text-muted">
+                <strong>Software Systems Limited</strong><br>
+                Trading as <strong>TallTree Technologies</strong><br>
+                Company Registration Number: 14466340 (England and Wales)<br>
+                Registered Office: 20-22 Wenlock Road, London, N1 7GU
+            </p>
+            <p class="text-center">
+                <strong>Version:</strong> 1.0<br>
+                <strong>Last Updated:</strong> 14 November 2025<br>
+                <strong>Next Review Date:</strong> 14 May 2026
+            </p>
+        </header>
+
+        <div class="intro">
+            <h2>Purpose</h2>
+            <p>This document establishes comprehensive coding standards and software development best practices for all TallTree Technologies projects. These standards ensure code quality, maintainability, security, and consistency across our development teams and client deliverables.</p>
+            <p><strong>Scope:</strong> All software development, including internal tools, client projects, open source contributions, and prototypes.</p>
+        </div>
+
+        <div class="info">
+            <p><strong>Compliance:</strong> All developers, contractors, and third-party contributors working on TallTree Technologies projects must adhere to these standards. Exceptions require written approval from the Technical Lead or Director.</p>
+        </div>
+
+        <h2>1. Code Quality Principles</h2>
+
+        <h3>1.1 SOLID Principles</h3>
+        <p>All object-oriented code must follow SOLID design principles:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Principle</th>
+                    <th>Description</th>
+                    <th>Application</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Single Responsibility</strong></td>
+                    <td>A class should have one reason to change</td>
+                    <td>Each class/module has one well-defined purpose</td>
+                </tr>
+                <tr>
+                    <td><strong>Open/Closed</strong></td>
+                    <td>Open for extension, closed for modification</td>
+                    <td>Use interfaces, abstract classes, and composition</td>
+                </tr>
+                <tr>
+                    <td><strong>Liskov Substitution</strong></td>
+                    <td>Subtypes must be substitutable for base types</td>
+                    <td>Inheritance must not violate base class contracts</td>
+                </tr>
+                <tr>
+                    <td><strong>Interface Segregation</strong></td>
+                    <td>No client should depend on unused methods</td>
+                    <td>Create specific, focused interfaces</td>
+                </tr>
+                <tr>
+                    <td><strong>Dependency Inversion</strong></td>
+                    <td>Depend on abstractions, not concretions</td>
+                    <td>Use dependency injection and interfaces</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>1.2 DRY (Don't Repeat Yourself)</h3>
+        <p><strong>Principle:</strong> Every piece of knowledge must have a single, unambiguous representation in the system.</p>
+
+        <p><strong>Application:</strong></p>
+        <ul>
+            <li>Extract repeated code into reusable functions/methods</li>
+            <li>Use configuration files for repeated constants</li>
+            <li>Create shared libraries for common functionality</li>
+            <li>Avoid copy-paste programming</li>
+        </ul>
+
+        <div class="warning">
+            <strong>Exception:</strong> Sometimes duplication is preferable to the wrong abstraction. If code is similar but serves different purposes or is likely to diverge, duplication may be appropriate.
+        </div>
+
+        <h3>1.3 KISS (Keep It Simple, Stupid)</h3>
+        <p><strong>Principle:</strong> Simplicity should be a key goal in design; unnecessary complexity should be avoided.</p>
+
+        <p><strong>Guidelines:</strong></p>
+        <ul>
+            <li>Choose simple solutions over clever ones</li>
+            <li>Write code for humans first, computers second</li>
+            <li>Avoid premature optimization</li>
+            <li>Question complex abstractions</li>
+            <li>Break complex problems into simple steps</li>
+        </ul>
+
+        <h3>1.4 YAGNI (You Aren't Gonna Need It)</h3>
+        <p><strong>Principle:</strong> Don't add functionality until it is necessary.</p>
+
+        <p><strong>Application:</strong></p>
+        <ul>
+            <li>Implement features when required, not in anticipation</li>
+            <li>Avoid speculative generality</li>
+            <li>Focus on current requirements</li>
+            <li>Refactor when new requirements emerge</li>
+        </ul>
+
+        <h3>1.5 Separation of Concerns</h3>
+        <p>Organize code into distinct sections, each addressing a separate concern:</p>
+        <ul>
+            <li><strong>Presentation Layer:</strong> UI/UX components</li>
+            <li><strong>Business Logic Layer:</strong> Core application logic</li>
+            <li><strong>Data Access Layer:</strong> Database and external service interactions</li>
+            <li><strong>Infrastructure:</strong> Configuration, logging, monitoring</li>
+        </ul>
+
+        <h2>2. Language-Specific Standards</h2>
+
+        <h3>2.1 Python Standards</h3>
+
+        <h4>Style Guide</h4>
+        <ul>
+            <li><strong>Follow PEP 8:</strong> Official Python style guide</li>
+            <li><strong>Line Length:</strong> Maximum 88 characters (Black formatter default)</li>
+            <li><strong>Indentation:</strong> 4 spaces (never tabs)</li>
+            <li><strong>Naming Conventions:</strong>
+                <ul>
+                    <li>snake_case for functions, variables, and modules</li>
+                    <li>PascalCase for classes</li>
+                    <li>UPPER_CASE for constants</li>
+                    <li>_leading_underscore for private/internal</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Required Tools</h4>
+        <ul>
+            <li><strong>Black:</strong> Code formatter (mandatory)</li>
+            <li><strong>Pylint/Flake8:</strong> Linting (minimum score: 8.5/10)</li>
+            <li><strong>mypy:</strong> Static type checking (required for new projects)</li>
+            <li><strong>isort:</strong> Import statement sorting</li>
+        </ul>
+
+        <h4>Type Hints</h4>
+        <pre><code># Required for Python 3.6+
+from typing import List, Dict, Optional
+
+def process_user_data(
+    user_id: int,
+    preferences: Dict[str, str],
+    tags: Optional[List[str]] = None
+) -> Dict[str, any]:
+    """Process user data and return results.
+
+    Args:
+        user_id: Unique identifier for the user
+        preferences: User preference key-value pairs
+        tags: Optional list of user tags
+
+    Returns:
+        Dictionary containing processed user data
+
+    Raises:
+        ValueError: If user_id is invalid
+    """
+    if user_id <= 0:
+        raise ValueError("User ID must be positive")
+
+    # Implementation
+    return {"status": "success", "user_id": user_id}</code></pre>
+
+        <h4>Project Structure</h4>
+        <pre><code>project_name/
+├── README.md
+├── requirements.txt
+├── setup.py
+├── .gitignore
+├── .env.example
+├── tests/
+│   ├── __init__.py
+│   ├── test_module1.py
+│   └── test_module2.py
+├── docs/
+│   └── api.md
+└── src/
+    └── project_name/
+        ├── __init__.py
+        ├── __main__.py
+        ├── module1.py
+        └── module2.py</code></pre>
+
+        <h3>2.2 JavaScript/TypeScript Standards</h3>
+
+        <h4>Style Guide</h4>
+        <ul>
+            <li><strong>Follow Airbnb JavaScript Style Guide</strong> with modifications</li>
+            <li><strong>Line Length:</strong> Maximum 100 characters</li>
+            <li><strong>Indentation:</strong> 2 spaces</li>
+            <li><strong>Semicolons:</strong> Required</li>
+            <li><strong>Quotes:</strong> Single quotes for strings (except to avoid escaping)</li>
+            <li><strong>Naming Conventions:</strong>
+                <ul>
+                    <li>camelCase for variables and functions</li>
+                    <li>PascalCase for classes and React components</li>
+                    <li>UPPER_CASE for constants</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>TypeScript Required</h4>
+        <p>All new JavaScript projects must use TypeScript unless explicitly exempted.</p>
+
+        <pre><code>// TypeScript example with proper typing
+interface User {
+  id: number;
+  email: string;
+  firstName: string;
+  lastName: string;
+  createdAt: Date;
+}
+
+interface UserService {
+  getUser(id: number): Promise&lt;User&gt;;
+  createUser(data: Omit&lt;User, 'id' | 'createdAt'&gt;): Promise&lt;User&gt;;
+}
+
+class UserServiceImpl implements UserService {
+  async getUser(id: number): Promise&lt;User&gt; {
+    // Implementation
+    const response = await fetch(`/api/users/${id}`);
+    return response.json();
+  }
+
+  async createUser(data: Omit&lt;User, 'id' | 'createdAt'&gt;): Promise&lt;User&gt; {
+    // Implementation
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: { 'Content-Type': 'application/json' }
+    });
+    return response.json();
+  }
+}</code></pre>
+
+        <h4>Required Tools</h4>
+        <ul>
+            <li><strong>ESLint:</strong> Linting (eslint-config-airbnb-typescript)</li>
+            <li><strong>Prettier:</strong> Code formatting (mandatory)</li>
+            <li><strong>TypeScript:</strong> Static typing (strict mode enabled)</li>
+        </ul>
+
+        <h4>Modern JavaScript Features</h4>
+        <ul>
+            <li>Use <code>const</code> and <code>let</code> (never <code>var</code>)</li>
+            <li>Arrow functions for callbacks and short functions</li>
+            <li>Template literals for string interpolation</li>
+            <li>Destructuring for objects and arrays</li>
+            <li>Async/await for asynchronous operations</li>
+            <li>ES6 modules (import/export)</li>
+        </ul>
+
+        <h3>2.3 Go Standards</h3>
+
+        <h4>Style Guide</h4>
+        <ul>
+            <li><strong>Follow Effective Go</strong> and official Go style guidelines</li>
+            <li><strong>Formatting:</strong> Use <code>gofmt</code> (mandatory)</li>
+            <li><strong>Linting:</strong> Use <code>golangci-lint</code></li>
+            <li><strong>Naming:</strong>
+                <ul>
+                    <li>MixedCaps or mixedCaps (no underscores)</li>
+                    <li>Exported identifiers start with uppercase</li>
+                    <li>Short, concise variable names</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Error Handling</h4>
+        <pre><code>// Always check errors explicitly
+func processFile(filename string) error {
+    data, err := os.ReadFile(filename)
+    if err != nil {
+        return fmt.Errorf("failed to read file %s: %w", filename, err)
+    }
+
+    result, err := parseData(data)
+    if err != nil {
+        return fmt.Errorf("failed to parse data: %w", err)
+    }
+
+    return storeResult(result)
+}</code></pre>
+
+        <h4>Project Structure</h4>
+        <pre><code>project/
+├── cmd/
+│   └── app/
+│       └── main.go
+├── internal/
+│   ├── handlers/
+│   ├── services/
+│   └── models/
+├── pkg/
+│   └── utils/
+├── api/
+│   └── openapi.yaml
+├── go.mod
+├── go.sum
+└── README.md</code></pre>
+
+        <h3>2.4 Java Standards</h3>
+
+        <h4>Style Guide</h4>
+        <ul>
+            <li><strong>Follow Google Java Style Guide</strong></li>
+            <li><strong>Indentation:</strong> 2 spaces</li>
+            <li><strong>Line Length:</strong> 100 characters</li>
+            <li><strong>Naming:</strong>
+                <ul>
+                    <li>camelCase for variables and methods</li>
+                    <li>PascalCase for classes</li>
+                    <li>UPPER_CASE for constants</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Required Tools</h4>
+        <ul>
+            <li><strong>Maven or Gradle:</strong> Build tool</li>
+            <li><strong>Checkstyle:</strong> Style checking</li>
+            <li><strong>SpotBugs:</strong> Bug detection</li>
+            <li><strong>JaCoCo:</strong> Code coverage (minimum 80%)</li>
+        </ul>
+
+        <h3>2.5 SQL Standards</h3>
+
+        <h4>Style Guide</h4>
+        <ul>
+            <li>SQL keywords in UPPERCASE</li>
+            <li>Table and column names in snake_case</li>
+            <li>Indent subqueries and nested logic</li>
+            <li>Use explicit JOIN syntax (not comma-separated tables)</li>
+        </ul>
+
+        <pre><code>-- Good SQL formatting
+SELECT
+    u.user_id,
+    u.email,
+    u.first_name,
+    u.last_name,
+    COUNT(o.order_id) AS total_orders
+FROM users u
+LEFT JOIN orders o ON u.user_id = o.user_id
+WHERE u.created_at >= '2025-01-01'
+    AND u.status = 'active'
+GROUP BY
+    u.user_id,
+    u.email,
+    u.first_name,
+    u.last_name
+HAVING COUNT(o.order_id) > 5
+ORDER BY total_orders DESC;</code></pre>
+
+        <h2>3. Documentation Requirements</h2>
+
+        <h3>3.1 Inline Code Comments</h3>
+
+        <h4>When to Comment</h4>
+        <ul>
+            <li><strong>Complex algorithms:</strong> Explain the approach and reasoning</li>
+            <li><strong>Non-obvious code:</strong> Clarify intent when code is not self-explanatory</li>
+            <li><strong>Workarounds:</strong> Document temporary solutions and technical debt</li>
+            <li><strong>Business logic:</strong> Explain business rules and domain concepts</li>
+            <li><strong>Performance considerations:</strong> Document optimization decisions</li>
+        </ul>
+
+        <h4>When NOT to Comment</h4>
+        <ul>
+            <li>Self-explanatory code (good naming makes comments unnecessary)</li>
+            <li>Obvious operations</li>
+            <li>Commented-out code (delete it; Git preserves history)</li>
+        </ul>
+
+        <h4>Comment Standards</h4>
+        <pre><code>// Bad: Obvious comment
+// Increment counter
+counter++;
+
+// Good: Explains why, not what
+// Reset counter every 1000 requests to prevent overflow
+// See: https://jira.example.com/PROJ-1234
+if (counter >= 1000) {
+    counter = 0;
+}</code></pre>
+
+        <h3>3.2 Function/Method Documentation</h3>
+
+        <h4>Python (Docstrings)</h4>
+        <pre><code>def calculate_discount(
+    price: float,
+    discount_rate: float,
+    member_tier: str
+) -> float:
+    """Calculate final price after applying discount.
+
+    Applies tiered discount rates based on membership level.
+    Gold members receive an additional 5% discount.
+
+    Args:
+        price: Original price before discount
+        discount_rate: Base discount rate (0.0 to 1.0)
+        member_tier: Membership tier ('bronze', 'silver', 'gold')
+
+    Returns:
+        Final price after all applicable discounts
+
+    Raises:
+        ValueError: If price is negative or discount_rate is invalid
+
+    Example:
+        >>> calculate_discount(100.0, 0.1, 'gold')
+        85.0
+    """</code></pre>
+
+        <h4>JavaScript/TypeScript (JSDoc)</h4>
+        <pre><code>/**
+ * Fetches user data from the API
+ *
+ * @param {number} userId - The unique user identifier
+ * @param {Object} options - Optional request parameters
+ * @param {boolean} options.includeOrders - Whether to include order history
+ * @returns {Promise&lt;User&gt;} User object with requested data
+ * @throws {ApiError} If the user is not found or request fails
+ *
+ * @example
+ * const user = await fetchUser(123, { includeOrders: true });
+ */
+async function fetchUser(userId, options = {}) {
+  // Implementation
+}</code></pre>
+
+        <h3>3.3 README Documentation</h3>
+
+        <p>Every repository must include a comprehensive README.md with:</p>
+
+        <ol>
+            <li><strong>Project Title and Description:</strong> Clear explanation of purpose</li>
+            <li><strong>Prerequisites:</strong> Required tools, versions, and dependencies</li>
+            <li><strong>Installation:</strong> Step-by-step setup instructions</li>
+            <li><strong>Usage:</strong> Examples of common use cases</li>
+            <li><strong>Configuration:</strong> Environment variables and settings</li>
+            <li><strong>Development:</strong> How to run tests, build, and contribute</li>
+            <li><strong>Deployment:</strong> Production deployment procedures</li>
+            <li><strong>Troubleshooting:</strong> Common issues and solutions</li>
+            <li><strong>License:</strong> Copyright and license information</li>
+            <li><strong>Contact:</strong> Support and maintainer information</li>
+        </ol>
+
+        <h3>3.4 API Documentation</h3>
+
+        <p><strong>RESTful APIs:</strong> Use OpenAPI/Swagger specification</p>
+        <p><strong>GraphQL APIs:</strong> Comprehensive schema documentation with examples</p>
+        <p><strong>Documentation Requirements:</strong></p>
+        <ul>
+            <li>Endpoint descriptions and purpose</li>
+            <li>Request/response schemas</li>
+            <li>Authentication requirements</li>
+            <li>Error codes and handling</li>
+            <li>Rate limiting information</li>
+            <li>Example requests and responses</li>
+        </ul>
+
+        <h3>3.5 Architecture Documentation</h3>
+
+        <p>Major projects require architecture documentation including:</p>
+        <ul>
+            <li><strong>System Architecture Diagrams:</strong> High-level component relationships</li>
+            <li><strong>Data Flow Diagrams:</strong> How data moves through the system</li>
+            <li><strong>Database Schema:</strong> ER diagrams and table relationships</li>
+            <li><strong>Deployment Architecture:</strong> Infrastructure and environments</li>
+            <li><strong>Security Architecture:</strong> Authentication, authorization, encryption</li>
+            <li><strong>Integration Points:</strong> External services and APIs</li>
+        </ul>
+
+        <h2>4. Version Control Practices</h2>
+
+        <h3>4.1 Git Workflow</h3>
+
+        <p>TallTree Technologies uses <strong>GitHub Flow</strong> for most projects:</p>
+
+        <ol>
+            <li>Create a feature branch from <code>main</code></li>
+            <li>Make commits with clear messages</li>
+            <li>Open a pull request for review</li>
+            <li>Address review feedback</li>
+            <li>Merge to <code>main</code> after approval</li>
+            <li>Delete feature branch after merge</li>
+        </ol>
+
+        <h4>Branch Naming Conventions</h4>
+        <pre><code>feature/user-authentication
+bugfix/login-error-handling
+hotfix/critical-security-patch
+refactor/database-optimization
+docs/api-documentation</code></pre>
+
+        <h3>4.2 Commit Message Standards</h3>
+
+        <h4>Format</h4>
+        <pre><code>type(scope): Short summary (50 chars or less)
+
+More detailed explanation if needed. Wrap at 72 characters.
+Explain what changed and why, not how (code shows how).
+
+- Bullet points for multiple changes
+- Reference issue numbers: Fixes #123
+
+Breaking Change: Note any breaking changes here</code></pre>
+
+        <h4>Commit Types</h4>
+        <table class="simple">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>feat</strong></td>
+                    <td>New feature</td>
+                    <td>feat(auth): Add OAuth2 login support</td>
+                </tr>
+                <tr>
+                    <td><strong>fix</strong></td>
+                    <td>Bug fix</td>
+                    <td>fix(api): Handle null response in user endpoint</td>
+                </tr>
+                <tr>
+                    <td><strong>docs</strong></td>
+                    <td>Documentation only</td>
+                    <td>docs(readme): Update installation instructions</td>
+                </tr>
+                <tr>
+                    <td><strong>refactor</strong></td>
+                    <td>Code refactoring</td>
+                    <td>refactor(db): Extract query logic to repository</td>
+                </tr>
+                <tr>
+                    <td><strong>test</strong></td>
+                    <td>Adding tests</td>
+                    <td>test(auth): Add unit tests for login flow</td>
+                </tr>
+                <tr>
+                    <td><strong>chore</strong></td>
+                    <td>Maintenance tasks</td>
+                    <td>chore(deps): Update dependencies to latest</td>
+                </tr>
+                <tr>
+                    <td><strong>perf</strong></td>
+                    <td>Performance improvement</td>
+                    <td>perf(query): Add database index for user lookups</td>
+                </tr>
+                <tr>
+                    <td><strong>style</strong></td>
+                    <td>Code style changes</td>
+                    <td>style(format): Run prettier on all files</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>4.3 .gitignore Standards</h3>
+
+        <p>Every repository must include a comprehensive .gitignore file:</p>
+
+        <pre><code># Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+vendor/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+target/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+coverage/
+.coverage
+*.cover
+
+# Secrets and credentials
+*.pem
+*.key
+credentials.json
+secrets.yaml</code></pre>
+
+        <h3>4.4 Pull Request Standards</h3>
+
+        <h4>PR Template</h4>
+        <pre><code>## Summary
+Brief description of changes (1-2 sentences)
+
+## Changes
+- Bullet list of specific changes
+- Each change on its own line
+
+## Testing
+- [ ] Unit tests added/updated
+- [ ] Integration tests pass
+- [ ] Manual testing completed
+
+## Screenshots (if applicable)
+[Add screenshots for UI changes]
+
+## Related Issues
+Fixes #123
+Related to #456
+
+## Checklist
+- [ ] Code follows style guidelines
+- [ ] Documentation updated
+- [ ] No new warnings or errors
+- [ ] Backwards compatible (or breaking change documented)</code></pre>
+
+        <h4>PR Requirements</h4>
+        <ul>
+            <li><strong>Minimum 1 approval</strong> from another developer</li>
+            <li><strong>All CI checks pass</strong> (tests, linting, build)</li>
+            <li><strong>No merge conflicts</strong></li>
+            <li><strong>Updated documentation</strong> if applicable</li>
+            <li><strong>Linked to issue</strong> or ticket</li>
+        </ul>
+
+        <h2>5. Code Review Process</h2>
+
+        <h3>5.1 Review Responsibilities</h3>
+
+        <h4>Author Responsibilities</h4>
+        <ul>
+            <li>Keep PRs small and focused (under 400 lines when possible)</li>
+            <li>Provide clear description and context</li>
+            <li>Self-review before requesting review</li>
+            <li>Respond to feedback promptly</li>
+            <li>Test changes thoroughly before submitting</li>
+        </ul>
+
+        <h4>Reviewer Responsibilities</h4>
+        <ul>
+            <li>Review within 1 business day</li>
+            <li>Provide constructive, specific feedback</li>
+            <li>Focus on logic, security, and maintainability</li>
+            <li>Approve if changes meet standards</li>
+            <li>Request changes if issues found</li>
+        </ul>
+
+        <h3>5.2 Review Checklist</h3>
+
+        <div class="card">
+            <h4>Functionality</h4>
+            <ul>
+                <li>Does the code do what it claims to do?</li>
+                <li>Are edge cases handled?</li>
+                <li>Are errors handled appropriately?</li>
+            </ul>
+
+            <h4>Code Quality</h4>
+            <ul>
+                <li>Is the code readable and maintainable?</li>
+                <li>Are naming conventions followed?</li>
+                <li>Is there unnecessary complexity?</li>
+                <li>Are there opportunities for refactoring?</li>
+            </ul>
+
+            <h4>Security</h4>
+            <ul>
+                <li>Are inputs validated and sanitized?</li>
+                <li>Are secrets properly managed?</li>
+                <li>Are authentication/authorization checks in place?</li>
+                <li>Are there SQL injection or XSS vulnerabilities?</li>
+            </ul>
+
+            <h4>Performance</h4>
+            <ul>
+                <li>Are there obvious performance issues?</li>
+                <li>Are database queries optimized?</li>
+                <li>Is caching used appropriately?</li>
+            </ul>
+
+            <h4>Testing</h4>
+            <ul>
+                <li>Are there adequate tests?</li>
+                <li>Do tests cover edge cases?</li>
+                <li>Are tests readable and maintainable?</li>
+            </ul>
+        </div>
+
+        <h2>6. Testing Requirements</h2>
+
+        <h3>6.1 Unit Testing</h3>
+
+        <p><strong>Requirements:</strong></p>
+        <ul>
+            <li><strong>Minimum Coverage:</strong> 80% code coverage for new code</li>
+            <li><strong>Test Naming:</strong> Descriptive names explaining what is tested</li>
+            <li><strong>Test Structure:</strong> Arrange-Act-Assert pattern</li>
+            <li><strong>Independence:</strong> Tests must not depend on execution order</li>
+            <li><strong>Speed:</strong> Unit tests should run quickly (under 1 second each)</li>
+        </ul>
+
+        <h4>Example (Python with pytest)</h4>
+        <pre><code>def test_calculate_discount_applies_gold_member_bonus():
+    """Gold members should receive additional 5% discount."""
+    # Arrange
+    price = 100.0
+    discount_rate = 0.1
+    member_tier = 'gold'
+
+    # Act
+    final_price = calculate_discount(price, discount_rate, member_tier)
+
+    # Assert
+    assert final_price == 85.0  # 10% + 5% bonus
+
+
+def test_calculate_discount_raises_error_for_negative_price():
+    """Should raise ValueError for negative prices."""
+    # Arrange, Act, Assert
+    with pytest.raises(ValueError, match="price must be positive"):
+        calculate_discount(-10.0, 0.1, 'silver')</code></pre>
+
+        <h3>6.2 Integration Testing</h3>
+
+        <p>Integration tests verify that multiple components work together correctly.</p>
+
+        <p><strong>Focus Areas:</strong></p>
+        <ul>
+            <li>API endpoint testing (request/response validation)</li>
+            <li>Database integration (CRUD operations)</li>
+            <li>External service mocking</li>
+            <li>Authentication and authorization flows</li>
+            <li>Error handling across components</li>
+        </ul>
+
+        <h3>6.3 End-to-End (E2E) Testing</h3>
+
+        <p><strong>Tools:</strong> Playwright, Cypress, Selenium</p>
+
+        <p><strong>Coverage:</strong></p>
+        <ul>
+            <li>Critical user journeys</li>
+            <li>Authentication flows</li>
+            <li>Payment and transaction processes</li>
+            <li>Data submission and retrieval</li>
+            <li>Error scenarios and edge cases</li>
+        </ul>
+
+        <h3>6.4 Test Data Management</h3>
+
+        <ul>
+            <li>Use factories or fixtures for test data</li>
+            <li>Never use production data in tests</li>
+            <li>Clean up test data after each test</li>
+            <li>Use realistic but anonymized data</li>
+        </ul>
+
+        <h2>7. Security Coding Practices</h2>
+
+        <h3>7.1 OWASP Top 10 Compliance</h3>
+
+        <p>All code must be developed with OWASP Top 10 security risks in mind:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Risk</th>
+                    <th>Mitigation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Injection (SQL, NoSQL, OS)</strong></td>
+                    <td>Use parameterized queries, ORMs, input validation</td>
+                </tr>
+                <tr>
+                    <td><strong>Broken Authentication</strong></td>
+                    <td>Use strong password policies, MFA, secure session management</td>
+                </tr>
+                <tr>
+                    <td><strong>Sensitive Data Exposure</strong></td>
+                    <td>Encrypt data at rest and in transit, use HTTPS</td>
+                </tr>
+                <tr>
+                    <td><strong>XML External Entities (XXE)</strong></td>
+                    <td>Disable XML external entity processing</td>
+                </tr>
+                <tr>
+                    <td><strong>Broken Access Control</strong></td>
+                    <td>Implement proper authorization checks on all endpoints</td>
+                </tr>
+                <tr>
+                    <td><strong>Security Misconfiguration</strong></td>
+                    <td>Harden configurations, disable unnecessary features</td>
+                </tr>
+                <tr>
+                    <td><strong>Cross-Site Scripting (XSS)</strong></td>
+                    <td>Sanitize input, escape output, use Content Security Policy</td>
+                </tr>
+                <tr>
+                    <td><strong>Insecure Deserialization</strong></td>
+                    <td>Validate serialized data, use safe serialization formats</td>
+                </tr>
+                <tr>
+                    <td><strong>Using Components with Known Vulnerabilities</strong></td>
+                    <td>Keep dependencies updated, use vulnerability scanning</td>
+                </tr>
+                <tr>
+                    <td><strong>Insufficient Logging & Monitoring</strong></td>
+                    <td>Log security events, monitor for suspicious activity</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>7.2 Input Validation</h3>
+
+        <p><strong>Principles:</strong></p>
+        <ul>
+            <li><strong>Validate all input:</strong> Never trust user input or external data</li>
+            <li><strong>Whitelist validation:</strong> Allow known good, reject everything else</li>
+            <li><strong>Server-side validation:</strong> Never rely solely on client-side validation</li>
+            <li><strong>Sanitize input:</strong> Remove or encode dangerous characters</li>
+        </ul>
+
+        <pre><code>// Example: Input validation in TypeScript
+function validateEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!email || typeof email !== 'string') {
+    throw new ValidationError('Email is required');
+  }
+
+  if (email.length > 255) {
+    throw new ValidationError('Email too long');
+  }
+
+  if (!emailRegex.test(email)) {
+    throw new ValidationError('Invalid email format');
+  }
+
+  return true;
+}</code></pre>
+
+        <h3>7.3 Authentication and Authorization</h3>
+
+        <ul>
+            <li><strong>Use established libraries:</strong> Don't roll your own crypto</li>
+            <li><strong>Hash passwords:</strong> Use bcrypt, scrypt, or Argon2</li>
+            <li><strong>Secure session tokens:</strong> Use cryptographically random tokens</li>
+            <li><strong>Implement rate limiting:</strong> Prevent brute force attacks</li>
+            <li><strong>Use HTTPS only:</strong> Never transmit credentials over HTTP</li>
+            <li><strong>Implement MFA:</strong> For sensitive operations</li>
+        </ul>
+
+        <h3>7.4 Secrets Management</h3>
+
+        <div class="critical">
+            <p><strong>NEVER commit secrets to version control!</strong></p>
+        </div>
+
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>Use environment variables for secrets</li>
+            <li>Use secret management services (AWS Secrets Manager, Azure Key Vault)</li>
+            <li>Rotate secrets regularly</li>
+            <li>Use different secrets for different environments</li>
+            <li>Provide .env.example with dummy values</li>
+        </ul>
+
+        <pre><code># .env.example (safe to commit)
+DATABASE_URL=postgresql://user:password@localhost:5432/dbname
+API_KEY=your_api_key_here
+JWT_SECRET=generate_random_secret
+
+# .env (NEVER commit)
+DATABASE_URL=postgresql://produser:X7k!mP9@prod.db.example.com:5432/proddb
+API_KEY=sk_live_abc123xyz789
+JWT_SECRET=7f3a9b2c8d4e1f6a5b9c3d7e2f8a1b4c</code></pre>
+
+        <h2>8. Performance Standards</h2>
+
+        <h3>8.1 Performance Targets</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Target</th>
+                    <th>Critical Threshold</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>API Response Time (p95)</td>
+                    <td>&lt; 200ms</td>
+                    <td>&lt; 500ms</td>
+                </tr>
+                <tr>
+                    <td>Page Load Time (First Contentful Paint)</td>
+                    <td>&lt; 1.5s</td>
+                    <td>&lt; 3s</td>
+                </tr>
+                <tr>
+                    <td>Database Query Time</td>
+                    <td>&lt; 100ms</td>
+                    <td>&lt; 250ms</td>
+                </tr>
+                <tr>
+                    <td>Time to Interactive (TTI)</td>
+                    <td>&lt; 3s</td>
+                    <td>&lt; 5s</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>8.2 Performance Best Practices</h3>
+
+        <ul>
+            <li><strong>Database:</strong> Use indexes, avoid N+1 queries, implement query caching</li>
+            <li><strong>API:</strong> Implement pagination, use compression, cache responses</li>
+            <li><strong>Frontend:</strong> Lazy load images, code splitting, minimize bundle size</li>
+            <li><strong>Caching:</strong> Use Redis for frequently accessed data</li>
+            <li><strong>CDN:</strong> Serve static assets from CDN</li>
+        </ul>
+
+        <h2>9. Accessibility Standards (WCAG 2.1)</h2>
+
+        <h3>9.1 Compliance Level</h3>
+        <p><strong>Target:</strong> WCAG 2.1 Level AA compliance for all user-facing applications.</p>
+
+        <h3>9.2 Key Requirements</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Requirements</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Perceivable</strong></td>
+                    <td>
+                        <ul>
+                            <li>Alt text for images</li>
+                            <li>Captions for videos</li>
+                            <li>Sufficient color contrast (4.5:1 minimum)</li>
+                            <li>Text resizing up to 200%</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Operable</strong></td>
+                    <td>
+                        <ul>
+                            <li>Keyboard navigation for all functionality</li>
+                            <li>No keyboard traps</li>
+                            <li>Skip navigation links</li>
+                            <li>Descriptive page titles</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Understandable</strong></td>
+                    <td>
+                        <ul>
+                            <li>Clear error messages</li>
+                            <li>Consistent navigation</li>
+                            <li>Input labels and instructions</li>
+                            <li>Predictable behavior</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Robust</strong></td>
+                    <td>
+                        <ul>
+                            <li>Valid HTML</li>
+                            <li>Proper ARIA attributes</li>
+                            <li>Compatible with assistive technologies</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>9.3 Accessibility Testing</h3>
+        <ul>
+            <li><strong>Automated:</strong> axe DevTools, Lighthouse accessibility audit</li>
+            <li><strong>Manual:</strong> Keyboard navigation testing, screen reader testing</li>
+            <li><strong>Tools:</strong> NVDA, JAWS, VoiceOver</li>
+        </ul>
+
+        <h2>10. Code Repository Structure</h2>
+
+        <h3>10.1 Standard Repository Structure</h3>
+
+        <pre><code>project-name/
+├── README.md              # Project overview and setup instructions
+├── LICENSE                # License information
+├── CONTRIBUTING.md        # Contribution guidelines
+├── CHANGELOG.md          # Version history and changes
+├── .gitignore            # Git ignore patterns
+├── .env.example          # Example environment variables
+├── package.json          # Project dependencies (Node.js)
+├── requirements.txt      # Python dependencies
+├── docker-compose.yml    # Docker configuration
+├── .github/              # GitHub-specific files
+│   ├── workflows/        # CI/CD workflows
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── ISSUE_TEMPLATE/
+├── docs/                 # Documentation
+│   ├── architecture.md
+│   ├── api.md
+│   └── deployment.md
+├── src/                  # Source code
+│   ├── main/
+│   ├── test/
+│   └── ...
+├── tests/                # Test files
+├── scripts/              # Build and utility scripts
+└── config/               # Configuration files</code></pre>
+
+        <h2>11. Continuous Integration/Continuous Deployment (CI/CD)</h2>
+
+        <h3>11.1 CI Pipeline Requirements</h3>
+
+        <p>All projects must have automated CI pipelines that run on every commit:</p>
+
+        <ol>
+            <li><strong>Linting:</strong> Check code style compliance</li>
+            <li><strong>Unit Tests:</strong> Run all unit tests</li>
+            <li><strong>Integration Tests:</strong> Run integration tests</li>
+            <li><strong>Security Scanning:</strong> Check for known vulnerabilities</li>
+            <li><strong>Build:</strong> Verify code compiles/builds successfully</li>
+            <li><strong>Code Coverage:</strong> Ensure minimum coverage thresholds met</li>
+        </ol>
+
+        <h3>11.2 Deployment Requirements</h3>
+
+        <ul>
+            <li><strong>Automated Deployments:</strong> Use CI/CD tools (GitHub Actions, GitLab CI)</li>
+            <li><strong>Environment Separation:</strong> Dev, Staging, Production</li>
+            <li><strong>Rollback Capability:</strong> Ability to quickly rollback failed deployments</li>
+            <li><strong>Health Checks:</strong> Automated post-deployment verification</li>
+            <li><strong>Database Migrations:</strong> Automated and reversible</li>
+        </ul>
+
+        <h2>12. Monitoring and Observability</h2>
+
+        <h3>12.1 Logging Standards</h3>
+
+        <p><strong>Log Levels:</strong></p>
+        <ul>
+            <li><strong>ERROR:</strong> Application errors requiring immediate attention</li>
+            <li><strong>WARN:</strong> Warning conditions that should be investigated</li>
+            <li><strong>INFO:</strong> Significant application events</li>
+            <li><strong>DEBUG:</strong> Detailed diagnostic information (development only)</li>
+        </ul>
+
+        <h4>Logging Best Practices</h4>
+        <pre><code>// Good logging example
+logger.info('User login successful', {
+  userId: user.id,
+  timestamp: new Date().toISOString(),
+  ip: request.ip
+});
+
+logger.error('Database connection failed', {
+  error: error.message,
+  stack: error.stack,
+  database: config.database.host,
+  timestamp: new Date().toISOString()
+});</code></pre>
+
+        <h3>12.2 Metrics and Monitoring</h3>
+
+        <ul>
+            <li><strong>Application Performance:</strong> Response times, error rates</li>
+            <li><strong>Business Metrics:</strong> User actions, conversions</li>
+            <li><strong>Infrastructure:</strong> CPU, memory, disk usage</li>
+            <li><strong>External Dependencies:</strong> Third-party API health</li>
+        </ul>
+
+        <h2>13. Policy Compliance and Enforcement</h2>
+
+        <h3>13.1 Automated Enforcement</h3>
+
+        <p>Where possible, standards are enforced through automation:</p>
+        <ul>
+            <li>Pre-commit hooks (linting, formatting)</li>
+            <li>CI/CD pipeline checks</li>
+            <li>Automated code review tools</li>
+            <li>Dependency vulnerability scanning</li>
+        </ul>
+
+        <h3>13.2 Code Review Enforcement</h3>
+
+        <p>All code changes must pass peer review before merging. Reviewers verify compliance with these standards.</p>
+
+        <h3>13.3 Exceptions</h3>
+
+        <p>Exceptions to these standards require:</p>
+        <ul>
+            <li>Written justification</li>
+            <li>Approval from Technical Lead or Director</li>
+            <li>Documentation of exception in code comments</li>
+            <li>Plan to remediate if applicable</li>
+        </ul>
+
+        <h2>14. Training and Resources</h2>
+
+        <p>TallTree Technologies provides:</p>
+        <ul>
+            <li>Onboarding training on coding standards</li>
+            <li>Access to online learning platforms (Pluralsight, Udemy, etc.)</li>
+            <li>Regular knowledge-sharing sessions</li>
+            <li>Code review mentorship</li>
+            <li>Conference and workshop attendance</li>
+        </ul>
+
+        <h2>15. Related Policies</h2>
+
+        <ul>
+            <li><a href="copyright-and-notices-policy.html">Copyright and Legal Notices Policy</a></li>
+            <li><a href="data-protection-policy.html">Data Protection Policy</a></li>
+            <li><a href="employee-nda-ip-assignment.html">Employee NDA and IP Assignment</a></li>
+            <li><a href="service-level-agreement.html">Service Level Agreement</a></li>
+        </ul>
+
+        <footer>
+            <p>&copy; 2025 Software Systems Limited trading as TallTree Technologies. All rights reserved.</p>
+            <p>Company Registration No. 14466340 (England and Wales)</p>
+            <p>Registered Office: 20-22 Wenlock Road, London, N1 7GU</p>
+            <p class="text-muted">This document is confidential and proprietary.</p>
+        </footer>
+    </div>
+</body>
+</html>

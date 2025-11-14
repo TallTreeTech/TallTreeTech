@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Control Policy - TallTree Technologies</title>
+    <link rel="stylesheet" href="css/talltree-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Access Control Policy</h1>
+
+        <div class="intro">
+            <p><strong>Document Owner:</strong> IT Director</p>
+            <p><strong>Effective Date:</strong> November 14, 2025</p>
+            <p><strong>Review Date:</strong> November 14, 2026</p>
+            <p><strong>Version:</strong> 1.0</p>
+        </div>
+
+        <h2>1. Purpose and Scope</h2>
+
+        <h3>1.1 Purpose</h3>
+        <p>This policy establishes requirements for managing user access to the Company's information systems, applications, and data. It ensures that access is granted based on business need, follows the principle of least privilege, and is appropriately controlled to protect against unauthorized access.</p>
+
+        <h3>1.2 Scope</h3>
+        <p>This policy applies to:</p>
+        <ul>
+            <li>All employees, contractors, consultants, and third parties requiring access to the Company's systems</li>
+            <li>All IT systems, applications, databases, and network resources</li>
+            <li>All access methods including on-site, remote, and cloud-based access</li>
+            <li>All types of accounts including user accounts, administrative accounts, service accounts, and application accounts</li>
+        </ul>
+
+        <h3>1.3 Policy Statement</h3>
+        <p>The Company shall implement appropriate access controls to ensure that only authorized individuals can access systems and data, and only to the extent necessary for their legitimate business purposes. Access controls must support confidentiality, integrity, and availability of information assets.</p>
+
+        <h2>2. Access Control Principles</h2>
+
+        <h3>2.1 Least Privilege</h3>
+        <p>Users shall be granted the minimum level of access required to perform their job functions. Access beyond this minimum must be specifically justified and approved.</p>
+
+        <h3>2.2 Need to Know</h3>
+        <p>Access to information shall be granted only when there is a legitimate business need to access that information.</p>
+
+        <h3>2.3 Separation of Duties</h3>
+        <p>Where practical, duties shall be segregated to prevent conflicts of interest and reduce the risk of fraud or error. No single individual should have control over all phases of a critical transaction or process.</p>
+
+        <h3>2.4 Defense in Depth</h3>
+        <p>Multiple layers of access controls shall be implemented, including network controls, application controls, and data controls.</p>
+
+        <h2>3. User Account Management</h2>
+
+        <h3>3.1 Account Creation Process</h3>
+
+        <h4>3.1.1 Standard User Accounts</h4>
+        <p>New user accounts shall be created according to the following process:</p>
+        <ol>
+            <li><strong>Request:</strong> Line manager submits access request using the approved access request form</li>
+            <li><strong>Justification:</strong> Request must include:
+                <ul>
+                    <li>User's name and job title</li>
+                    <li>Start date and duration (if temporary)</li>
+                    <li>Systems and applications required</li>
+                    <li>Access level required with business justification</li>
+                    <li>Reference user (someone with similar access requirements)</li>
+                </ul>
+            </li>
+            <li><strong>Approval:</strong>
+                <ul>
+                    <li>Line manager approval (confirms business need)</li>
+                    <li>IT Director approval (confirms appropriate access level)</li>
+                    <li>Data owner approval (for access to sensitive systems or data)</li>
+                </ul>
+            </li>
+            <li><strong>Implementation:</strong> IT team creates account with approved access rights</li>
+            <li><strong>Documentation:</strong> Access request and approvals retained for audit purposes</li>
+            <li><strong>Communication:</strong> User provided with account details and security requirements</li>
+        </ol>
+
+        <h4>3.1.2 Administrative Accounts</h4>
+        <p>Administrative accounts require enhanced controls:</p>
+        <ul>
+            <li><strong>Limited number:</strong> Granted only when regular user access is insufficient</li>
+            <li><strong>Named accounts:</strong> Each administrator must have a separate admin account (no shared admin accounts)</li>
+            <li><strong>Naming convention:</strong> Clearly identified as administrative (e.g., "admin-" prefix)</li>
+            <li><strong>Additional approval:</strong> Requires approval from IT Director and a member of senior management</li>
+            <li><strong>Annual review:</strong> Administrative access reviewed annually to confirm continued need</li>
+            <li><strong>Enhanced monitoring:</strong> Activities performed with administrative accounts are logged and monitored</li>
+        </ul>
+
+        <div class="warning">
+            <h4>Important: Separate Accounts Required</h4>
+            <p>Users requiring administrative access must have <strong>two separate accounts</strong>:</p>
+            <ul>
+                <li><strong>Standard user account:</strong> For day-to-day work (email, documents, normal applications)</li>
+                <li><strong>Administrative account:</strong> Only used when administrative privileges are needed</li>
+            </ul>
+            <p>Administrative accounts must NOT be used for regular activities such as email or web browsing.</p>
+        </div>
+
+        <h3>3.2 Account Types</h3>
+
+        <h4>3.2.1 Standard User Accounts</h4>
+        <ul>
+            <li>For day-to-day business activities</li>
+            <li>Limited privileges appropriate to job role</li>
+            <li>Subject to standard password and MFA requirements</li>
+        </ul>
+
+        <h4>3.2.2 Administrative/Privileged Accounts</h4>
+        <ul>
+            <li>For system administration and configuration</li>
+            <li>Enhanced security requirements including mandatory MFA</li>
+            <li>Activities logged and monitored</li>
+            <li>Separate from standard user accounts</li>
+        </ul>
+
+        <h4>3.2.3 Service Accounts</h4>
+        <ul>
+            <li>Used by applications and automated processes</li>
+            <li>Not for interactive login by users</li>
+            <li>Strong passwords (minimum 20 characters) managed securely</li>
+            <li>Documented with owner and purpose</li>
+            <li>Reviewed quarterly</li>
+        </ul>
+
+        <h4>3.2.4 Emergency Access Accounts</h4>
+        <ul>
+            <li>Break-glass accounts for emergency access to critical systems</li>
+            <li>Credentials stored securely in sealed envelope or secure password vault</li>
+            <li>Any use triggers immediate investigation and password change</li>
+            <li>Tested quarterly to ensure functionality</li>
+        </ul>
+
+        <h4>3.2.5 Temporary/Contractor Accounts</h4>
+        <ul>
+            <li>Created with defined expiration date</li>
+            <li>Access limited to specific systems as needed</li>
+            <li>Subject to same security requirements as employee accounts</li>
+            <li>Automatically disabled on expiration date</li>
+        </ul>
+
+        <h3>3.3 Prohibited Account Types</h3>
+        <p>The following account types are <strong>prohibited</strong>:</p>
+        <ul>
+            <li><strong>Shared accounts:</strong> Each user must have a unique account (exceptions require IT Director approval with compensating controls)</li>
+            <li><strong>Generic accounts:</strong> Accounts such as "admin", "user", "test" must not be used</li>
+            <li><strong>Guest accounts:</strong> Must be disabled on all systems</li>
+            <li><strong>Anonymous access:</strong> Must be disabled except where specifically required and approved</li>
+        </ul>
+
+        <h2>4. Password Requirements</h2>
+
+        <h3>4.1 Password Strength</h3>
+        <p>All user passwords must meet the following minimum requirements:</p>
+
+        <table>
+            <tr>
+                <th>Account Type</th>
+                <th>Minimum Length</th>
+                <th>Complexity</th>
+                <th>MFA Required</th>
+            </tr>
+            <tr>
+                <td>Standard User Accounts</td>
+                <td>12 characters</td>
+                <td>Mix of upper, lower, numbers, symbols</td>
+                <td>Yes (remote access)</td>
+            </tr>
+            <tr>
+                <td>Administrative Accounts</td>
+                <td>14 characters</td>
+                <td>Mix of upper, lower, numbers, symbols</td>
+                <td>Yes (all access)</td>
+            </tr>
+            <tr>
+                <td>Service Accounts</td>
+                <td>20 characters</td>
+                <td>Randomly generated</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Emergency Access</td>
+                <td>16 characters</td>
+                <td>Randomly generated</td>
+                <td>Yes</td>
+            </tr>
+        </table>
+
+        <h3>4.2 Password Composition</h3>
+        <p>Passwords must:</p>
+        <ul>
+            <li>Contain at least one uppercase letter (A-Z)</li>
+            <li>Contain at least one lowercase letter (a-z)</li>
+            <li>Contain at least one number (0-9)</li>
+            <li>Contain at least one special character (!@#$%^&* etc.)</li>
+            <li>Not contain the user's name or username</li>
+            <li>Not contain common dictionary words</li>
+            <li>Not be a commonly used password (checked against breach databases)</li>
+        </ul>
+
+        <h3>4.3 Password Management</h3>
+        <ul>
+            <li><strong>Password changes:</strong>
+                <ul>
+                    <li>Must be changed immediately when compromised or suspected compromise</li>
+                    <li>Should be changed if account shows suspicious activity</li>
+                    <li>No routine mandatory changes required (unless password is weak or compromised)</li>
+                </ul>
+            </li>
+            <li><strong>Password reuse:</strong> Previous 10 passwords cannot be reused</li>
+            <li><strong>Default passwords:</strong> Must be changed before account can be used</li>
+            <li><strong>Password storage:</strong>
+                <ul>
+                    <li>Users may use approved password managers</li>
+                    <li>Passwords must never be written down or shared</li>
+                    <li>Passwords must never be sent via email or instant message</li>
+                    <li>Passwords must not be stored in browsers without additional protection</li>
+                </ul>
+            </li>
+            <li><strong>Password reset:</strong>
+                <ul>
+                    <li>Self-service password reset available using approved methods</li>
+                    <li>Identity verification required for IT support password resets</li>
+                    <li>Temporary passwords must be changed on first login</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>4.4 Account Lockout</h3>
+        <p>To prevent brute force attacks:</p>
+        <ul>
+            <li>Accounts must be locked after a maximum of 10 failed login attempts</li>
+            <li>Lockout duration: 30 minutes or until administrator unlocks</li>
+            <li>Lockout events must be logged and reviewed</li>
+            <li>Repeated lockouts investigated as potential security incidents</li>
+        </ul>
+
+        <h2>5. Multi-Factor Authentication (MFA)</h2>
+
+        <h3>5.1 MFA Requirements</h3>
+        <p>Multi-factor authentication <strong>must</strong> be enabled for:</p>
+        <ul>
+            <li>All administrative and privileged accounts (no exceptions)</li>
+            <li>Remote access to Company systems (VPN, RDP, SSH, etc.)</li>
+            <li>Access to cloud services and SaaS applications</li>
+            <li>Email systems (webmail and mobile access)</li>
+            <li>Access to financial systems</li>
+            <li>Access to systems containing sensitive personal data</li>
+        </ul>
+
+        <h3>5.2 MFA Methods</h3>
+        <p>Approved MFA methods include:</p>
+        <ul>
+            <li><strong>Preferred:</strong> Authenticator apps (Microsoft Authenticator, Google Authenticator, Duo)</li>
+            <li><strong>Acceptable:</strong> Hardware tokens (YubiKey, etc.)</li>
+            <li><strong>Acceptable:</strong> Push notifications to registered mobile device</li>
+            <li><strong>Discouraged:</strong> SMS codes (use only if no other option available)</li>
+        </ul>
+
+        <h3>5.3 MFA Registration and Recovery</h3>
+        <ul>
+            <li>Users must register MFA methods during account setup or first login</li>
+            <li>Multiple MFA methods should be registered where possible</li>
+            <li>Backup codes must be generated and stored securely</li>
+            <li>MFA reset requires identity verification by IT support</li>
+        </ul>
+
+        <h2>6. Access Reviews</h2>
+
+        <h3>6.1 Regular Access Reviews</h3>
+        <p>User access rights must be reviewed according to the following schedule:</p>
+
+        <table>
+            <tr>
+                <th>Review Type</th>
+                <th>Frequency</th>
+                <th>Reviewer</th>
+            </tr>
+            <tr>
+                <td>All User Accounts</td>
+                <td>Quarterly</td>
+                <td>Line Managers</td>
+            </tr>
+            <tr>
+                <td>Administrative Accounts</td>
+                <td>Quarterly</td>
+                <td>IT Director</td>
+            </tr>
+            <tr>
+                <td>Service Accounts</td>
+                <td>Quarterly</td>
+                <td>System Administrators</td>
+            </tr>
+            <tr>
+                <td>Sensitive Data Access</td>
+                <td>Monthly</td>
+                <td>Data Owners</td>
+            </tr>
+            <tr>
+                <td>External/Third Party Access</td>
+                <td>Monthly</td>
+                <td>IT Director</td>
+            </tr>
+        </table>
+
+        <h3>6.2 Review Process</h3>
+        <p>During access reviews, reviewers must:</p>
+        <ol>
+            <li>Verify that each user still requires access</li>
+            <li>Confirm that access levels are appropriate for current job role</li>
+            <li>Identify any unnecessary or excessive access</li>
+            <li>Request removal of access that is no longer needed</li>
+            <li>Document the review with findings and actions taken</li>
+        </ol>
+
+        <h3>6.3 Inactive Account Review</h3>
+        <ul>
+            <li>Accounts with no login activity for 60 days must be reviewed</li>
+            <li>Accounts inactive for 90 days must be disabled (unless documented exception)</li>
+            <li>Disabled accounts may be deleted after 180 days</li>
+        </ul>
+
+        <h2>7. Account Deactivation and Removal</h2>
+
+        <h3>7.1 Employee Termination</h3>
+        <p>When employment ends:</p>
+        <ul>
+            <li><strong>Immediate action (within 1 hour of notification):</strong>
+                <ul>
+                    <li>Disable all user accounts</li>
+                    <li>Revoke VPN and remote access</li>
+                    <li>Disable access cards and physical access</li>
+                </ul>
+            </li>
+            <li><strong>Within 24 hours:</strong>
+                <ul>
+                    <li>Remove from all security groups and distribution lists</li>
+                    <li>Revoke access to cloud services</li>
+                    <li>Disable mobile device access</li>
+                    <li>Change passwords on any shared accounts the user knew</li>
+                </ul>
+            </li>
+            <li><strong>Within 1 week:</strong>
+                <ul>
+                    <li>Transfer ownership of files and data as appropriate</li>
+                    <li>Archive mailbox if required</li>
+                    <li>Complete documentation of access removal</li>
+                </ul>
+            </li>
+            <li><strong>After 30 days:</strong>
+                <ul>
+                    <li>Delete account (unless legal or business requirement to retain)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>7.2 Role Changes</h3>
+        <p>When an employee changes role:</p>
+        <ul>
+            <li>Line manager notifies IT of role change</li>
+            <li>New access requirements identified</li>
+            <li>Old access that is no longer needed is removed</li>
+            <li>New access is granted following normal approval process</li>
+            <li>Changes documented in access management system</li>
+        </ul>
+
+        <h3>7.3 Contractor/Third Party Access</h3>
+        <p>For external parties:</p>
+        <ul>
+            <li>Access granted for specified time period only</li>
+            <li>Expiration date set on account creation</li>
+            <li>System automatically disables account on expiration</li>
+            <li>Sponsoring employee responsible for requesting extension if needed</li>
+            <li>Access revoked immediately if contract/agreement ends early</li>
+        </ul>
+
+        <h2>8. Remote Access Controls</h2>
+
+        <h3>8.1 Remote Access Requirements</h3>
+        <p>All remote access to the Company's systems must:</p>
+        <ul>
+            <li>Use approved VPN or secure gateway solutions</li>
+            <li>Require multi-factor authentication</li>
+            <li>Use encrypted connections (TLS 1.2 or higher)</li>
+            <li>Be from devices that meet security requirements (encryption, anti-malware, patches)</li>
+            <li>Be logged and monitored</li>
+        </ul>
+
+        <h3>8.2 Remote Access Methods</h3>
+
+        <table class="simple">
+            <tr>
+                <th>Access Method</th>
+                <th>Use Case</th>
+                <th>Requirements</th>
+            </tr>
+            <tr>
+                <td>VPN (Virtual Private Network)</td>
+                <td>General remote access to internal network</td>
+                <td>Approved VPN client, MFA, managed device</td>
+            </tr>
+            <tr>
+                <td>Web-based Applications</td>
+                <td>Access to cloud services and SaaS</td>
+                <td>HTTPS only, MFA, supported browser</td>
+            </tr>
+            <tr>
+                <td>Remote Desktop (RDP)</td>
+                <td>Remote administration</td>
+                <td>VPN required, MFA, admin account, logged</td>
+            </tr>
+            <tr>
+                <td>SSH</td>
+                <td>Server administration</td>
+                <td>Key-based auth, MFA, VPN required, logged</td>
+            </tr>
+        </table>
+
+        <h3>8.3 Third Party Remote Access</h3>
+        <p>When third parties require remote access for support or development:</p>
+        <ul>
+            <li>Access must be time-limited (specific dates/times)</li>
+            <li>Access requires approval from IT Director</li>
+            <li>Third party must comply with Company security requirements</li>
+            <li>Access sessions must be monitored or supervised</li>
+            <li>All activities logged</li>
+            <li>Access revoked immediately after work completion</li>
+        </ul>
+
+        <h2>9. Special Access Controls</h2>
+
+        <h3>9.1 Sensitive Data Access</h3>
+        <p>Access to sensitive data categories requires additional controls:</p>
+        <ul>
+            <li><strong>Personal data:</strong> Data protection impact assessment, role-based access, audit logging</li>
+            <li><strong>Financial data:</strong> Segregation of duties, approval workflows, reconciliation controls</li>
+            <li><strong>Commercial confidential:</strong> NDA required, need-to-know principle, DLP controls</li>
+            <li><strong>Security information:</strong> Strictly limited access, clearance required</li>
+        </ul>
+
+        <h3>9.2 Database Access</h3>
+        <ul>
+            <li>Direct database access limited to database administrators</li>
+            <li>Application access via service accounts only</li>
+            <li>Production database access requires specific justification and approval</li>
+            <li>All database queries logged (especially on production)</li>
+            <li>Development/test databases must not contain real personal data</li>
+        </ul>
+
+        <h3>9.3 Source Code Access</h3>
+        <ul>
+            <li>Read access: Developers and relevant technical staff</li>
+            <li>Write access: Subject to code review and version control</li>
+            <li>Production deployment access: Limited to authorized deployment team</li>
+            <li>All code changes tracked and attributed to named users</li>
+        </ul>
+
+        <h2>10. Roles and Responsibilities</h2>
+
+        <h3>10.1 IT Director</h3>
+        <ul>
+            <li>Overall responsibility for access control policy and implementation</li>
+            <li>Approve administrative access requests</li>
+            <li>Review access control logs and reports</li>
+            <li>Investigate access control violations</li>
+            <li>Report on access control compliance</li>
+        </ul>
+
+        <h3>10.2 Line Managers</h3>
+        <ul>
+            <li>Request access for team members</li>
+            <li>Ensure access requests are appropriate and justified</li>
+            <li>Participate in quarterly access reviews</li>
+            <li>Notify IT immediately when team members leave or change roles</li>
+        </ul>
+
+        <h3>10.3 IT Support Team</h3>
+        <ul>
+            <li>Implement approved access requests</li>
+            <li>Maintain access management documentation</li>
+            <li>Monitor for suspicious account activity</li>
+            <li>Perform regular account maintenance (disable inactive accounts, etc.)</li>
+        </ul>
+
+        <h3>10.4 All Users</h3>
+        <ul>
+            <li>Protect passwords and authentication credentials</li>
+            <li>Use only assigned accounts (no sharing)</li>
+            <li>Report lost or stolen credentials immediately</li>
+            <li>Report suspicious account activity</li>
+            <li>Comply with all access control requirements</li>
+            <li>Only access systems and data required for job duties</li>
+        </ul>
+
+        <h2>11. Monitoring and Compliance</h2>
+
+        <h3>11.1 Access Logging</h3>
+        <p>The following access events must be logged:</p>
+        <ul>
+            <li>Successful and failed login attempts</li>
+            <li>Use of administrative privileges</li>
+            <li>Access to sensitive data</li>
+            <li>Account creation, modification, and deletion</li>
+            <li>Permission changes</li>
+            <li>Remote access connections</li>
+        </ul>
+
+        <h3>11.2 Log Review</h3>
+        <ul>
+            <li>Security logs reviewed weekly for anomalies</li>
+            <li>Failed login attempts investigated</li>
+            <li>Unusual access patterns flagged for review</li>
+            <li>Administrative account usage reviewed monthly</li>
+        </ul>
+
+        <h3>11.3 Policy Violations</h3>
+        <p>Violations of this policy may result in:</p>
+        <ul>
+            <li>Account suspension or termination</li>
+            <li>Disciplinary action up to and including termination of employment</li>
+            <li>Legal action for unauthorized access</li>
+            <li>Reporting to law enforcement if criminal activity suspected</li>
+        </ul>
+
+        <h2>12. Policy Review</h2>
+
+        <p>This policy shall be reviewed:</p>
+        <ul>
+            <li>Annually as a minimum</li>
+            <li>Following security incidents involving access control</li>
+            <li>When significant changes are made to IT systems</li>
+            <li>When regulatory requirements change</li>
+        </ul>
+
+        <div class="info">
+            <h3>Related Policies</h3>
+            <ul>
+                <li>Cyber Essentials Policy</li>
+                <li>Data Protection Policy</li>
+                <li>IT Governance Policy</li>
+                <li>Information Security Policy</li>
+                <li>Remote Working Policy</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Contact Information</h3>
+            <p><strong>Policy Owner:</strong> IT Director<br>
+            <strong>Email:</strong> <a href="mailto:it.director@talltree.tech">it.director@talltree.tech</a></p>
+
+            <p><strong>Access Requests:</strong> <a href="mailto:it.access@talltree.tech">it.access@talltree.tech</a><br>
+            <strong>IT Support:</strong> <a href="mailto:support@talltree.tech">support@talltree.tech</a></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Software Systems Limited, trading as TallTree Technologies. All rights reserved.</p>
+            <p>Registered in England and Wales. Company No. 14466340.</p>
+            <p><strong>Document Classification:</strong> Internal Use Only</p>
+        </footer>
+    </div>
+</body>
+</html>

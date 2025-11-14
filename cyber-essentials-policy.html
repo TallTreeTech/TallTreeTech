@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Essentials Policy - TallTree Technologies</title>
+    <link rel="stylesheet" href="css/talltree-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Essentials Policy</h1>
+
+        <div class="intro">
+            <p><strong>Document Owner:</strong> IT Director</p>
+            <p><strong>Effective Date:</strong> November 14, 2025</p>
+            <p><strong>Review Date:</strong> November 14, 2026</p>
+            <p><strong>Version:</strong> 1.0</p>
+        </div>
+
+        <h2>1. Purpose and Scope</h2>
+
+        <h3>1.1 Purpose</h3>
+        <p>This policy establishes the framework for achieving and maintaining Cyber Essentials certification to protect the Company against common cyber security threats. It defines the security controls required to meet the UK Government's Cyber Essentials scheme requirements.</p>
+
+        <h3>1.2 Scope</h3>
+        <p>This policy applies to:</p>
+        <ul>
+            <li>All IT systems, devices, and networks owned or operated by the Company</li>
+            <li>All employees, contractors, and third parties with access to the Company's IT systems</li>
+            <li>All devices connecting to the Company's network or accessing Company data</li>
+            <li>Cloud services and hosted applications used by the Company</li>
+        </ul>
+
+        <h3>1.3 Policy Statement</h3>
+        <p>The Company is committed to implementing and maintaining the five key controls defined by the Cyber Essentials scheme to protect against the most common internet-based cyber attacks. Compliance with this policy is mandatory for all users and systems.</p>
+
+        <h2>2. Cyber Essentials Framework</h2>
+
+        <p>The Company shall implement and maintain the following five technical controls as specified by the National Cyber Security Centre (NCSC):</p>
+
+        <div class="card">
+            <div class="card-header">2.1 Firewalls and Internet Gateways <span class="badge required">REQUIRED</span></div>
+            <p>Firewalls shall be configured to prevent unauthorized access to the Company's network and systems.</p>
+
+            <h4>Requirements:</h4>
+            <ul>
+                <li>Hardware or software firewalls must be enabled on all devices that connect to the internet</li>
+                <li>Boundary firewalls must be in place between the Company's network and the internet</li>
+                <li>Default deny rules shall be implemented - only explicitly allowed traffic is permitted</li>
+                <li>Inbound connections from the internet shall be blocked unless there is a business requirement</li>
+                <li>Where inbound connections are required, they must be:
+                    <ul>
+                        <li>Documented and approved by IT management</li>
+                        <li>Limited to specific IP addresses where possible</li>
+                        <li>Protected by additional security controls (VPN, MFA, etc.)</li>
+                    </ul>
+                </li>
+                <li>Host-based firewalls must be enabled on all laptops and desktop computers</li>
+                <li>Firewall rules must be reviewed quarterly and after any significant network changes</li>
+            </ul>
+
+            <h4>Responsibility:</h4>
+            <p>IT Director is responsible for firewall configuration and maintenance.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">2.2 Secure Configuration <span class="badge required">REQUIRED</span></div>
+            <p>All systems and devices shall be configured securely to reduce vulnerabilities.</p>
+
+            <h4>Requirements:</h4>
+            <ul>
+                <li>Default passwords must be changed before systems are put into use</li>
+                <li>Unnecessary user accounts must be removed or disabled</li>
+                <li>Unnecessary software, services, and functionality must be removed or disabled</li>
+                <li>Auto-run features for removable media must be disabled</li>
+                <li>Only approved applications may be installed on Company devices</li>
+                <li>Device encryption must be enabled on all laptops and mobile devices</li>
+                <li>Configuration baselines must be established and maintained for all system types</li>
+                <li>Systems must be hardened according to industry best practice (CIS benchmarks, vendor guidelines)</li>
+            </ul>
+
+            <h4>Responsibility:</h4>
+            <p>IT Director is responsible for establishing and enforcing secure configuration standards. System administrators are responsible for implementing secure configurations.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">2.3 User Access Control <span class="badge required">REQUIRED</span></div>
+            <p>User accounts and privileges shall be appropriately managed and controlled.</p>
+
+            <h4>Requirements:</h4>
+            <ul>
+                <li>Each user must have a unique user account - shared accounts are prohibited</li>
+                <li>Least privilege principle must be applied - users only have access required for their role</li>
+                <li>Administrative accounts must be:
+                    <ul>
+                        <li>Limited in number and assigned only when necessary</li>
+                        <li>Separate from standard user accounts</li>
+                        <li>Subject to additional security controls including multi-factor authentication</li>
+                    </ul>
+                </li>
+                <li>Guest and anonymous accounts must be disabled</li>
+                <li>Account lockout policies must be enabled (maximum 10 failed login attempts)</li>
+                <li>Password requirements:
+                    <ul>
+                        <li>Minimum 12 characters in length</li>
+                        <li>Complexity requirements enforced (mix of character types)</li>
+                        <li>No common or dictionary words</li>
+                        <li>Changed when compromised</li>
+                    </ul>
+                </li>
+                <li>Multi-factor authentication (MFA) must be enabled for:
+                    <ul>
+                        <li>All administrative accounts</li>
+                        <li>Remote access to Company systems</li>
+                        <li>Access to cloud services and email</li>
+                    </ul>
+                </li>
+                <li>User access must be reviewed quarterly</li>
+                <li>Accounts must be disabled immediately upon termination of employment</li>
+            </ul>
+
+            <h4>Responsibility:</h4>
+            <p>IT Director approves access requests. Line managers request access for their team members. System administrators implement access controls.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">2.4 Malware Protection <span class="badge required">REQUIRED</span></div>
+            <p>All systems shall be protected against malware through appropriate technical controls.</p>
+
+            <h4>Requirements:</h4>
+            <ul>
+                <li>Anti-malware software must be installed on all computers and servers</li>
+                <li>Anti-malware definitions must be updated automatically at least daily</li>
+                <li>Real-time scanning must be enabled on all protected devices</li>
+                <li>Regular full system scans must be scheduled (at least weekly)</li>
+                <li>Email filtering must be in place to block malicious attachments and links</li>
+                <li>Web filtering must be enabled to block access to known malicious sites</li>
+                <li>Users must be prohibited from disabling or interfering with anti-malware software</li>
+                <li>Malware detection events must be logged and reviewed</li>
+                <li>Incident response procedures must be followed when malware is detected</li>
+                <li>For devices where traditional anti-malware cannot be installed (mobile devices), alternative controls must be implemented:
+                    <ul>
+                        <li>Only approved applications from official app stores</li>
+                        <li>Operating system security features enabled</li>
+                        <li>Mobile device management (MDM) with security policies</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Responsibility:</h4>
+            <p>IT Director is responsible for selecting, deploying, and maintaining anti-malware solutions. All users are responsible for reporting suspected malware incidents.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">2.5 Security Update Management (Patch Management) <span class="badge required">REQUIRED</span></div>
+            <p>All systems and software shall be kept up to date with security patches.</p>
+
+            <h4>Requirements:</h4>
+            <ul>
+                <li>Security updates must be applied according to defined timescales:
+                    <ul>
+                        <li><strong>Critical updates:</strong> Within 14 days of release</li>
+                        <li><strong>High-priority updates:</strong> Within 30 days of release</li>
+                        <li><strong>Other updates:</strong> Within 90 days of release</li>
+                    </ul>
+                </li>
+                <li>Automatic updates must be enabled where possible and appropriate</li>
+                <li>An inventory of all software and systems must be maintained</li>
+                <li>Unsupported software (no longer receiving security updates) must not be used</li>
+                <li>Operating systems, applications, firmware, and network devices must all be included in patch management</li>
+                <li>Updates must be tested before deployment to production systems where practical</li>
+                <li>Emergency patching procedures must be established for zero-day vulnerabilities</li>
+                <li>Patch compliance must be monitored and reported monthly</li>
+            </ul>
+
+            <h4>Responsibility:</h4>
+            <p>IT Director is responsible for the patch management program. System administrators are responsible for applying updates to their assigned systems.</p>
+        </div>
+
+        <h2>3. Roles and Responsibilities</h2>
+
+        <h3>3.1 Senior Management</h3>
+        <ul>
+            <li>Provide resources and support for Cyber Essentials compliance</li>
+            <li>Review cyber security risks and controls annually</li>
+            <li>Approve exceptions to this policy (which may affect Cyber Essentials certification)</li>
+        </ul>
+
+        <h3>3.2 IT Director (Policy Owner)</h3>
+        <ul>
+            <li>Maintain overall responsibility for Cyber Essentials compliance</li>
+            <li>Ensure all technical controls are implemented and maintained</li>
+            <li>Coordinate Cyber Essentials assessments and certification</li>
+            <li>Review and update this policy annually</li>
+            <li>Report on compliance status to senior management</li>
+            <li>Investigate and remediate control failures</li>
+            <li>Maintain evidence of compliance</li>
+        </ul>
+
+        <h3>3.3 System Administrators</h3>
+        <ul>
+            <li>Implement security controls on assigned systems</li>
+            <li>Apply security updates according to defined timescales</li>
+            <li>Maintain secure configurations</li>
+            <li>Monitor security events and alerts</li>
+            <li>Report compliance issues to the IT Director</li>
+        </ul>
+
+        <h3>3.4 All Employees and Contractors</h3>
+        <ul>
+            <li>Comply with all security requirements in this policy</li>
+            <li>Protect passwords and authentication credentials</li>
+            <li>Report security incidents and suspected malware</li>
+            <li>Complete mandatory cyber security awareness training</li>
+            <li>Use only approved devices and software</li>
+            <li>Follow secure configuration requirements for any personal devices used for work</li>
+        </ul>
+
+        <h2>4. Compliance Monitoring and Assessment</h2>
+
+        <h3>4.1 Regular Monitoring</h3>
+        <p>Compliance with this policy shall be monitored through:</p>
+        <ul>
+            <li><strong>Automated scanning:</strong> Weekly vulnerability and configuration scans</li>
+            <li><strong>Log reviews:</strong> Monthly review of security logs and events</li>
+            <li><strong>Access reviews:</strong> Quarterly review of user access rights</li>
+            <li><strong>Firewall reviews:</strong> Quarterly review of firewall rules</li>
+            <li><strong>Patch compliance:</strong> Monthly patch compliance reporting</li>
+        </ul>
+
+        <h3>4.2 Cyber Essentials Assessment</h3>
+        <p>The Company shall:</p>
+        <ul>
+            <li>Complete a Cyber Essentials self-assessment annually (minimum)</li>
+            <li>Pursue Cyber Essentials certification through an accredited certification body</li>
+            <li>Maintain certification through annual re-assessment</li>
+            <li>Consider Cyber Essentials Plus certification for enhanced assurance</li>
+        </ul>
+
+        <h3>4.3 Internal Audits</h3>
+        <p>IT security controls shall be subject to internal audit at least annually to verify:</p>
+        <ul>
+            <li>Firewall configurations are appropriate and documented</li>
+            <li>Secure configuration baselines are applied</li>
+            <li>Access controls are properly implemented</li>
+            <li>Anti-malware is deployed and updated</li>
+            <li>Security patches are applied within required timescales</li>
+        </ul>
+
+        <h3>4.4 Reporting</h3>
+        <p>The IT Director shall provide quarterly reports to senior management including:</p>
+        <ul>
+            <li>Status of Cyber Essentials controls</li>
+            <li>Patch compliance metrics</li>
+            <li>Security incidents and trends</li>
+            <li>Risk issues and remediation plans</li>
+            <li>Changes to the IT environment affecting Cyber Essentials scope</li>
+        </ul>
+
+        <h2>5. Scope Definition and Boundary</h2>
+
+        <h3>5.1 In-Scope Systems</h3>
+        <p>The following systems and devices are within the scope of Cyber Essentials controls:</p>
+        <ul>
+            <li>All desktop computers and laptops</li>
+            <li>All servers (physical and virtual)</li>
+            <li>All mobile devices accessing Company data</li>
+            <li>All network devices (routers, switches, firewalls, wireless access points)</li>
+            <li>Cloud services and platforms where the Company has configuration control</li>
+            <li>Any device connected to the Company network</li>
+        </ul>
+
+        <h3>5.2 Excluded Systems</h3>
+        <p>The following may be excluded from scope (subject to certification body approval):</p>
+        <ul>
+            <li>Systems with no internet connectivity or network access</li>
+            <li>Systems scheduled for decommissioning within 3 months</li>
+            <li>Fully managed cloud services where the Company has no configuration control (e.g., SaaS applications)</li>
+        </ul>
+
+        <h3>5.3 Bring Your Own Device (BYOD)</h3>
+        <p>Personal devices used to access Company systems must meet the same security requirements as Company-owned devices, including:</p>
+        <ul>
+            <li>Device encryption</li>
+            <li>Security updates applied</li>
+            <li>Anti-malware where applicable</li>
+            <li>Screen lock with password/PIN</li>
+            <li>Remote wipe capability</li>
+        </ul>
+
+        <h2>6. Training and Awareness</h2>
+
+        <h3>6.1 Mandatory Training</h3>
+        <p>All employees and contractors must complete:</p>
+        <ul>
+            <li>Cyber security awareness training during onboarding</li>
+            <li>Annual refresher training</li>
+            <li>Targeted training when this policy is updated</li>
+        </ul>
+
+        <h3>6.2 Training Content</h3>
+        <p>Training shall cover:</p>
+        <ul>
+            <li>Password security and MFA</li>
+            <li>Malware threats (phishing, ransomware, etc.)</li>
+            <li>Secure use of devices and networks</li>
+            <li>Incident reporting procedures</li>
+            <li>Social engineering awareness</li>
+            <li>Data protection and privacy</li>
+        </ul>
+
+        <h3>6.3 Specialized Training</h3>
+        <p>Technical staff with security responsibilities shall receive additional training on:</p>
+        <ul>
+            <li>Secure system configuration</li>
+            <li>Patch management</li>
+            <li>Firewall administration</li>
+            <li>Incident response</li>
+            <li>Cyber Essentials requirements and controls</li>
+        </ul>
+
+        <h2>7. Incident Management</h2>
+
+        <h3>7.1 Security Incidents</h3>
+        <p>All security incidents that may affect Cyber Essentials controls must be:</p>
+        <ul>
+            <li>Reported to the IT Director immediately</li>
+            <li>Investigated to determine root cause</li>
+            <li>Remediated to prevent recurrence</li>
+            <li>Documented with lessons learned</li>
+        </ul>
+
+        <h3>7.2 Control Failures</h3>
+        <p>If any Cyber Essentials control fails or cannot be maintained:</p>
+        <ul>
+            <li>The IT Director must be notified immediately</li>
+            <li>Compensating controls must be implemented if possible</li>
+            <li>A remediation plan must be created with timescales</li>
+            <li>Senior management must be informed of the risk</li>
+            <li>The certification body must be notified if certification is affected</li>
+        </ul>
+
+        <h2>8. Exceptions and Deviations</h2>
+
+        <h3>8.1 Exception Process</h3>
+        <p>Exceptions to this policy must be:</p>
+        <ul>
+            <li>Documented in writing with business justification</li>
+            <li>Include a risk assessment</li>
+            <li>Specify compensating controls (if any)</li>
+            <li>Approved by the IT Director and a member of senior management</li>
+            <li>Reviewed quarterly</li>
+        </ul>
+
+        <h3>8.2 Impact on Certification</h3>
+        <p>The IT Director shall assess whether any exception would prevent Cyber Essentials certification. Exceptions that would affect certification require approval from the Managing Director and may only be granted in exceptional circumstances.</p>
+
+        <h2>9. Policy Review and Maintenance</h2>
+
+        <h3>9.1 Review Schedule</h3>
+        <p>This policy shall be reviewed:</p>
+        <ul>
+            <li>Annually as a minimum</li>
+            <li>When the Cyber Essentials scheme requirements change</li>
+            <li>Following significant security incidents</li>
+            <li>When the Company's IT environment changes significantly</li>
+        </ul>
+
+        <h3>9.2 Update Process</h3>
+        <p>Policy updates must be:</p>
+        <ul>
+            <li>Approved by the IT Director and senior management</li>
+            <li>Communicated to all affected staff</li>
+            <li>Supported by updated training if required</li>
+            <li>Version controlled with change history maintained</li>
+        </ul>
+
+        <h3>9.3 Related Documents</h3>
+        <p>This policy should be read in conjunction with:</p>
+        <ul>
+            <li>Access Control Policy</li>
+            <li>Secure Configuration Policy</li>
+            <li>Patch Management Policy</li>
+            <li>IT Governance Policy</li>
+            <li>Data Protection Policy</li>
+            <li>Incident Response Plan</li>
+            <li>Business Continuity Plan</li>
+        </ul>
+
+        <h2>10. References</h2>
+
+        <h3>10.1 External Standards</h3>
+        <ul>
+            <li><strong>Cyber Essentials Scheme:</strong> NCSC Cyber Essentials Requirements for IT Infrastructure v3.1 (or latest version)</li>
+            <li><strong>NCSC Guidance:</strong> <a href="https://www.ncsc.gov.uk/cyberessentials" target="_blank">https://www.ncsc.gov.uk/cyberessentials</a></li>
+            <li><strong>Cyber Essentials Certification Bodies:</strong> Accredited by IASME Consortium</li>
+        </ul>
+
+        <h3>10.2 Additional Resources</h3>
+        <ul>
+            <li>NCSC 10 Steps to Cyber Security</li>
+            <li>CIS Critical Security Controls</li>
+            <li>ISO/IEC 27001 Information Security Management</li>
+        </ul>
+
+        <div class="critical">
+            <h3>Important Notice</h3>
+            <p><strong>Non-compliance with this policy may:</strong></p>
+            <ul>
+                <li>Result in loss of Cyber Essentials certification</li>
+                <li>Prevent the Company from bidding for UK Government contracts</li>
+                <li>Expose the Company to cyber attacks and data breaches</li>
+                <li>Lead to disciplinary action for employees who breach requirements</li>
+                <li>Result in regulatory fines and legal liability</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Contact Information</h3>
+            <p><strong>Policy Owner:</strong> IT Director<br>
+            <strong>Email:</strong> <a href="mailto:it.director@talltree.tech">it.director@talltree.tech</a></p>
+
+            <p><strong>Security Incidents:</strong> <a href="mailto:security@talltree.tech">security@talltree.tech</a><br>
+            <strong>IT Support:</strong> <a href="mailto:support@talltree.tech">support@talltree.tech</a></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Software Systems Limited, trading as TallTree Technologies. All rights reserved.</p>
+            <p>Registered in England and Wales. Company No. 14466340.</p>
+            <p><strong>Document Classification:</strong> Internal Use Only</p>
+        </footer>
+    </div>
+</body>
+</html>

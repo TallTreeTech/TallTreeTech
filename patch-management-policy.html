@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch Management Policy - TallTree Technologies</title>
+    <link rel="stylesheet" href="css/talltree-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patch Management Policy</h1>
+
+        <div class="intro">
+            <p><strong>Document Owner:</strong> IT Director</p>
+            <p><strong>Effective Date:</strong> November 14, 2025</p>
+            <p><strong>Review Date:</strong> November 14, 2026</p>
+            <p><strong>Version:</strong> 1.0</p>
+        </div>
+
+        <h2>1. Purpose and Scope</h2>
+
+        <h3>1.1 Purpose</h3>
+        <p>This policy establishes requirements and procedures for managing security updates and patches across all IT systems. Timely patching is essential to protect against known vulnerabilities and is a core requirement of the UK Cyber Essentials scheme. This policy ensures that security updates are identified, assessed, tested, and deployed systematically.</p>
+
+        <h3>1.2 Scope</h3>
+        <p>This policy applies to security updates and patches for:</p>
+        <ul>
+            <li>Operating systems (Windows, macOS, Linux, mobile operating systems)</li>
+            <li>Applications and software (browsers, office applications, PDF readers, etc.)</li>
+            <li>Server software (web servers, database servers, mail servers)</li>
+            <li>Network devices (firewalls, routers, switches, wireless access points)</li>
+            <li>Firmware (BIOS/UEFI, device firmware)</li>
+            <li>Security software (anti-malware, endpoint protection)</li>
+            <li>Cloud services where the Company manages updates</li>
+            <li>Development frameworks and libraries used in Company applications</li>
+        </ul>
+
+        <h3>1.3 Policy Statement</h3>
+        <p>The Company shall maintain a systematic patch management program to ensure that security updates are applied promptly to all systems. Patches addressing critical and high-severity vulnerabilities shall be prioritized and deployed according to defined timescales. All systems within scope must be kept up to date with security patches.</p>
+
+        <h2>2. Patch Management Framework</h2>
+
+        <h3>2.1 Patch Management Lifecycle</h3>
+
+        <div class="timeline-item">
+            <strong>1. Identification</strong>
+            <p>Monitor vendor security bulletins, advisories, and automated tools to identify available patches.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>2. Assessment</strong>
+            <p>Evaluate patch severity, applicability, and potential impact on systems.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>3. Acquisition</strong>
+            <p>Obtain patches from official vendor sources or trusted repositories.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>4. Testing</strong>
+            <p>Test patches in non-production environment to identify potential issues.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>5. Approval</strong>
+            <p>Approve patches for deployment based on testing results and risk assessment.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>6. Deployment</strong>
+            <p>Deploy patches to production systems according to priority and schedule.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>7. Verification</strong>
+            <p>Verify successful installation and system functionality after patching.</p>
+        </div>
+
+        <div class="timeline-item">
+            <strong>8. Documentation</strong>
+            <p>Document patch deployment, issues encountered, and current patch status.</p>
+        </div>
+
+        <h3>2.2 Patch Management Principles</h3>
+
+        <div class="card">
+            <div class="card-header">Risk-Based Prioritization</div>
+            <p>Patches shall be prioritized based on vulnerability severity, exploitability, and asset criticality. Critical vulnerabilities affecting internet-facing systems receive highest priority.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Timely Deployment</div>
+            <p>Security patches must be deployed within defined timescales based on severity. Delays increase risk of exploitation.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Testing Before Production</div>
+            <p>Patches should be tested before production deployment where practical. Balance testing thoroughness with urgency of patching.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Comprehensive Coverage</div>
+            <p>All systems, applications, and devices must be included in patch management. No systems should be overlooked.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Automated Where Possible</div>
+            <p>Automation should be used to improve timeliness and consistency of patching while maintaining appropriate controls.</p>
+        </div>
+
+        <h2>3. Patch Deployment Timescales</h2>
+
+        <h3>3.1 Cyber Essentials Requirements</h3>
+        <p>To maintain Cyber Essentials compliance, security updates must be applied according to the following timescales:</p>
+
+        <table>
+            <tr>
+                <th>Severity Level</th>
+                <th>Description</th>
+                <th>Maximum Deployment Time</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td><span class="status priority-high">Critical</span></td>
+                <td>Severe vulnerabilities with active exploitation or high likelihood of exploitation. Could allow complete system compromise.</td>
+                <td><strong>14 days</strong> from release</td>
+                <td>Remote code execution, privilege escalation, actively exploited zero-days</td>
+            </tr>
+            <tr>
+                <td><span class="status priority-high">High</span></td>
+                <td>Significant security vulnerabilities that could lead to system compromise but may require specific conditions.</td>
+                <td><strong>30 days</strong> from release</td>
+                <td>Authentication bypass, information disclosure of sensitive data, DoS vulnerabilities</td>
+            </tr>
+            <tr>
+                <td><span class="status priority-medium">Medium</span></td>
+                <td>Moderate security issues with limited impact or requiring significant attacker access.</td>
+                <td><strong>90 days</strong> from release</td>
+                <td>Cross-site scripting, limited information disclosure, local privilege escalation</td>
+            </tr>
+            <tr>
+                <td><span class="status priority-low">Low</span></td>
+                <td>Minor security issues or feature updates with security improvements.</td>
+                <td><strong>As practical</strong> (within 180 days recommended)</td>
+                <td>Hardening improvements, security feature additions, minor fixes</td>
+            </tr>
+        </table>
+
+        <h3>3.2 Accelerated Patching</h3>
+        <p>The following situations require accelerated patching (target 48-72 hours):</p>
+        <ul>
+            <li>Vulnerabilities with active exploitation in the wild</li>
+            <li>Zero-day vulnerabilities affecting the Company's systems</li>
+            <li>Vulnerabilities affecting internet-facing systems</li>
+            <li>Vulnerabilities for which exploit code is publicly available</li>
+            <li>Worm-able vulnerabilities (e.g., WannaCry, NotPetya scenarios)</li>
+        </ul>
+
+        <h3>3.3 Automatic Updates</h3>
+        <p>Automatic updates shall be enabled for:</p>
+        <ul>
+            <li><strong>Workstations:</strong> Windows Update, macOS Software Update (for security updates)</li>
+            <li><strong>Browsers:</strong> Automatic updates enabled for Chrome, Edge, Firefox</li>
+            <li><strong>Anti-malware:</strong> Automatic definition and engine updates</li>
+            <li><strong>Mobile devices:</strong> Automatic security updates enabled where available</li>
+            <li><strong>SaaS applications:</strong> Vendor-managed updates (no action required from Company)</li>
+        </ul>
+
+        <h3>3.4 Controlled Updates</h3>
+        <p>The following require controlled deployment (not automatic):</p>
+        <ul>
+            <li>Server operating system updates</li>
+            <li>Database patches</li>
+            <li>Network device firmware</li>
+            <li>Application server patches</li>
+            <li>Business-critical application updates</li>
+        </ul>
+
+        <h2>4. Patch Management Process</h2>
+
+        <h3>4.1 Patch Identification and Monitoring</h3>
+
+        <h4>4.1.1 Information Sources</h4>
+        <p>The IT team shall monitor the following sources for security updates:</p>
+        <ul>
+            <li><strong>Microsoft:</strong> Windows Update, WSUS, Microsoft Security Response Center</li>
+            <li><strong>Apple:</strong> macOS and iOS security updates page</li>
+            <li><strong>Linux:</strong> Distribution security mailing lists and update repositories</li>
+            <li><strong>Application vendors:</strong> Security bulletins and update notifications</li>
+            <li><strong>Security advisories:</strong> NCSC alerts, US-CERT, vendor-specific advisories</li>
+            <li><strong>Vulnerability databases:</strong> CVE, NVD (National Vulnerability Database)</li>
+            <li><strong>Automated tools:</strong> Patch management systems, vulnerability scanners</li>
+        </ul>
+
+        <h4>4.1.2 Automated Scanning</h4>
+        <ul>
+            <li>Vulnerability scanning tools deployed to identify missing patches</li>
+            <li>Scans performed weekly (minimum) on all managed systems</li>
+            <li>Results reviewed and prioritized by IT team</li>
+            <li>Critical findings trigger immediate action</li>
+        </ul>
+
+        <h3>4.2 Patch Assessment</h3>
+
+        <h4>4.2.1 Severity Rating</h4>
+        <p>Patches shall be rated based on:</p>
+        <ul>
+            <li><strong>Vendor severity rating:</strong> Critical, Important/High, Moderate/Medium, Low</li>
+            <li><strong>CVSS score:</strong> Common Vulnerability Scoring System score (0-10)</li>
+            <li><strong>Exploitability:</strong> Is exploit code available? Is it being exploited?</li>
+            <li><strong>Attack vector:</strong> Network accessible, adjacent network, local, or physical</li>
+        </ul>
+
+        <h4>4.2.2 Applicability Assessment</h4>
+        <p>For each patch, determine:</p>
+        <ul>
+            <li>Which Company systems are affected</li>
+            <li>Number of systems requiring the patch</li>
+            <li>Criticality of affected systems</li>
+            <li>Current exposure (internet-facing, internal, isolated)</li>
+        </ul>
+
+        <h4>4.2.3 Impact Assessment</h4>
+        <p>Evaluate potential impact of patch deployment:</p>
+        <ul>
+            <li>Required system restart or service interruption</li>
+            <li>Known compatibility issues</li>
+            <li>Application dependencies</li>
+            <li>Potential performance impact</li>
+            <li>Testing requirements</li>
+        </ul>
+
+        <h3>4.3 Patch Testing</h3>
+
+        <h4>4.3.1 Test Environment</h4>
+        <p>The Company shall maintain test environments that mirror production for:</p>
+        <ul>
+            <li>Critical servers and applications</li>
+            <li>Standard desktop/laptop configurations</li>
+            <li>Network infrastructure (where practical)</li>
+        </ul>
+
+        <h4>4.3.2 Testing Procedures</h4>
+
+        <table class="simple">
+            <tr>
+                <th>Patch Severity</th>
+                <th>Testing Requirements</th>
+                <th>Testing Duration</th>
+            </tr>
+            <tr>
+                <td>Critical (exploited in wild)</td>
+                <td>Minimal testing - basic functionality only</td>
+                <td>1-2 hours</td>
+            </tr>
+            <tr>
+                <td>Critical (not yet exploited)</td>
+                <td>Basic functionality and application compatibility</td>
+                <td>1-2 days</td>
+            </tr>
+            <tr>
+                <td>High</td>
+                <td>Functionality, compatibility, and limited performance testing</td>
+                <td>3-5 days</td>
+            </tr>
+            <tr>
+                <td>Medium/Low</td>
+                <td>Comprehensive testing including edge cases</td>
+                <td>1-2 weeks</td>
+            </tr>
+        </table>
+
+        <h4>4.3.3 Testing Activities</h4>
+        <ul>
+            <li><strong>Installation testing:</strong> Verify patch installs without errors</li>
+            <li><strong>Functionality testing:</strong> Confirm system and applications work as expected</li>
+            <li><strong>Compatibility testing:</strong> Test integration with other systems and applications</li>
+            <li><strong>Performance testing:</strong> Verify no significant performance degradation</li>
+            <li><strong>Rollback testing:</strong> Confirm ability to uninstall/rollback if needed</li>
+        </ul>
+
+        <h4>4.3.4 Testing Exceptions</h4>
+        <p>Limited or no testing may be performed when:</p>
+        <ul>
+            <li>Patch addresses actively exploited vulnerability</li>
+            <li>Test environment not available (automatic client updates)</li>
+            <li>Vendor recommends immediate deployment</li>
+            <li>Compensating controls insufficient to mitigate risk</li>
+        </ul>
+        <p>In these cases, closely monitor production deployment and be prepared for rapid rollback.</p>
+
+        <h3>4.4 Patch Approval</h3>
+
+        <h4>4.4.1 Approval Authority</h4>
+
+        <table>
+            <tr>
+                <th>Patch Scope</th>
+                <th>Approval Required</th>
+            </tr>
+            <tr>
+                <td>Automatic client updates (workstations, browsers)</td>
+                <td>Pre-approved (policy sets framework)</td>
+            </tr>
+            <tr>
+                <td>Server patches (routine, tested)</td>
+                <td>IT Director or delegate</td>
+            </tr>
+            <tr>
+                <td>Emergency patches</td>
+                <td>IT Director (with retrospective executive notification)</td>
+            </tr>
+            <tr>
+                <td>Patches affecting critical business systems</td>
+                <td>IT Director + Business System Owner</td>
+            </tr>
+            <tr>
+                <td>Patches requiring significant downtime</td>
+                <td>IT Director + Executive Management</td>
+            </tr>
+        </table>
+
+        <h4>4.4.2 Approval Criteria</h4>
+        <p>Patches approved for deployment when:</p>
+        <ul>
+            <li>Testing completed successfully (or testing exception applies)</li>
+            <li>No critical issues identified</li>
+            <li>Deployment plan prepared</li>
+            <li>Rollback procedures documented</li>
+            <li>Business impact assessed and acceptable</li>
+            <li>Change management requirements met</li>
+        </ul>
+
+        <h3>4.5 Patch Deployment</h3>
+
+        <h4>4.5.1 Deployment Methods</h4>
+
+        <table class="simple">
+            <tr>
+                <th>System Type</th>
+                <th>Deployment Method</th>
+            </tr>
+            <tr>
+                <td>Windows Workstations</td>
+                <td>WSUS, Microsoft Endpoint Manager, or Windows Update</td>
+            </tr>
+            <tr>
+                <td>macOS Workstations</td>
+                <td>Apple Software Update, MDM, or Jamf</td>
+            </tr>
+            <tr>
+                <td>Linux Systems</td>
+                <td>Package manager (apt, yum, dnf), Ansible, or manual</td>
+            </tr>
+            <tr>
+                <td>Windows Servers</td>
+                <td>WSUS, manual deployment during maintenance windows</td>
+            </tr>
+            <tr>
+                <td>Network Devices</td>
+                <td>Manual deployment following vendor procedures</td>
+            </tr>
+            <tr>
+                <td>Cloud Services</td>
+                <td>Vendor-managed or infrastructure-as-code tools</td>
+            </tr>
+        </table>
+
+        <h4>4.5.2 Deployment Staging</h4>
+        <p>Patches shall be deployed in stages to minimize risk:</p>
+        <ol>
+            <li><strong>Pilot group:</strong> Small number of representative systems (5-10% of population)</li>
+            <li><strong>Monitor:</strong> Verify successful deployment and no issues (24-48 hours)</li>
+            <li><strong>Phased rollout:</strong> Deploy to larger groups progressively</li>
+            <li><strong>Complete deployment:</strong> Deploy to remaining systems</li>
+        </ol>
+
+        <p><strong>Exception:</strong> Critical patches for actively exploited vulnerabilities may skip staging for rapid deployment.</p>
+
+        <h4>4.5.3 Deployment Timing</h4>
+        <ul>
+            <li><strong>Workstations:</strong> During off-hours or allow user-initiated restarts</li>
+            <li><strong>Non-critical servers:</strong> During standard maintenance windows (e.g., weekends)</li>
+            <li><strong>Critical servers:</strong> During planned maintenance windows with business approval</li>
+            <li><strong>Network devices:</strong> During scheduled maintenance windows with redundancy in place</li>
+        </ul>
+
+        <h4>4.5.4 Deployment Communication</h4>
+        <p>Users and stakeholders shall be notified:</p>
+        <ul>
+            <li>48-72 hours advance notice for planned maintenance</li>
+            <li>Notification of required system restarts</li>
+            <li>Expected downtime and service availability</li>
+            <li>Contact information for issues</li>
+            <li>Emergency patches may have shorter notice periods</li>
+        </ul>
+
+        <h3>4.6 Verification and Reporting</h3>
+
+        <h4>4.6.1 Post-Deployment Verification</h4>
+        <p>After patch deployment, verify:</p>
+        <ul>
+            <li>Patch installed successfully on target systems</li>
+            <li>Systems rebooted if required</li>
+            <li>Applications and services functioning normally</li>
+            <li>No unexpected issues or errors</li>
+            <li>Users able to work without problems</li>
+        </ul>
+
+        <h4>4.6.2 Failed Deployments</h4>
+        <p>When patch deployment fails:</p>
+        <ul>
+            <li>Document the failure and error messages</li>
+            <li>Investigate root cause</li>
+            <li>Implement remediation (fix issue, alternative patch, compensating controls)</li>
+            <li>Retry deployment after resolution</li>
+            <li>Escalate if unable to resolve</li>
+        </ul>
+
+        <h4>4.6.3 Rollback Procedures</h4>
+        <p>If patch causes issues in production:</p>
+        <ul>
+            <li>Assess severity of issue vs. security risk of unpatching</li>
+            <li>Uninstall patch using tested rollback procedure if needed</li>
+            <li>Implement compensating controls (firewall rules, access restrictions)</li>
+            <li>Investigate issue and test alternative approaches</li>
+            <li>Report issue to vendor if appropriate</li>
+        </ul>
+
+        <h2>5. Emergency Patching</h2>
+
+        <h3>5.1 Emergency Patch Criteria</h3>
+        <p>Emergency patching procedures activated when:</p>
+        <ul>
+            <li>Critical vulnerability actively being exploited</li>
+            <li>Worm-able vulnerability affecting Company systems</li>
+            <li>Zero-day vulnerability with available patch</li>
+            <li>Vendor issues emergency security update with urgent recommendation</li>
+            <li>Company systems compromised due to unpatched vulnerability</li>
+        </ul>
+
+        <h3>5.2 Emergency Patching Process</h3>
+        <ol>
+            <li><strong>Notification:</strong> IT Director notified immediately of emergency situation</li>
+            <li><strong>Assessment:</strong> Rapid assessment of impact and affected systems (1-2 hours)</li>
+            <li><strong>Decision:</strong> IT Director decides on emergency patching approach</li>
+            <li><strong>Preparation:</strong> Obtain patches, prepare deployment, document rollback</li>
+            <li><strong>Testing:</strong> Minimal testing (1-2 hours) - basic functionality only</li>
+            <li><strong>Approval:</strong> IT Director approval (verbal acceptable, document later)</li>
+            <li><strong>Deployment:</strong> Deploy to all affected systems as quickly as possible</li>
+            <li><strong>Monitoring:</strong> Intensive monitoring during and after deployment</li>
+            <li><strong>Communication:</strong> Update executive management and affected users</li>
+            <li><strong>Documentation:</strong> Document actions taken and lessons learned</li>
+        </ol>
+
+        <h3>5.3 Emergency Response Time</h3>
+        <p>Target emergency patch deployment timescales:</p>
+        <ul>
+            <li><strong>Internet-facing systems:</strong> 24-48 hours from patch availability</li>
+            <li><strong>Internal systems:</strong> 48-72 hours from patch availability</li>
+            <li><strong>Isolated systems:</strong> 72 hours or implement isolation/compensating controls</li>
+        </ul>
+
+        <h2>6. Patch Inventory Management</h2>
+
+        <h3>6.1 Asset Inventory</h3>
+        <p>The Company shall maintain an inventory of all assets requiring patching:</p>
+        <ul>
+            <li>Hardware devices and their operating systems</li>
+            <li>Installed applications and versions</li>
+            <li>Network devices and firmware versions</li>
+            <li>Cloud services and subscription levels</li>
+            <li>Asset owners and criticality ratings</li>
+        </ul>
+
+        <h3>6.2 Patch Status Tracking</h3>
+        <p>For each system, track:</p>
+        <ul>
+            <li>Current patch level/version</li>
+            <li>Missing patches (categorized by severity)</li>
+            <li>Last patch date</li>
+            <li>Scheduled patch maintenance</li>
+            <li>Exceptions and compensating controls</li>
+        </ul>
+
+        <h3>6.3 Software Lifecycle Management</h3>
+
+        <h4>6.3.1 Unsupported Software</h4>
+        <p>Software that no longer receives security updates <strong>must not be used</strong> (Cyber Essentials requirement):</p>
+        <ul>
+            <li>Operating systems beyond end-of-support (e.g., Windows 7, Windows Server 2008)</li>
+            <li>Applications no longer supported by vendor</li>
+            <li>Outdated software versions multiple generations behind current</li>
+        </ul>
+
+        <h4>6.3.2 End-of-Life Planning</h4>
+        <p>For software approaching end-of-support:</p>
+        <ul>
+            <li>Identify affected systems 12 months before EOL</li>
+            <li>Create migration plan with timeline and budget</li>
+            <li>Test replacement software/systems</li>
+            <li>Migrate before support ends</li>
+            <li>If migration delayed, isolate unsupported systems from network</li>
+        </ul>
+
+        <h2>7. Patch Management Metrics and Reporting</h2>
+
+        <h3>7.1 Key Performance Indicators</h3>
+
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Target</th>
+                <th>Reporting Frequency</th>
+            </tr>
+            <tr>
+                <td>Critical patches deployed within 14 days</td>
+                <td>100%</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>High severity patches deployed within 30 days</td>
+                <td>≥95%</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>All systems current on patches</td>
+                <td>≥90%</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>Time to deploy emergency patches</td>
+                <td>≤48 hours</td>
+                <td>Per incident</td>
+            </tr>
+            <tr>
+                <td>Systems with no unsupported software</td>
+                <td>100%</td>
+                <td>Quarterly</td>
+            </tr>
+            <tr>
+                <td>Patching-related system outages</td>
+                <td>≤2 per year</td>
+                <td>Quarterly</td>
+            </tr>
+        </table>
+
+        <h3>7.2 Compliance Reporting</h3>
+        <p>Patch compliance reports shall include:</p>
+        <ul>
+            <li><strong>Executive summary:</strong> Overall compliance status and key metrics</li>
+            <li><strong>Compliance by severity:</strong> Percentage of systems patched for critical/high/medium</li>
+            <li><strong>Overdue patches:</strong> Systems with patches past deployment deadline</li>
+            <li><strong>Exceptions:</strong> Approved exceptions and compensating controls</li>
+            <li><strong>Trends:</strong> Compliance trends over time</li>
+            <li><strong>Issues:</strong> Barriers to patching and remediation plans</li>
+        </ul>
+
+        <h3>7.3 Reporting Schedule</h3>
+        <ul>
+            <li><strong>IT Management:</strong> Weekly patch status dashboard</li>
+            <li><strong>IT Director:</strong> Monthly compliance report</li>
+            <li><strong>Executive Management:</strong> Quarterly summary report</li>
+            <li><strong>Board of Directors:</strong> Annual patch management review</li>
+            <li><strong>Cyber Essentials Assessment:</strong> Patch compliance evidence as required</li>
+        </ul>
+
+        <h2>8. Compensating Controls</h2>
+
+        <h3>8.1 When Patches Cannot Be Deployed</h3>
+        <p>If a security patch cannot be deployed within required timescales due to technical or business constraints, compensating controls must be implemented:</p>
+
+        <h4>8.1.1 Network Isolation</h4>
+        <ul>
+            <li>Isolate vulnerable system from internet and untrusted networks</li>
+            <li>Place on separate VLAN with restricted access</li>
+            <li>Allow only necessary communication through firewall rules</li>
+        </ul>
+
+        <h4>8.1.2 Additional Monitoring</h4>
+        <ul>
+            <li>Enhanced logging and monitoring of vulnerable system</li>
+            <li>Intrusion detection/prevention rules specific to vulnerability</li>
+            <li>More frequent review of security logs</li>
+        </ul>
+
+        <h4>8.1.3 Access Restrictions</h4>
+        <ul>
+            <li>Limit user access to system (only essential personnel)</li>
+            <li>Disable unnecessary services and features</li>
+            <li>Enhanced authentication requirements</li>
+        </ul>
+
+        <h4>8.1.4 Virtual Patching</h4>
+        <ul>
+            <li>Deploy IPS signatures to block exploitation attempts</li>
+            <li>Use web application firewall rules to filter malicious requests</li>
+            <li>Implement endpoint protection rules</li>
+        </ul>
+
+        <h3>8.2 Documentation Requirements</h3>
+        <p>Compensating controls must be documented with:</p>
+        <ul>
+            <li>System identification and vulnerability details</li>
+            <li>Reason patch cannot be deployed</li>
+            <li>Risk assessment</li>
+            <li>Specific compensating controls implemented</li>
+            <li>Timeline for patch deployment</li>
+            <li>Approval from IT Director</li>
+            <li>Regular review schedule (at least monthly)</li>
+        </ul>
+
+        <h2>9. Roles and Responsibilities</h2>
+
+        <h3>9.1 IT Director</h3>
+        <ul>
+            <li>Overall accountability for patch management program</li>
+            <li>Approve patch management procedures and schedules</li>
+            <li>Approve exceptions and compensating controls</li>
+            <li>Allocate resources for patching activities</li>
+            <li>Review patch compliance reports</li>
+            <li>Escalate compliance issues to executive management</li>
+            <li>Authorize emergency patching activities</li>
+        </ul>
+
+        <h3>9.2 System Administrators</h3>
+        <ul>
+            <li>Monitor for available security patches</li>
+            <li>Assess and prioritize patches</li>
+            <li>Test patches in appropriate environments</li>
+            <li>Deploy patches according to schedules and procedures</li>
+            <li>Verify successful patch installation</li>
+            <li>Document patching activities</li>
+            <li>Report compliance status</li>
+            <li>Maintain patch management tools</li>
+        </ul>
+
+        <h3>9.3 Application Owners</h3>
+        <ul>
+            <li>Identify patches affecting their applications</li>
+            <li>Participate in patch testing for their applications</li>
+            <li>Approve patches that may impact business operations</li>
+            <li>Coordinate maintenance windows for critical systems</li>
+            <li>Report application issues after patching</li>
+        </ul>
+
+        <h3>9.4 All Users</h3>
+        <ul>
+            <li>Allow automatic updates on workstations</li>
+            <li>Restart systems when prompted for updates</li>
+            <li>Report issues after patching promptly</li>
+            <li>Comply with maintenance window schedules</li>
+            <li>Keep personal devices used for work up to date</li>
+        </ul>
+
+        <h2>10. Training and Awareness</h2>
+
+        <h3>10.1 Technical Training</h3>
+        <p>IT staff responsible for patching shall receive training on:</p>
+        <ul>
+            <li>Patch management tools and systems</li>
+            <li>Vulnerability assessment and prioritization</li>
+            <li>Testing procedures and rollback</li>
+            <li>Emergency response procedures</li>
+            <li>Vendor-specific patching processes</li>
+        </ul>
+
+        <h3>10.2 User Awareness</h3>
+        <p>All users shall be educated on:</p>
+        <ul>
+            <li>Importance of security updates</li>
+            <li>Not delaying or ignoring update prompts</li>
+            <li>Restarting devices when updates require it</li>
+            <li>Reporting update-related issues</li>
+        </ul>
+
+        <h2>11. Policy Review and Maintenance</h2>
+
+        <h3>11.1 Review Schedule</h3>
+        <p>This policy shall be reviewed:</p>
+        <ul>
+            <li>Annually as a minimum</li>
+            <li>When Cyber Essentials requirements change</li>
+            <li>After significant patching failures or security incidents</li>
+            <li>When new system types are introduced</li>
+            <li>When patching tools or processes change significantly</li>
+        </ul>
+
+        <h3>11.2 Continuous Improvement</h3>
+        <p>The patch management program shall be continuously improved through:</p>
+        <ul>
+            <li>Post-incident reviews of patching-related issues</li>
+            <li>Regular process audits</li>
+            <li>Stakeholder feedback</li>
+            <li>Adoption of improved tools and automation</li>
+            <li>Industry best practice benchmarking</li>
+        </ul>
+
+        <div class="critical">
+            <h3>Important Cyber Essentials Requirement</h3>
+            <p><strong>Unsupported software and operating systems must not be used.</strong> Systems that no longer receive security updates from vendors cannot be certified under Cyber Essentials and present significant security risk.</p>
+            <p>Current examples of unsupported software that must not be used:</p>
+            <ul>
+                <li>Windows 7, Windows 8, Windows Server 2008/2012 (unless Extended Security Updates active)</li>
+                <li>macOS versions more than 2 years old</li>
+                <li>Internet Explorer</li>
+                <li>Any application no longer supported by vendor</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Related Policies</h3>
+            <ul>
+                <li>Cyber Essentials Policy</li>
+                <li>Secure Configuration Policy</li>
+                <li>IT Governance Policy</li>
+                <li>Change Management Policy</li>
+                <li>Incident Response Plan</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Contact Information</h3>
+            <p><strong>Policy Owner:</strong> IT Director<br>
+            <strong>Email:</strong> <a href="mailto:it.director@talltree.tech">it.director@talltree.tech</a></p>
+
+            <p><strong>Patch Management Team:</strong> <a href="mailto:patching@talltree.tech">patching@talltree.tech</a><br>
+            <strong>IT Support:</strong> <a href="mailto:support@talltree.tech">support@talltree.tech</a></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Software Systems Limited, trading as TallTree Technologies. All rights reserved.</p>
+            <p>Registered in England and Wales. Company No. 14466340.</p>
+            <p><strong>Document Classification:</strong> Internal Use Only</p>
+        </footer>
+    </div>
+</body>
+</html>

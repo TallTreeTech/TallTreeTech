@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Configuration Policy - TallTree Technologies</title>
+    <link rel="stylesheet" href="css/talltree-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Secure Configuration Policy</h1>
+
+        <div class="intro">
+            <p><strong>Document Owner:</strong> IT Director</p>
+            <p><strong>Effective Date:</strong> November 14, 2025</p>
+            <p><strong>Review Date:</strong> November 14, 2026</p>
+            <p><strong>Version:</strong> 1.0</p>
+        </div>
+
+        <h2>1. Purpose and Scope</h2>
+
+        <h3>1.1 Purpose</h3>
+        <p>This policy establishes secure configuration standards for all IT systems and devices used by the Company. It ensures that systems are hardened against attack by removing unnecessary functionality, implementing security controls, and following industry best practices. Secure configuration is a fundamental requirement of the UK Cyber Essentials scheme.</p>
+
+        <h3>1.2 Scope</h3>
+        <p>This policy applies to:</p>
+        <ul>
+            <li>All servers (physical, virtual, and cloud-based)</li>
+            <li>All desktop computers and laptops (Company-owned and BYOD)</li>
+            <li>All mobile devices accessing Company data</li>
+            <li>All network devices (routers, switches, firewalls, wireless access points)</li>
+            <li>All operating systems (Windows, macOS, Linux, mobile OS)</li>
+            <li>All applications and software</li>
+            <li>Cloud services and platforms</li>
+            <li>Development, test, and production environments</li>
+        </ul>
+
+        <h3>1.3 Policy Statement</h3>
+        <p>All IT systems and devices shall be configured securely to minimize vulnerabilities and reduce the attack surface. Default configurations must be hardened, unnecessary services disabled, and security settings enabled. Configuration standards shall be documented, implemented consistently, and verified regularly.</p>
+
+        <h2>2. Secure Configuration Principles</h2>
+
+        <h3>2.1 Core Principles</h3>
+
+        <div class="card">
+            <div class="card-header">Minimize Attack Surface</div>
+            <p>Remove or disable all unnecessary software, services, features, and functionality. Only components required for business purposes should be enabled.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Least Functionality</div>
+            <p>Systems shall be configured to provide only the functionality required for their intended purpose. Additional capabilities must be disabled or removed.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Secure by Default</div>
+            <p>Default security settings shall be strengthened. Default passwords must be changed, and secure settings enabled from initial deployment.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Defense in Depth</div>
+            <p>Multiple layers of security controls shall be implemented. No single control should be relied upon exclusively.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Consistent Standards</div>
+            <p>Configuration standards shall be documented and applied consistently across similar systems. Deviations must be documented and approved.</p>
+        </div>
+
+        <h2>3. General Configuration Requirements</h2>
+
+        <h3>3.1 Default Settings</h3>
+        <p>All systems must have default settings hardened before deployment:</p>
+        <ul>
+            <li><strong>Default passwords:</strong> Must be changed immediately (never use in production)</li>
+            <li><strong>Default accounts:</strong> Unnecessary default accounts must be disabled or removed</li>
+            <li><strong>Default services:</strong> Unnecessary default services must be disabled</li>
+            <li><strong>Sample content:</strong> Default sample files, applications, and content must be removed</li>
+            <li><strong>Error messages:</strong> Detailed error messages revealing system information must be disabled</li>
+        </ul>
+
+        <h3>3.2 Unnecessary Software and Services</h3>
+        <p>To reduce attack surface:</p>
+        <ul>
+            <li>Remove software and applications not required for business purposes</li>
+            <li>Disable services that are not needed</li>
+            <li>Remove or disable development tools from production systems</li>
+            <li>Disable remote management services unless specifically required</li>
+            <li>Remove legacy protocols and services (e.g., SMBv1, Telnet, FTP)</li>
+        </ul>
+
+        <h3>3.3 Auto-Run Features</h3>
+        <p>Auto-run and auto-play features <strong>must be disabled</strong> to prevent malware execution:</p>
+        <ul>
+            <li>AutoRun for removable drives disabled on all Windows systems</li>
+            <li>AutoPlay disabled for all media types</li>
+            <li>Automatic execution of macros in documents disabled by default</li>
+            <li>Scripts from untrusted sources blocked</li>
+        </ul>
+
+        <h3>3.4 System Hardening</h3>
+        <p>All systems shall be hardened according to recognized standards:</p>
+        <ul>
+            <li><strong>CIS Benchmarks:</strong> Apply relevant CIS (Center for Internet Security) benchmarks</li>
+            <li><strong>Vendor guidelines:</strong> Follow security hardening guides from vendors (Microsoft, Apple, etc.)</li>
+            <li><strong>NCSC guidance:</strong> Apply NCSC end user device security guidance</li>
+            <li><strong>Industry best practices:</strong> Implement additional hardening appropriate to threat environment</li>
+        </ul>
+
+        <h2>4. Operating System Configuration</h2>
+
+        <h3>4.1 Windows Systems</h3>
+
+        <h4>4.1.1 Security Features</h4>
+        <ul>
+            <li><strong>Windows Defender/Anti-Malware:</strong> Enabled with real-time protection</li>
+            <li><strong>Windows Firewall:</strong> Enabled for all network profiles</li>
+            <li><strong>BitLocker:</strong> Enabled on all laptops and portable devices</li>
+            <li><strong>User Account Control (UAC):</strong> Enabled at appropriate level</li>
+            <li><strong>Windows Update:</strong> Automatic updates enabled or managed centrally</li>
+            <li><strong>Secure Boot:</strong> Enabled where supported</li>
+            <li><strong>Credential Guard:</strong> Enabled on Windows 10/11 Enterprise (where available)</li>
+        </ul>
+
+        <h4>4.1.2 Disabled Features</h4>
+        <ul>
+            <li>SMBv1 protocol disabled</li>
+            <li>PowerShell v2 removed</li>
+            <li>Guest account disabled</li>
+            <li>LAN Manager authentication disabled</li>
+            <li>Remote Registry service disabled</li>
+            <li>Unnecessary scheduled tasks removed</li>
+        </ul>
+
+        <h4>4.1.3 Registry and Policy Settings</h4>
+        <ul>
+            <li>Group Policy settings applied consistently</li>
+            <li>Screen lock timeout enforced (15 minutes maximum)</li>
+            <li>Password complexity and length requirements enforced</li>
+            <li>Remote Desktop limited to authorized users only (with NLA enabled)</li>
+            <li>Windows Script Host configured securely</li>
+        </ul>
+
+        <h3>4.2 macOS Systems</h3>
+
+        <h4>4.2.1 Security Features</h4>
+        <ul>
+            <li><strong>FileVault:</strong> Enabled for full disk encryption</li>
+            <li><strong>Firewall:</strong> Enabled and configured appropriately</li>
+            <li><strong>Gatekeeper:</strong> Enabled (App Store and identified developers only)</li>
+            <li><strong>System Integrity Protection (SIP):</strong> Enabled</li>
+            <li><strong>Automatic Updates:</strong> Enabled for security updates</li>
+            <li><strong>Screen lock:</strong> Enabled with password required</li>
+        </ul>
+
+        <h4>4.2.2 Privacy and Security Settings</h4>
+        <ul>
+            <li>Location Services configured appropriately</li>
+            <li>Analytics and diagnostics data minimized</li>
+            <li>Automatic login disabled</li>
+            <li>Password required on wake from sleep/screensaver</li>
+            <li>Guest account disabled</li>
+        </ul>
+
+        <h3>4.3 Linux Systems</h3>
+
+        <h4>4.3.1 Security Features</h4>
+        <ul>
+            <li><strong>SELinux or AppArmor:</strong> Enabled in enforcing mode</li>
+            <li><strong>Firewall (iptables/firewalld):</strong> Configured with default deny</li>
+            <li><strong>Disk encryption (LUKS):</strong> Enabled on laptops and sensitive servers</li>
+            <li><strong>Automatic updates:</strong> Enabled for security patches</li>
+            <li><strong>SSH:</strong> Key-based authentication, root login disabled</li>
+        </ul>
+
+        <h4>4.3.2 Service Hardening</h4>
+        <ul>
+            <li>Unnecessary services disabled (xinetd, telnet, rsh, etc.)</li>
+            <li>Secure versions of services used (SSH instead of Telnet)</li>
+            <li>Service accounts locked (no interactive login)</li>
+            <li>Kernel parameters hardened (sysctl settings)</li>
+            <li>File permissions restricted appropriately</li>
+        </ul>
+
+        <h3>4.4 Mobile Devices (iOS and Android)</h3>
+
+        <h4>4.4.1 Required Settings</h4>
+        <ul>
+            <li><strong>Screen lock:</strong> PIN/password/biometric required (6+ digits)</li>
+            <li><strong>Encryption:</strong> Device encryption enabled</li>
+            <li><strong>Auto-lock timeout:</strong> Maximum 5 minutes</li>
+            <li><strong>OS updates:</strong> Kept up to date</li>
+            <li><strong>App sources:</strong> Only official app stores (no sideloading)</li>
+            <li><strong>Find My Device:</strong> Enabled for remote wipe capability</li>
+            <li><strong>Bluetooth:</strong> Disabled when not in use</li>
+        </ul>
+
+        <h4>4.4.2 Mobile Device Management (MDM)</h4>
+        <p>Corporate mobile devices must be enrolled in MDM with:</p>
+        <ul>
+            <li>Security policy enforcement</li>
+            <li>App management and distribution</li>
+            <li>Remote wipe capability</li>
+            <li>Device compliance monitoring</li>
+            <li>Encryption verification</li>
+        </ul>
+
+        <h2>5. Application Configuration</h2>
+
+        <h3>5.1 Application Whitelisting</h3>
+        <p>Where technically feasible:</p>
+        <ul>
+            <li>Implement application whitelisting to allow only approved applications</li>
+            <li>On Windows: Use AppLocker or Windows Defender Application Control</li>
+            <li>Block execution from temporary locations and user-writable directories</li>
+            <li>Regularly review and update whitelist</li>
+        </ul>
+
+        <h3>5.2 Web Browser Configuration</h3>
+
+        <h4>5.2.1 Approved Browsers</h4>
+        <p>Approved browsers (kept up to date):</p>
+        <ul>
+            <li>Microsoft Edge (Chromium)</li>
+            <li>Google Chrome</li>
+            <li>Mozilla Firefox</li>
+            <li>Safari (on macOS/iOS only)</li>
+        </ul>
+
+        <h4>5.2.2 Browser Security Settings</h4>
+        <ul>
+            <li><strong>Automatic updates:</strong> Enabled</li>
+            <li><strong>Pop-up blocker:</strong> Enabled</li>
+            <li><strong>Phishing/malware protection:</strong> Enabled (Safe Browsing, SmartScreen)</li>
+            <li><strong>Password manager:</strong> Company-approved password manager only</li>
+            <li><strong>Extensions:</strong> Limited to approved and necessary extensions</li>
+            <li><strong>Cookies:</strong> Third-party cookies blocked or limited</li>
+            <li><strong>Do Not Track:</strong> Enabled</li>
+            <li><strong>HTTPS enforcement:</strong> HTTPS-only mode where available</li>
+        </ul>
+
+        <h4>5.2.3 Restricted Browser Features</h4>
+        <ul>
+            <li>Disable Java plugin (if still present)</li>
+            <li>Adobe Flash blocked or removed</li>
+            <li>ActiveX controls restricted to approved sites only</li>
+            <li>Automatic downloads prevented or restricted</li>
+        </ul>
+
+        <h3>5.3 Microsoft Office Configuration</h3>
+        <ul>
+            <li><strong>Macros:</strong> Disabled by default, prompt for signed macros only</li>
+            <li><strong>Protected View:</strong> Enabled for files from internet and unsafe locations</li>
+            <li><strong>Automatic updates:</strong> Enabled</li>
+            <li><strong>DDE:</strong> Disabled (Dynamic Data Exchange)</li>
+            <li><strong>External content:</strong> Blocked or prompt before loading</li>
+            <li><strong>File blocking:</strong> Block execution of dangerous file types</li>
+        </ul>
+
+        <h3>5.4 Email Client Configuration</h3>
+        <ul>
+            <li>HTML rendering restricted or sanitized</li>
+            <li>Automatic download of images disabled (prompt user)</li>
+            <li>Links and attachments from external sources flagged</li>
+            <li>Dangerous attachment types blocked (.exe, .scr, .vbs, etc.)</li>
+            <li>Encryption available and encouraged (S/MIME, PGP)</li>
+            <li>Junk/spam filtering enabled</li>
+        </ul>
+
+        <h3>5.5 PDF Reader Configuration</h3>
+        <ul>
+            <li>JavaScript in PDFs disabled</li>
+            <li>Protected mode/sandbox enabled</li>
+            <li>Automatic updates enabled</li>
+            <li>Opening non-PDF attachments from PDFs blocked</li>
+        </ul>
+
+        <h2>6. Network Device Configuration</h2>
+
+        <h3>6.1 Firewall Configuration</h3>
+
+        <h4>6.1.1 Firewall Rules</h4>
+        <ul>
+            <li><strong>Default deny:</strong> Block all traffic by default, allow only explicitly approved traffic</li>
+            <li><strong>Inbound rules:</strong> Limit inbound connections from internet to minimum required</li>
+            <li><strong>Outbound rules:</strong> Control outbound traffic to prevent data exfiltration</li>
+            <li><strong>Rule documentation:</strong> Each rule documented with business justification</li>
+            <li><strong>Rule review:</strong> Firewall rules reviewed quarterly</li>
+        </ul>
+
+        <h4>6.1.2 Firewall Management</h4>
+        <ul>
+            <li>Management interface access restricted to authorized administrators</li>
+            <li>Strong authentication required (MFA preferred)</li>
+            <li>Management access only from trusted networks (not directly from internet)</li>
+            <li>All configuration changes logged</li>
+            <li>Configuration backups taken before changes</li>
+        </ul>
+
+        <h3>6.2 Router and Switch Configuration</h3>
+        <ul>
+            <li>Default passwords changed immediately</li>
+            <li>Unnecessary services disabled (HTTP, Telnet, SNMP v1/v2)</li>
+            <li>Secure management protocols used (SSH, HTTPS)</li>
+            <li>Network segmentation implemented</li>
+            <li>VLAN configuration documented</li>
+            <li>MAC address filtering where appropriate</li>
+            <li>Port security enabled</li>
+        </ul>
+
+        <h3>6.3 Wireless Network Configuration</h3>
+
+        <h4>6.3.1 Corporate Wi-Fi</h4>
+        <ul>
+            <li><strong>Encryption:</strong> WPA3 or WPA2-Enterprise (no WPA or WEP)</li>
+            <li><strong>Authentication:</strong> 802.1X with RADIUS for corporate network</li>
+            <li><strong>SSID:</strong> Non-revealing name (don't identify company)</li>
+            <li><strong>SSID broadcast:</strong> Enabled (hiding provides false security)</li>
+            <li><strong>Isolation:</strong> Client isolation enabled where appropriate</li>
+            <li><strong>Password:</strong> Strong pre-shared key (if using WPA2-PSK)</li>
+        </ul>
+
+        <h4>6.3.2 Guest Wi-Fi</h4>
+        <ul>
+            <li>Separate SSID and VLAN from corporate network</li>
+            <li>No access to internal corporate resources</li>
+            <li>Captive portal for terms acceptance</li>
+            <li>Time-limited access or rotating password</li>
+            <li>Web filtering and content restrictions</li>
+        </ul>
+
+        <h3>6.4 VPN Configuration</h3>
+        <ul>
+            <li>Strong encryption protocols (IKEv2, OpenVPN, WireGuard)</li>
+            <li>No weak encryption (PPTP prohibited)</li>
+            <li>Certificate-based authentication preferred</li>
+            <li>Multi-factor authentication required</li>
+            <li>Split tunneling disabled (all traffic through VPN)</li>
+            <li>Kill switch enabled to prevent data leaks</li>
+        </ul>
+
+        <h2>7. Server Configuration</h2>
+
+        <h3>7.1 General Server Requirements</h3>
+        <ul>
+            <li>Server role-specific builds (dedicated purpose per server)</li>
+            <li>Minimal software installation (only required packages)</li>
+            <li>Unnecessary user accounts removed</li>
+            <li>Service accounts properly configured (no interactive login)</li>
+            <li>Logging enabled and centralized</li>
+            <li>Time synchronization configured (NTP)</li>
+        </ul>
+
+        <h3>7.2 Web Server Configuration</h3>
+        <ul>
+            <li><strong>TLS/SSL:</strong> TLS 1.2 minimum, TLS 1.3 preferred</li>
+            <li><strong>Certificates:</strong> Valid certificates from trusted CA</li>
+            <li><strong>HTTP headers:</strong> Security headers configured (HSTS, CSP, X-Frame-Options)</li>
+            <li><strong>Directory listing:</strong> Disabled</li>
+            <li><strong>Error pages:</strong> Custom error pages (no system information)</li>
+            <li><strong>Server banner:</strong> Minimal information disclosure</li>
+            <li><strong>Unnecessary modules:</strong> Disabled or removed</li>
+        </ul>
+
+        <h3>7.3 Database Server Configuration</h3>
+        <ul>
+            <li>Sample databases and accounts removed</li>
+            <li>Strong authentication required</li>
+            <li>Least privilege for database accounts</li>
+            <li>Network access restricted (firewall rules)</li>
+            <li>Encryption for data at rest and in transit</li>
+            <li>Audit logging enabled for administrative actions</li>
+            <li>Regular backups with tested restore procedures</li>
+        </ul>
+
+        <h3>7.4 File Server Configuration</h3>
+        <ul>
+            <li>Share permissions and NTFS/file permissions both configured</li>
+            <li>Default administrative shares removed or secured</li>
+            <li>Anonymous access disabled</li>
+            <li>Audit logging enabled for sensitive data</li>
+            <li>Quotas configured to prevent resource exhaustion</li>
+        </ul>
+
+        <h2>8. Encryption Requirements</h2>
+
+        <h3>8.1 Data at Rest Encryption</h3>
+        <p><strong>Full disk encryption required for:</strong></p>
+        <ul>
+            <li>All laptops and portable computers</li>
+            <li>All mobile devices</li>
+            <li>Removable media (USB drives, external hard drives)</li>
+            <li>Servers containing sensitive data</li>
+        </ul>
+
+        <p><strong>Encryption methods:</strong></p>
+        <ul>
+            <li><strong>Windows:</strong> BitLocker</li>
+            <li><strong>macOS:</strong> FileVault 2</li>
+            <li><strong>Linux:</strong> LUKS (dm-crypt)</li>
+            <li><strong>Mobile:</strong> Built-in device encryption</li>
+        </ul>
+
+        <h3>8.2 Data in Transit Encryption</h3>
+        <p>Encryption required for:</p>
+        <ul>
+            <li>Web traffic: HTTPS (TLS 1.2 minimum)</li>
+            <li>Email: TLS for SMTP, encrypted connections for IMAP/POP</li>
+            <li>File transfers: SFTP, FTPS, or SCP (not plain FTP)</li>
+            <li>Remote access: VPN with strong encryption</li>
+            <li>Database connections: TLS/SSL enabled</li>
+            <li>API communications: HTTPS only</li>
+        </ul>
+
+        <h3>8.3 Encryption Key Management</h3>
+        <ul>
+            <li>Encryption keys stored securely (not with encrypted data)</li>
+            <li>Key recovery mechanisms documented and tested</li>
+            <li>Keys rotated according to schedule</li>
+            <li>Access to keys restricted to authorized personnel</li>
+        </ul>
+
+        <h2>9. Configuration Baselines and Standards</h2>
+
+        <h3>9.1 Baseline Documentation</h3>
+        <p>Configuration baselines shall be documented for:</p>
+        <ul>
+            <li>Windows 10/11 workstations</li>
+            <li>macOS workstations</li>
+            <li>Windows Server editions</li>
+            <li>Linux servers (by distribution)</li>
+            <li>Mobile devices (iOS and Android)</li>
+            <li>Network devices (firewalls, routers, switches)</li>
+            <li>Cloud service configurations</li>
+        </ul>
+
+        <h3>9.2 Baseline Contents</h3>
+        <p>Each baseline document shall include:</p>
+        <ul>
+            <li>Purpose and scope</li>
+            <li>Security settings and rationale</li>
+            <li>Services and features to enable/disable</li>
+            <li>Software to install/remove</li>
+            <li>Network settings</li>
+            <li>Authentication and access control settings</li>
+            <li>Logging and monitoring configuration</li>
+            <li>Verification procedures</li>
+        </ul>
+
+        <h3>9.3 Configuration Templates</h3>
+        <ul>
+            <li>System images and templates created based on baselines</li>
+            <li>Templates include all security hardening</li>
+            <li>Templates updated quarterly and when baselines change</li>
+            <li>New systems deployed from approved templates</li>
+        </ul>
+
+        <h2>10. Configuration Management</h2>
+
+        <h3>10.1 Configuration Change Control</h3>
+        <p>Configuration changes must follow change management process:</p>
+        <ul>
+            <li>Configuration changes requested and approved</li>
+            <li>Impact on security assessed</li>
+            <li>Changes documented and tracked</li>
+            <li>Rollback procedures prepared</li>
+            <li>Changes tested before production deployment</li>
+        </ul>
+
+        <h3>10.2 Configuration Monitoring</h3>
+        <ul>
+            <li>Automated tools monitor configuration compliance</li>
+            <li>Configuration drift detected and reported</li>
+            <li>Non-compliant systems flagged for remediation</li>
+            <li>Regular configuration audits conducted</li>
+        </ul>
+
+        <h3>10.3 Configuration Backup</h3>
+        <ul>
+            <li>Configuration backed up before changes</li>
+            <li>Configuration documentation maintained</li>
+            <li>Backup configurations tested for restoration</li>
+            <li>Network device configurations backed up automatically</li>
+        </ul>
+
+        <h2>11. Cloud Service Configuration</h2>
+
+        <h3>11.1 Cloud Security Configuration</h3>
+        <p>Cloud services must be configured securely:</p>
+        <ul>
+            <li>Multi-factor authentication enabled for all accounts</li>
+            <li>Least privilege access implemented</li>
+            <li>Strong password policies enforced</li>
+            <li>Audit logging enabled</li>
+            <li>Data encryption enabled (at rest and in transit)</li>
+            <li>Public access disabled unless explicitly required</li>
+            <li>Security monitoring and alerts configured</li>
+        </ul>
+
+        <h3>11.2 Cloud Service Baselines</h3>
+        <p>Configuration baselines maintained for:</p>
+        <ul>
+            <li>Microsoft 365 tenant settings</li>
+            <li>Azure subscriptions and resources</li>
+            <li>AWS accounts and services</li>
+            <li>Google Workspace</li>
+            <li>Other SaaS applications</li>
+        </ul>
+
+        <h2>12. Compliance and Verification</h2>
+
+        <h3>12.1 Configuration Audits</h3>
+
+        <table>
+            <tr>
+                <th>Audit Type</th>
+                <th>Frequency</th>
+                <th>Scope</th>
+            </tr>
+            <tr>
+                <td>Automated Compliance Scanning</td>
+                <td>Weekly</td>
+                <td>All managed devices</td>
+            </tr>
+            <tr>
+                <td>Manual Configuration Review</td>
+                <td>Quarterly</td>
+                <td>Critical servers and network devices</td>
+            </tr>
+            <tr>
+                <td>Comprehensive Security Audit</td>
+                <td>Annually</td>
+                <td>All in-scope systems</td>
+            </tr>
+            <tr>
+                <td>New System Verification</td>
+                <td>Before deployment</td>
+                <td>Each new system</td>
+            </tr>
+        </table>
+
+        <h3>12.2 Non-Compliance Remediation</h3>
+        <p>When non-compliant configurations are identified:</p>
+        <ul>
+            <li>Non-compliance documented with details</li>
+            <li>Risk assessed (likelihood and impact)</li>
+            <li>Remediation plan created with timeline</li>
+            <li>High-risk issues remediated within 7 days</li>
+            <li>Medium-risk issues remediated within 30 days</li>
+            <li>Low-risk issues remediated within 90 days</li>
+            <li>Progress tracked until resolution</li>
+        </ul>
+
+        <h3>12.3 Exceptions and Waivers</h3>
+        <p>Deviations from secure configuration standards:</p>
+        <ul>
+            <li>Must be documented with business justification</li>
+            <li>Require IT Director approval</li>
+            <li>Must include compensating controls</li>
+            <li>Subject to regular review (at least annually)</li>
+            <li>May affect Cyber Essentials certification</li>
+        </ul>
+
+        <h2>13. Roles and Responsibilities</h2>
+
+        <h3>13.1 IT Director</h3>
+        <ul>
+            <li>Overall responsibility for secure configuration policy</li>
+            <li>Approve configuration baselines and standards</li>
+            <li>Approve exceptions and waivers</li>
+            <li>Review configuration audit results</li>
+            <li>Ensure resources for compliance</li>
+        </ul>
+
+        <h3>13.2 System Administrators</h3>
+        <ul>
+            <li>Implement secure configurations on systems</li>
+            <li>Maintain configuration baselines</li>
+            <li>Monitor configuration compliance</li>
+            <li>Remediate non-compliant configurations</li>
+            <li>Document configuration changes</li>
+        </ul>
+
+        <h3>13.3 All Users</h3>
+        <ul>
+            <li>Do not modify security settings without authorization</li>
+            <li>Report configuration issues or concerns</li>
+            <li>Comply with application usage restrictions</li>
+            <li>Do not install unauthorized software</li>
+        </ul>
+
+        <h2>14. Policy Review and Maintenance</h2>
+
+        <p>This policy shall be reviewed:</p>
+        <ul>
+            <li>Annually as a minimum</li>
+            <li>When new system types are introduced</li>
+            <li>When security incidents reveal configuration weaknesses</li>
+            <li>When Cyber Essentials requirements are updated</li>
+            <li>When vendor security guidance changes significantly</li>
+        </ul>
+
+        <div class="info">
+            <h3>Related Policies</h3>
+            <ul>
+                <li>Cyber Essentials Policy</li>
+                <li>Patch Management Policy</li>
+                <li>Access Control Policy</li>
+                <li>Data Protection Policy</li>
+                <li>IT Governance Policy</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Contact Information</h3>
+            <p><strong>Policy Owner:</strong> IT Director<br>
+            <strong>Email:</strong> <a href="mailto:it.director@talltree.tech">it.director@talltree.tech</a></p>
+
+            <p><strong>Configuration Support:</strong> <a href="mailto:support@talltree.tech">support@talltree.tech</a><br>
+            <strong>Security Team:</strong> <a href="mailto:security@talltree.tech">security@talltree.tech</a></p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Software Systems Limited, trading as TallTree Technologies. All rights reserved.</p>
+            <p>Registered in England and Wales. Company No. 14466340.</p>
+            <p><strong>Document Classification:</strong> Internal Use Only</p>
+        </footer>
+    </div>
+</body>
+</html>
