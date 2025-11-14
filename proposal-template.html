@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Services Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .signature-block {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .signature-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .field {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .summary-box {
+            background-color: #e7f3ff;
+            border: 2px solid #0056b3;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .executive-summary {
+            background-color: #f8f9fa;
+            border-left: 4px solid #333;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 1.05em;
+        }
+        .cover-page {
+            text-align: center;
+            padding: 60px 0 40px 0;
+            border-bottom: 3px solid #0056b3;
+            margin-bottom: 40px;
+        }
+        .cover-page h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .cover-page .proposal-info {
+            font-size: 1.1em;
+            color: #666;
+            margin-top: 30px;
+        }
+        .team-member {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .timeline-item {
+            margin: 10px 0;
+            padding: 10px 15px;
+            border-left: 3px solid #0056b3;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <div class="cover-page">
+        <h1>Professional Services Proposal</h1>
+        <p style="font-size: 1.5em; color: #0056b3; margin: 20px 0;">
+            <strong>[Project Title]</strong>
+        </p>
+        <p style="font-size: 1.2em; color: #666;">
+            Prepared for
+        </p>
+        <p style="font-size: 1.3em; margin: 10px 0;">
+            <strong>[Client Company Name]</strong>
+        </p>
+        <div class="proposal-info">
+            <p><strong>Proposal Number:</strong> PROP-[YYYY]-[###]</p>
+            <p><strong>Date:</strong> [Date]</p>
+            <p><strong>Valid Until:</strong> [Date + 30 days]</p>
+        </div>
+        <p style="margin-top: 40px;">
+            <strong>Prepared by:</strong><br>
+            TallTree® Technologies<br>
+            Software Systems Limited<br>
+            7 Bell Yard, London, England, WC2A 2JR
+        </p>
+    </div>
+
+    <div class="info">
+        <strong>Confidential Proposal:</strong> This proposal contains confidential and proprietary information. It is provided solely for the use of [Client Company Name] and may not be disclosed to third parties without the prior written consent of TallTree Technologies.
+    </div>
+
+    <h2>Executive Summary</h2>
+    <div class="executive-summary">
+        <p><strong>[2-3 paragraph executive summary highlighting:]</strong></p>
+        <ul>
+            <li><strong>Client's Challenge:</strong> [Brief description of the problem or opportunity]</li>
+            <li><strong>Our Solution:</strong> [High-level overview of proposed solution]</li>
+            <li><strong>Key Benefits:</strong> [Primary value propositions and outcomes]</li>
+            <li><strong>Investment:</strong> [Total project cost and timeline]</li>
+        </ul>
+
+        <p style="margin-top: 20px;">
+            <em>Example: "[Client Name] seeks to modernize their IoT infrastructure to improve security, scalability, and operational efficiency. TallTree proposes a comprehensive edge computing solution leveraging our expertise in security and IoT systems. This solution will reduce latency by 60%, improve security posture, and enable real-time analytics. The project will be delivered over [X] months with a total investment of £[Amount]."</em>
+        </p>
+    </div>
+
+    <div class="summary-box">
+        <h3 style="margin-top: 0;">Proposal at a Glance</h3>
+        <table style="margin: 10px 0; border: none;">
+            <tr>
+                <th style="width: 40%;">Project Name</th>
+                <td>[Project Name]</td>
+            </tr>
+            <tr>
+                <th>Duration</th>
+                <td>[X] weeks / [Y] months</td>
+            </tr>
+            <tr>
+                <th>Total Investment</th>
+                <td><strong>£[Amount]</strong> (exc. VAT)</td>
+            </tr>
+            <tr>
+                <th>Estimated Start Date</th>
+                <td>[Date]</td>
+            </tr>
+            <tr>
+                <th>Estimated Completion</th>
+                <td>[Date]</td>
+            </tr>
+            <tr>
+                <th>Proposal Valid Until</th>
+                <td>[Date]</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>1. Understanding Your Needs</h2>
+    <h3>1.1 Current Situation</h3>
+    <p>[Describe the client's current state, challenges, and pain points. Demonstrate understanding of their business context.]</p>
+    <p><strong>Example:</strong> <em>"Your organization currently manages [X] IoT devices across [Y] locations using a centralized cloud architecture. This approach has led to challenges including..."</em></p>
+
+    <h3>1.2 Business Objectives</h3>
+    <p>Based on our discussions, we understand your key objectives are:</p>
+    <ul>
+        <li><strong>[Objective 1]:</strong> [Description and business impact]</li>
+        <li><strong>[Objective 2]:</strong> [Description and business impact]</li>
+        <li><strong>[Objective 3]:</strong> [Description and business impact]</li>
+        <li><strong>[Objective 4]:</strong> [Description and business impact]</li>
+    </ul>
+
+    <h3>1.3 Success Criteria</h3>
+    <p>This project will be considered successful when:</p>
+    <ul>
+        <li>[Measurable success criterion 1]</li>
+        <li>[Measurable success criterion 2]</li>
+        <li>[Measurable success criterion 3]</li>
+        <li>[Measurable success criterion 4]</li>
+    </ul>
+
+    <h3>1.4 Constraints and Considerations</h3>
+    <ul>
+        <li><strong>Timeline:</strong> [Any deadline or time constraints]</li>
+        <li><strong>Budget:</strong> [Budget parameters if discussed]</li>
+        <li><strong>Technical:</strong> [Integration requirements, technology constraints]</li>
+        <li><strong>Regulatory:</strong> [Compliance requirements, industry standards]</li>
+        <li><strong>Organizational:</strong> [Change management, team availability]</li>
+    </ul>
+
+    <h2>2. Proposed Solution</h2>
+    <h3>2.1 Solution Overview</h3>
+    <p>[Provide a clear, high-level description of the proposed solution and how it addresses the client's needs.]</p>
+    <p><strong>Example:</strong> <em>"TallTree proposes implementing a distributed edge computing architecture that processes data locally at each site while maintaining centralized oversight. This hybrid approach will..."</em></p>
+
+    <h3>2.2 Technical Approach</h3>
+    <p>Our solution is based on the following technical approach:</p>
+
+    <p><strong>Architecture:</strong></p>
+    <ul>
+        <li>[Key architectural decisions and rationale]</li>
+        <li>[Technology stack and platforms]</li>
+        <li>[Integration approach]</li>
+    </ul>
+
+    <p><strong>Key Components:</strong></p>
+    <ul>
+        <li><strong>[Component 1]:</strong> [Description and purpose]</li>
+        <li><strong>[Component 2]:</strong> [Description and purpose]</li>
+        <li><strong>[Component 3]:</strong> [Description and purpose]</li>
+    </ul>
+
+    <p><strong>Security & Compliance:</strong></p>
+    <ul>
+        <li>[Security measures and protocols]</li>
+        <li>[Compliance with relevant standards]</li>
+        <li>[Data protection and privacy considerations]</li>
+    </ul>
+
+    <h3>2.3 Benefits and Value Proposition</h3>
+    <p>This solution will deliver the following benefits:</p>
+
+    <table>
+        <tr>
+            <th style="width: 30%">Benefit</th>
+            <th style="width: 35%">Description</th>
+            <th style="width: 35%">Quantifiable Impact</th>
+        </tr>
+        <tr>
+            <td><strong>[Benefit 1]</strong></td>
+            <td>[How this benefit is achieved]</td>
+            <td>[Metric: e.g., "60% reduction in latency"]</td>
+        </tr>
+        <tr>
+            <td><strong>[Benefit 2]</strong></td>
+            <td>[How this benefit is achieved]</td>
+            <td>[Metric: e.g., "30% cost savings"]</td>
+        </tr>
+        <tr>
+            <td><strong>[Benefit 3]</strong></td>
+            <td>[How this benefit is achieved]</td>
+            <td>[Metric: e.g., "99.9% uptime"]</td>
+        </tr>
+        <tr>
+            <td><strong>[Benefit 4]</strong></td>
+            <td>[How this benefit is achieved]</td>
+            <td>[Metric or qualitative improvement]</td>
+        </tr>
+    </table>
+
+    <h3>2.4 Why This Approach</h3>
+    <p>[Explain why this particular approach is recommended over alternatives. Address any alternatives considered and why this is the best fit for the client.]</p>
+
+    <h2>3. Deliverables</h2>
+    <p>TallTree will provide the following deliverables throughout the project:</p>
+
+    <table>
+        <tr>
+            <th style="width: 10%">ID</th>
+            <th style="width: 30%">Deliverable</th>
+            <th style="width: 40%">Description</th>
+            <th style="width: 20%">Timeline</th>
+        </tr>
+        <tr>
+            <td><strong>D1</strong></td>
+            <td>Discovery & Requirements Document</td>
+            <td>Detailed requirements specification and technical design document</td>
+            <td>Week 2</td>
+        </tr>
+        <tr>
+            <td><strong>D2</strong></td>
+            <td>System Architecture & Design</td>
+            <td>Complete architecture diagrams, component specifications, and integration design</td>
+            <td>Week 4</td>
+        </tr>
+        <tr>
+            <td><strong>D3</strong></td>
+            <td>[Deliverable Name]</td>
+            <td>[Description]</td>
+            <td>[Timeline]</td>
+        </tr>
+        <tr>
+            <td><strong>D4</strong></td>
+            <td>[Deliverable Name]</td>
+            <td>[Description]</td>
+            <td>[Timeline]</td>
+        </tr>
+        <tr>
+            <td><strong>D5</strong></td>
+            <td>Implementation & Deployment</td>
+            <td>Fully deployed and configured solution in production environment</td>
+            <td>Week [X]</td>
+        </tr>
+        <tr>
+            <td><strong>D6</strong></td>
+            <td>Documentation & Training</td>
+            <td>Technical documentation, user guides, and team training sessions</td>
+            <td>Week [X]</td>
+        </tr>
+        <tr>
+            <td><strong>D7</strong></td>
+            <td>Handover & Knowledge Transfer</td>
+            <td>Complete knowledge transfer to your team with ongoing support documentation</td>
+            <td>Week [X]</td>
+        </tr>
+    </table>
+
+    <h2>4. Project Timeline and Milestones</h2>
+    <p>The project is structured in [X] phases over approximately [Y] weeks/months:</p>
+
+    <h3>Phase 1: Discovery & Planning ([Duration])</h3>
+    <div class="timeline-item">
+        <p><strong>Weeks 1-[X]</strong></p>
+        <ul>
+            <li>Stakeholder interviews and requirements gathering</li>
+            <li>Technical assessment of current systems</li>
+            <li>Detailed solution design and architecture</li>
+            <li>Project plan refinement and approval</li>
+        </ul>
+        <p><strong>Key Milestone:</strong> Requirements sign-off and design approval</p>
+    </div>
+
+    <h3>Phase 2: [Phase Name] ([Duration])</h3>
+    <div class="timeline-item">
+        <p><strong>Weeks [X]-[Y]</strong></p>
+        <ul>
+            <li>[Key activities]</li>
+            <li>[Key activities]</li>
+            <li>[Key activities]</li>
+        </ul>
+        <p><strong>Key Milestone:</strong> [Milestone description]</p>
+    </div>
+
+    <h3>Phase 3: [Phase Name] ([Duration])</h3>
+    <div class="timeline-item">
+        <p><strong>Weeks [X]-[Y]</strong></p>
+        <ul>
+            <li>[Key activities]</li>
+            <li>[Key activities]</li>
+            <li>[Key activities]</li>
+        </ul>
+        <p><strong>Key Milestone:</strong> [Milestone description]</p>
+    </div>
+
+    <h3>Phase 4: Deployment & Handover ([Duration])</h3>
+    <div class="timeline-item">
+        <p><strong>Weeks [X]-[Y]</strong></p>
+        <ul>
+            <li>Production deployment and cutover</li>
+            <li>User acceptance testing and validation</li>
+            <li>Training and documentation delivery</li>
+            <li>Hypercare support period</li>
+        </ul>
+        <p><strong>Key Milestone:</strong> Production go-live and project completion</p>
+    </div>
+
+    <h3>Project Timeline Summary</h3>
+    <table>
+        <tr>
+            <th>Phase</th>
+            <th>Duration</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Key Deliverables</th>
+        </tr>
+        <tr>
+            <td>Phase 1: Discovery</td>
+            <td>[X] weeks</td>
+            <td>[Date]</td>
+            <td>[Date]</td>
+            <td>D1, D2</td>
+        </tr>
+        <tr>
+            <td>Phase 2: [Name]</td>
+            <td>[X] weeks</td>
+            <td>[Date]</td>
+            <td>[Date]</td>
+            <td>D3, D4</td>
+        </tr>
+        <tr>
+            <td>Phase 3: [Name]</td>
+            <td>[X] weeks</td>
+            <td>[Date]</td>
+            <td>[Date]</td>
+            <td>D5</td>
+        </tr>
+        <tr>
+            <td>Phase 4: Deployment</td>
+            <td>[X] weeks</td>
+            <td>[Date]</td>
+            <td>[Date]</td>
+            <td>D6, D7</td>
+        </tr>
+    </table>
+
+    <h2>5. Team and Qualifications</h2>
+    <h3>5.1 About TallTree Technologies</h3>
+    <p>TallTree Technologies specializes in security, edge computing, and IoT solutions. We combine deep technical expertise with practical experience delivering complex systems for clients across [industries]. Our team brings [X] years of collective experience in [relevant areas].</p>
+
+    <h3>5.2 Project Team</h3>
+    <p>Your dedicated project team will include:</p>
+
+    <div class="team-member">
+        <p><strong>[Name] - [Role]</strong></p>
+        <p>[2-3 sentence bio highlighting relevant experience and qualifications]</p>
+        <ul>
+            <li>[Key qualification or achievement]</li>
+            <li>[Key qualification or achievement]</li>
+        </ul>
+        <p><strong>Project Role:</strong> [Specific responsibilities on this project]</p>
+    </div>
+
+    <div class="team-member">
+        <p><strong>[Name] - [Role]</strong></p>
+        <p>[2-3 sentence bio highlighting relevant experience and qualifications]</p>
+        <ul>
+            <li>[Key qualification or achievement]</li>
+            <li>[Key qualification or achievement]</li>
+        </ul>
+        <p><strong>Project Role:</strong> [Specific responsibilities on this project]</p>
+    </div>
+
+    <div class="team-member">
+        <p><strong>[Name] - [Role]</strong></p>
+        <p>[2-3 sentence bio highlighting relevant experience and qualifications]</p>
+        <ul>
+            <li>[Key qualification or achievement]</li>
+            <li>[Key qualification or achievement]</li>
+        </ul>
+        <p><strong>Project Role:</strong> [Specific responsibilities on this project]</p>
+    </div>
+
+    <h3>5.3 Relevant Experience</h3>
+    <p>TallTree has successfully delivered similar projects including:</p>
+    <ul>
+        <li><strong>[Client/Project Name]:</strong> [Brief description of relevant project and outcomes]</li>
+        <li><strong>[Client/Project Name]:</strong> [Brief description of relevant project and outcomes]</li>
+        <li><strong>[Client/Project Name]:</strong> [Brief description of relevant project and outcomes]</li>
+    </ul>
+
+    <h3>5.4 Certifications and Expertise</h3>
+    <ul>
+        <li>[Relevant certifications, e.g., "AWS Certified Solutions Architect"]</li>
+        <li>[Industry memberships or partnerships]</li>
+        <li>[Specialized expertise areas]</li>
+        <li>[Security clearances if relevant]</li>
+    </ul>
+
+    <h2>6. Investment and Pricing</h2>
+
+    <div class="summary-box">
+        <h3 style="margin-top: 0;">Total Project Investment</h3>
+        <table style="margin: 10px 0;">
+            <tr>
+                <th>Total Project Cost</th>
+                <td style="font-size: 1.3em;"><strong>£[Amount]</strong> (exc. VAT)</td>
+            </tr>
+            <tr>
+                <th>VAT (20%)</th>
+                <td>£[VAT Amount]</td>
+            </tr>
+            <tr>
+                <th>Total including VAT</th>
+                <td style="font-size: 1.2em;"><strong>£[Total with VAT]</strong></td>
+            </tr>
+            <tr>
+                <th>Pricing Model</th>
+                <td>[Fixed Price / Time & Materials with cap / Phased Fixed Price]</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>6.1 Pricing Breakdown</h3>
+    <table>
+        <tr>
+            <th style="width: 40%">Phase / Component</th>
+            <th style="width: 30%">Description</th>
+            <th style="width: 30%">Investment (exc. VAT)</th>
+        </tr>
+        <tr>
+            <td>Phase 1: Discovery & Planning</td>
+            <td>[Brief description]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>Phase 2: [Name]</td>
+            <td>[Brief description]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>Phase 3: [Name]</td>
+            <td>[Brief description]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>Phase 4: Deployment & Handover</td>
+            <td>[Brief description]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <th colspan="2">Subtotal</th>
+            <th>£[Subtotal]</th>
+        </tr>
+        <tr>
+            <td colspan="2">Contingency ([X]%) [Optional]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <th colspan="2">Total Project Investment</th>
+            <th>£[Total]</th>
+        </tr>
+    </table>
+
+    <h3>6.2 What's Included</h3>
+    <ul>
+        <li>All professional services described in this proposal</li>
+        <li>Project management and coordination</li>
+        <li>All deliverables as specified in Section 3</li>
+        <li>Documentation and knowledge transfer</li>
+        <li>Training for up to [X] team members</li>
+        <li>[X] days of hypercare support following go-live</li>
+        <li>Standard travel within [region] for on-site work</li>
+    </ul>
+
+    <h3>6.3 What's Not Included</h3>
+    <ul>
+        <li>Third-party software licenses or cloud infrastructure costs</li>
+        <li>Hardware or equipment procurement</li>
+        <li>International travel or expenses outside [region]</li>
+        <li>Ongoing support beyond the hypercare period (available separately)</li>
+        <li>Training beyond the included [X] sessions</li>
+        <li>[Other exclusions]</li>
+    </ul>
+
+    <h3>6.4 Payment Terms</h3>
+    <p>Payment will be structured as follows:</p>
+    <table>
+        <tr>
+            <th style="width: 15%">Invoice</th>
+            <th style="width: 35%">Milestone</th>
+            <th style="width: 25%">Amount</th>
+            <th style="width: 25%">Due</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Upon project commencement</td>
+            <td>£[Amount] ([%]%)</td>
+            <td>14 days from start</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Completion of Phase 1</td>
+            <td>£[Amount] ([%]%)</td>
+            <td>14 days from milestone</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Completion of Phase 2</td>
+            <td>£[Amount] ([%]%)</td>
+            <td>14 days from milestone</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Completion of Phase 3</td>
+            <td>£[Amount] ([%]%)</td>
+            <td>14 days from milestone</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Project completion & acceptance</td>
+            <td>£[Amount] ([%]%)</td>
+            <td>14 days from acceptance</td>
+        </tr>
+    </table>
+
+    <h3>6.5 Pricing Validity</h3>
+    <ul>
+        <li>This pricing is valid until <strong>[Date]</strong></li>
+        <li>Prices assume project commencement by [Date]</li>
+        <li>Significant delays or changes to scope may require pricing review</li>
+    </ul>
+
+    <h2>7. Assumptions and Dependencies</h2>
+    <h3>7.1 Key Assumptions</h3>
+    <p>This proposal is based on the following assumptions:</p>
+    <ul>
+        <li>[Assumption about client resources or systems]</li>
+        <li>[Assumption about access or availability]</li>
+        <li>[Assumption about technical environment]</li>
+        <li>[Assumption about timeline or approvals]</li>
+        <li>[Other key assumptions]</li>
+    </ul>
+
+    <h3>7.2 Client Dependencies</h3>
+    <p>Successful project delivery depends on the Client providing:</p>
+    <ul>
+        <li>Designated project owner with decision-making authority</li>
+        <li>Timely access to systems, environments, and data</li>
+        <li>Subject matter experts for [X] hours per week</li>
+        <li>Timely review and approval of deliverables (within [X] days)</li>
+        <li>Necessary licenses, credentials, or access rights</li>
+        <li>[Other specific client responsibilities]</li>
+    </ul>
+
+    <h3>7.3 External Dependencies</h3>
+    <ul>
+        <li>[Third-party vendors or service providers]</li>
+        <li>[Regulatory approvals or compliance requirements]</li>
+        <li>[Infrastructure or platform dependencies]</li>
+    </ul>
+
+    <h2>8. Risk Management</h2>
+    <table>
+        <tr>
+            <th style="width: 30%">Risk</th>
+            <th style="width: 35%">Mitigation Strategy</th>
+            <th style="width: 35%">Contingency Plan</th>
+        </tr>
+        <tr>
+            <td>[Risk description]</td>
+            <td>[How we'll prevent or minimize]</td>
+            <td>[What we'll do if it occurs]</td>
+        </tr>
+        <tr>
+            <td>[Risk description]</td>
+            <td>[How we'll prevent or minimize]</td>
+            <td>[What we'll do if it occurs]</td>
+        </tr>
+        <tr>
+            <td>[Risk description]</td>
+            <td>[How we'll prevent or minimize]</td>
+            <td>[What we'll do if it occurs]</td>
+        </tr>
+    </table>
+
+    <h2>9. Next Steps and Acceptance</h2>
+    <h3>9.1 To Proceed</h3>
+    <p>If you wish to proceed with this proposal:</p>
+    <ol>
+        <li><strong>Review:</strong> Review this proposal and discuss any questions with our team</li>
+        <li><strong>Accept:</strong> Sign the acceptance section below or reply with written acceptance</li>
+        <li><strong>Agreements:</strong> We will provide the Master Services Agreement and Statement of Work for execution</li>
+        <li><strong>Kickoff:</strong> Schedule project kickoff meeting within [X] days of agreement execution</li>
+    </ol>
+
+    <h3>9.2 Questions or Clarifications</h3>
+    <p>For questions about this proposal, please contact:</p>
+    <p>
+        <strong>[Contact Name]</strong><br>
+        [Title]<br>
+        Email: [email@talltree.tech]<br>
+        Phone: [Phone Number]
+    </p>
+
+    <h3>9.3 Proposal Validity</h3>
+    <p>This proposal is valid until <strong>[Date]</strong>. After this date, pricing and availability may be subject to change.</p>
+
+    <div class="success">
+        <h3 style="margin-top: 0;">Why Choose TallTree</h3>
+        <ul>
+            <li><strong>Specialized Expertise:</strong> Deep expertise in security, edge computing, and IoT systems</li>
+            <li><strong>Proven Delivery:</strong> Track record of successful projects similar to yours</li>
+            <li><strong>Quality Focus:</strong> Commitment to excellence in every deliverable</li>
+            <li><strong>Partnership Approach:</strong> We work collaboratively as an extension of your team</li>
+            <li><strong>Long-term Support:</strong> Available for ongoing support and future enhancements</li>
+        </ul>
+    </div>
+
+    <h2>Proposal Acceptance</h2>
+    <p>By signing below, the Client authorizes TallTree Technologies to proceed with the project as described in this proposal, subject to execution of the Master Services Agreement and Statement of Work.</p>
+
+    <div class="signature-block">
+        <div class="signature-section">
+            <h4>Client Acceptance</h4>
+            <div class="field">
+                <strong>Company:</strong> [Client Legal Name]
+            </div>
+            <div class="field">
+                <strong>Signature:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+        </div>
+
+        <div class="info" style="margin-top: 20px;">
+            <strong>Note:</strong> Signature of this proposal indicates intent to proceed. A formal Master Services Agreement and Statement of Work will be executed before work commences. This proposal is not a binding contract but serves as a basis for the formal agreements.
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Software Systems Limited. All rights reserved.</p>
+        <p>Trading as TallTree® Technologies.</p>
+        <p>Registered in England and Wales. Company No. 14466340.</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">
+            <strong>Proposal Reference:</strong> PROP-[YYYY]-[###] | <strong>Date:</strong> [Date] | <strong>Valid Until:</strong> [Date]
+        </p>
+    </footer>
+    </div>
+</body>
+</html>

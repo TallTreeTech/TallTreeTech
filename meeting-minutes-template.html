@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Minutes Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .metadata-table th {
+            width: 30%;
+        }
+        .action-table th {
+            background-color: #e7f3ff;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .decision-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .approval-section {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .signature-block {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .field {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Meeting Minutes</h1>
+    <p style="text-align: center;"><strong>[Project/Client Name]</strong></p>
+
+    <h2>Meeting Metadata</h2>
+    <table class="metadata-table">
+        <tr>
+            <th>Meeting Title</th>
+            <td>[Meeting Title/Purpose]</td>
+        </tr>
+        <tr>
+            <th>Date</th>
+            <td>[DD/MM/YYYY]</td>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <td>[Start Time] - [End Time] GMT/BST</td>
+        </tr>
+        <tr>
+            <th>Location/Platform</th>
+            <td>[Physical Location / Zoom / Teams / Other]</td>
+        </tr>
+        <tr>
+            <th>Meeting Organizer</th>
+            <td>[Name, Role]</td>
+        </tr>
+        <tr>
+            <th>Minutes Taken By</th>
+            <td>[Name, Role]</td>
+        </tr>
+    </table>
+
+    <h2>Attendees</h2>
+    <h3>Present</h3>
+    <table>
+        <tr>
+            <th style="width: 30%">Name</th>
+            <th style="width: 30%">Role/Title</th>
+            <th style="width: 40%">Organization</th>
+        </tr>
+        <tr>
+            <td>[Name]</td>
+            <td>[Role]</td>
+            <td>[TallTree / Client Name]</td>
+        </tr>
+        <tr>
+            <td>[Name]</td>
+            <td>[Role]</td>
+            <td>[TallTree / Client Name]</td>
+        </tr>
+        <tr>
+            <td>[Name]</td>
+            <td>[Role]</td>
+            <td>[TallTree / Client Name]</td>
+        </tr>
+    </table>
+
+    <h3>Apologies</h3>
+    <ul>
+        <li>[Name, Role, Organization - if any]</li>
+    </ul>
+
+    <h2>Agenda and Discussion</h2>
+
+    <h3>1. [Agenda Item 1 - e.g., Welcome and Introductions]</h3>
+    <p><strong>Presenter:</strong> [Name]</p>
+    <p><strong>Discussion Summary:</strong></p>
+    <p>[Summary of what was discussed under this agenda item. Include key points raised, questions asked, concerns expressed, and information shared.]</p>
+
+    <div class="decision-box">
+        <strong>Decision:</strong> [Any decision made related to this agenda item, or "No decision required"]
+    </div>
+
+    <h3>2. [Agenda Item 2 - e.g., Project Status Review]</h3>
+    <p><strong>Presenter:</strong> [Name]</p>
+    <p><strong>Discussion Summary:</strong></p>
+    <p>[Summary of what was discussed. Key points might include:]</p>
+    <ul>
+        <li>[Key point or topic discussed]</li>
+        <li>[Another key point or concern raised]</li>
+        <li>[Additional discussion topic]</li>
+    </ul>
+    <p>[Additional narrative about the discussion if needed]</p>
+
+    <div class="decision-box">
+        <strong>Decision:</strong> [Decision made, if any]
+    </div>
+
+    <h3>3. [Agenda Item 3 - e.g., Technical Architecture Discussion]</h3>
+    <p><strong>Presenter:</strong> [Name]</p>
+    <p><strong>Discussion Summary:</strong></p>
+    <p>[Summary of the discussion]</p>
+
+    <div class="decision-box">
+        <strong>Decision:</strong> [Decision made, if any]
+    </div>
+
+    <h3>4. [Agenda Item 4 - e.g., Budget and Timeline Review]</h3>
+    <p><strong>Presenter:</strong> [Name]</p>
+    <p><strong>Discussion Summary:</strong></p>
+    <p>[Summary of the discussion]</p>
+
+    <div class="decision-box">
+        <strong>Decision:</strong> [Decision made, if any]
+    </div>
+
+    <h3>5. [Agenda Item 5 - e.g., Any Other Business]</h3>
+    <p><strong>Discussion Summary:</strong></p>
+    <p>[Summary of any additional items discussed]</p>
+
+    <h2>Decisions Summary</h2>
+    <div class="info">
+        <strong>Key Decisions Made:</strong>
+        <ol>
+            <li>[Decision 1 - brief statement]</li>
+            <li>[Decision 2 - brief statement]</li>
+            <li>[Decision 3 - brief statement]</li>
+        </ol>
+    </div>
+
+    <h2>Action Items</h2>
+    <table class="action-table">
+        <tr>
+            <th style="width: 8%">ID</th>
+            <th style="width: 37%">Action</th>
+            <th style="width: 20%">Owner</th>
+            <th style="width: 15%">Due Date</th>
+            <th style="width: 20%">Status</th>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>[Description of action to be taken]</td>
+            <td>[Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="highlight">Pending</span></td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>[Description of action to be taken]</td>
+            <td>[Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="highlight">Pending</span></td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>[Description of action to be taken]</td>
+            <td>[Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="highlight">Pending</span></td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>[Description of action to be taken]</td>
+            <td>[Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="highlight">Pending</span></td>
+        </tr>
+    </table>
+
+    <h2>Outstanding Actions from Previous Meetings</h2>
+    <table>
+        <tr>
+            <th style="width: 8%">ID</th>
+            <th style="width: 37%">Action</th>
+            <th style="width: 20%">Owner</th>
+            <th style="width: 15%">Original Due</th>
+            <th style="width: 20%">Status/Update</th>
+        </tr>
+        <tr>
+            <td>[ID]</td>
+            <td>[Previous action carried forward]</td>
+            <td>[Name]</td>
+            <td>[Date]</td>
+            <td>[In Progress / Completed / Blocked]</td>
+        </tr>
+    </table>
+
+    <h2>Next Meeting</h2>
+    <table class="metadata-table">
+        <tr>
+            <th>Date</th>
+            <td>[DD/MM/YYYY]</td>
+        </tr>
+        <tr>
+            <th>Time</th>
+            <td>[Time] GMT/BST</td>
+        </tr>
+        <tr>
+            <th>Location/Platform</th>
+            <td>[Location/Platform]</td>
+        </tr>
+        <tr>
+            <th>Proposed Agenda Items</th>
+            <td>
+                <ul style="margin: 5px 0;">
+                    <li>[Agenda item 1]</li>
+                    <li>[Agenda item 2]</li>
+                    <li>[Review of action items]</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Approval</h2>
+    <div class="approval-section">
+        <p>These minutes are subject to approval at the next meeting or by circulation.</p>
+
+        <div class="signature-block">
+            <h4>Minutes Approved By</h4>
+            <div class="field">
+                <strong>Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Signature:</strong> _________________________________
+            </div>
+        </div>
+    </div>
+
+    <h2>Distribution List</h2>
+    <p>These minutes have been distributed to:</p>
+    <ul>
+        <li>All attendees</li>
+        <li>[Additional stakeholder/distribution list member]</li>
+        <li>[Additional stakeholder/distribution list member]</li>
+    </ul>
+
+    <footer>
+        <p>© 2025 Software Systems Limited. All rights reserved.</p>
+        <p>Trading as TallTree® Technologies.</p>
+        <p>Registered in England and Wales. Company No. 14466340.</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">
+            <strong>Meeting Date:</strong> [DD/MM/YYYY] | <strong>Document:</strong> Meeting Minutes | <strong>Version:</strong> 1.0
+        </p>
+    </footer>
+    </div>
+</body>
+</html>

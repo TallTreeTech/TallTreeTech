@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Level Agreement</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .signature-block {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .signature-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .field {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .summary-box {
+            background-color: #e7f3ff;
+            border: 2px solid #0056b3;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .priority-critical {
+            background-color: #f8d7da;
+            font-weight: bold;
+        }
+        .priority-high {
+            background-color: #fff3cd;
+        }
+        .priority-medium {
+            background-color: #d1ecf1;
+        }
+        .priority-low {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Service Level Agreement</h1>
+    <p style="text-align: center;"><strong>For Ongoing Support and Maintenance Services</strong></p>
+    <p style="text-align: center;"><strong>SLA Reference: [SLA-YYYY-###]</strong></p>
+
+    <div class="info">
+        <strong>Agreement Reference:</strong><br>
+        This Service Level Agreement is issued pursuant to the Master Services Agreement dated <span class="highlight">[MSA Date]</span> and/or Statement of Work <span class="highlight">[SOW Number]</span>. This SLA defines the service commitments, response times, and performance metrics for ongoing support services.
+    </div>
+
+    <h2>1. Parties</h2>
+    <p><strong>Service Provider:</strong> Software Systems Limited, trading as TallTree® Technologies<br>
+    7 Bell Yard, London, England, WC2A 2JR<br>
+    ("TallTree", "Provider", or "We")</p>
+
+    <p><strong>Client:</strong> [Client Legal Name]<br>
+    [Client Address]<br>
+    ("Client" or "You")</p>
+
+    <h2>2. SLA Overview</h2>
+    <table>
+        <tr>
+            <th>SLA Reference</th>
+            <td>[SLA-YYYY-###]</td>
+        </tr>
+        <tr>
+            <th>Related Agreement</th>
+            <td>MSA dated [Date] / SOW [Number]</td>
+        </tr>
+        <tr>
+            <th>Service Type</th>
+            <td>[Application Support / Infrastructure Support / Managed Services / Custom]</td>
+        </tr>
+        <tr>
+            <th>Effective Date</th>
+            <td>[Start Date]</td>
+        </tr>
+        <tr>
+            <th>Review Period</th>
+            <td>Quarterly</td>
+        </tr>
+        <tr>
+            <th>TallTree Service Manager</th>
+            <td>[Name, Email, Phone]</td>
+        </tr>
+        <tr>
+            <th>Client Service Owner</th>
+            <td>[Name, Email, Phone]</td>
+        </tr>
+    </table>
+
+    <h2>3. Service Scope</h2>
+    <h3>3.1 Covered Services</h3>
+    <p>This SLA covers the following services and systems:</p>
+    <ul>
+        <li><strong>Systems in Scope:</strong> [List specific systems, applications, or infrastructure components]</li>
+        <li><strong>Support Type:</strong> [Incident response / Maintenance / Monitoring / All of the above]</li>
+        <li><strong>Service Hours:</strong> [24/7 / Business Hours Only / Extended Hours - specify]</li>
+    </ul>
+
+    <h3>3.2 Included Support Activities</h3>
+    <ul>
+        <li>Incident response and resolution</li>
+        <li>Performance monitoring and alerting</li>
+        <li>Routine maintenance and updates</li>
+        <li>Security patch management</li>
+        <li>Backup verification and restoration testing</li>
+        <li>Capacity planning and optimization recommendations</li>
+        <li>Root cause analysis for recurring issues</li>
+        <li>Monthly/quarterly reporting on system health and performance</li>
+        <li>[Other included activities]</li>
+    </ul>
+
+    <h3>3.3 Excluded from SLA</h3>
+    <p>The following are not covered under this SLA:</p>
+    <ul>
+        <li>New feature development or enhancements</li>
+        <li>Issues caused by unauthorized modifications or third-party software</li>
+        <li>Problems resulting from Client's failure to follow documented procedures</li>
+        <li>Support for end-user training or documentation requests</li>
+        <li>Consulting or advisory services beyond incident resolution</li>
+        <li>Force majeure events or third-party service provider outages</li>
+        <li>[Other exclusions]</li>
+    </ul>
+
+    <h2>4. Service Availability Commitments</h2>
+
+    <div class="summary-box">
+        <h3 style="margin-top: 0;">Availability Targets</h3>
+        <table style="margin: 10px 0;">
+            <tr>
+                <th>Service Component</th>
+                <th>Availability Target</th>
+                <th>Measurement Period</th>
+            </tr>
+            <tr>
+                <td>[Production System/Application]</td>
+                <td><strong>99.9%</strong> uptime</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>[API/Integration Services]</td>
+                <td><strong>99.5%</strong> uptime</td>
+                <td>Monthly</td>
+            </tr>
+            <tr>
+                <td>[Support Portal/Communication]</td>
+                <td><strong>99.0%</strong> uptime</td>
+                <td>Monthly</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>4.1 Availability Definitions</h3>
+    <ul>
+        <li><strong>Uptime:</strong> Period during which the service is available and functional for normal business use</li>
+        <li><strong>Downtime:</strong> Period during which service is unavailable or unusable, excluding planned maintenance</li>
+        <li><strong>Planned Maintenance:</strong> Scheduled downtime communicated at least [5/7] days in advance (excluded from availability calculation)</li>
+        <li><strong>Emergency Maintenance:</strong> Unscheduled maintenance to address critical security or stability issues ([included/excluded] from availability calculation)</li>
+    </ul>
+
+    <h3>4.2 Measurement and Reporting</h3>
+    <ul>
+        <li>Availability measured monthly from the 1st to last day of each calendar month</li>
+        <li>Monitoring conducted 24/7 using automated tools</li>
+        <li>Monthly availability reports provided to Client by [5th] business day of following month</li>
+        <li>Measurements based on [synthetic monitoring / real user monitoring / both]</li>
+    </ul>
+
+    <h3>4.3 Planned Maintenance Windows</h3>
+    <ul>
+        <li><strong>Standard Window:</strong> [Day, Time, Duration - e.g., "Sundays 02:00-06:00 GMT"]</li>
+        <li><strong>Frequency:</strong> [Weekly / Monthly / As needed - maximum X hours per month]</li>
+        <li><strong>Notification:</strong> Minimum [5/7/14] days' advance notice via [email/portal]</li>
+        <li><strong>Emergency Maintenance:</strong> [2/4] hours' notice when possible, or immediate if critical security issue</li>
+    </ul>
+
+    <h2>5. Response Times and Priorities</h2>
+
+    <h3>5.1 Incident Priority Definitions</h3>
+    <table>
+        <tr>
+            <th style="width: 15%">Priority</th>
+            <th style="width: 40%">Definition</th>
+            <th style="width: 45%">Examples</th>
+        </tr>
+        <tr class="priority-critical">
+            <td><strong>Critical (P1)</strong></td>
+            <td>Complete service outage or critical functionality unavailable affecting all users or critical business operations</td>
+            <td>Production system down, data breach, complete loss of service, security incident</td>
+        </tr>
+        <tr class="priority-high">
+            <td><strong>High (P2)</strong></td>
+            <td>Major functionality degraded or unavailable affecting multiple users or important business functions</td>
+            <td>Significant performance degradation, major feature not working, partial service disruption</td>
+        </tr>
+        <tr class="priority-medium">
+            <td><strong>Medium (P3)</strong></td>
+            <td>Minor functionality issue or inconvenience affecting limited users with workaround available</td>
+            <td>Non-critical bug, minor performance issue, cosmetic problems with workaround</td>
+        </tr>
+        <tr class="priority-low">
+            <td><strong>Low (P4)</strong></td>
+            <td>Minor issue with minimal impact, information request, or enhancement suggestion</td>
+            <td>Feature requests, documentation updates, general questions, minor cosmetic issues</td>
+        </tr>
+    </table>
+
+    <h3>5.2 Response Time Commitments</h3>
+    <table>
+        <tr>
+            <th>Priority</th>
+            <th>Initial Response</th>
+            <th>Regular Updates</th>
+            <th>Resolution Target</th>
+        </tr>
+        <tr class="priority-critical">
+            <td><strong>Critical (P1)</strong></td>
+            <td>30 minutes</td>
+            <td>Every 2 hours</td>
+            <td>4 hours (best effort)</td>
+        </tr>
+        <tr class="priority-high">
+            <td><strong>High (P2)</strong></td>
+            <td>2 hours</td>
+            <td>Every 4 hours</td>
+            <td>8 business hours</td>
+        </tr>
+        <tr class="priority-medium">
+            <td><strong>Medium (P3)</strong></td>
+            <td>8 business hours</td>
+            <td>Daily</td>
+            <td>5 business days</td>
+        </tr>
+        <tr class="priority-low">
+            <td><strong>Low (P4)</strong></td>
+            <td>2 business days</td>
+            <td>As needed</td>
+            <td>15 business days</td>
+        </tr>
+    </table>
+
+    <p><strong>Notes:</strong></p>
+    <ul>
+        <li><strong>Initial Response:</strong> Acknowledgment of issue, assignment to engineer, and preliminary assessment</li>
+        <li><strong>Regular Updates:</strong> Status updates provided to Client even if no resolution yet achieved</li>
+        <li><strong>Resolution Target:</strong> Time to restore service or implement workaround; not necessarily permanent fix</li>
+        <li><strong>Business Hours:</strong> [9:00-18:00 GMT/BST, Monday-Friday, excluding UK public holidays]</li>
+        <li><strong>After Hours:</strong> P1 and P2 incidents supported 24/7; P3 and P4 handled during business hours only</li>
+    </ul>
+
+    <h3>5.3 Response Time Measurement</h3>
+    <ul>
+        <li>Response times measured from when incident is logged in support system</li>
+        <li>Clock stops for P3/P4 issues outside business hours</li>
+        <li>Clock pauses when waiting for Client input or access</li>
+        <li>Monthly compliance reporting: target [95]% adherence to response times</li>
+    </ul>
+
+    <h2>6. Support Channels and Hours</h2>
+
+    <h3>6.1 How to Request Support</h3>
+    <table>
+        <tr>
+            <th style="width: 25%">Channel</th>
+            <th style="width: 30%">Use For</th>
+            <th style="width: 45%">Availability</th>
+        </tr>
+        <tr>
+            <td><strong>Support Portal</strong><br>[URL]</td>
+            <td>All incident types, preferred method</td>
+            <td>24/7 submission, monitored during support hours</td>
+        </tr>
+        <tr>
+            <td><strong>Email</strong><br>support@talltree.tech</td>
+            <td>All incident types</td>
+            <td>24/7 submission, monitored during support hours</td>
+        </tr>
+        <tr>
+            <td><strong>Phone</strong><br>[Phone Number]</td>
+            <td>P1 and P2 incidents only</td>
+            <td>24/7 for P1, business hours for P2</td>
+        </tr>
+        <tr>
+            <td><strong>Slack/Teams</strong><br>[Channel]</td>
+            <td>Quick questions, status updates</td>
+            <td>Business hours, not for incident logging</td>
+        </tr>
+        <tr>
+            <td><strong>Emergency Hotline</strong><br>[Emergency Number]</td>
+            <td>P1 incidents only, after hours</td>
+            <td>24/7 (use sparingly)</td>
+        </tr>
+    </table>
+
+    <h3>6.2 Support Hours</h3>
+    <ul>
+        <li><strong>Standard Support:</strong> Monday-Friday, 9:00-18:00 GMT/BST (excluding UK public holidays)</li>
+        <li><strong>Extended Support:</strong> [If applicable: specific hours for extended coverage]</li>
+        <li><strong>Emergency Support:</strong> 24/7 for P1 Critical incidents only</li>
+        <li><strong>Holidays:</strong> TallTree observes UK public holidays; emergency support available for P1 only</li>
+        <li><strong>Out of Hours:</strong> P2-P4 incidents logged out of hours will be triaged next business day</li>
+    </ul>
+
+    <h3>6.3 Authorized Contacts</h3>
+    <p>The following individuals are authorized to log support requests:</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Authorization Level</th>
+        </tr>
+        <tr>
+            <td>[Name]</td>
+            <td>[Email]</td>
+            <td>[Phone]</td>
+            <td>[All incidents / P1-P2 only / etc.]</td>
+        </tr>
+        <tr>
+            <td>[Name]</td>
+            <td>[Email]</td>
+            <td>[Phone]</td>
+            <td>[All incidents / P1-P2 only / etc.]</td>
+        </tr>
+    </table>
+    <p><em>Contact list to be updated by Client as needed with written notification to TallTree.</em></p>
+
+    <h2>7. Escalation Procedures</h2>
+
+    <h3>7.1 Technical Escalation Path</h3>
+    <table>
+        <tr>
+            <th>Level</th>
+            <th>Role</th>
+            <th>Contact</th>
+            <th>When to Escalate</th>
+        </tr>
+        <tr>
+            <td><strong>L1</strong></td>
+            <td>Support Engineer</td>
+            <td>[Auto-assigned via portal]</td>
+            <td>Initial incident response</td>
+        </tr>
+        <tr>
+            <td><strong>L2</strong></td>
+            <td>Senior Engineer</td>
+            <td>[Name/Email/Phone]</td>
+            <td>Issue requires specialized expertise or not resolved within target time</td>
+        </tr>
+        <tr>
+            <td><strong>L3</strong></td>
+            <td>Technical Lead</td>
+            <td>[Name/Email/Phone]</td>
+            <td>Critical P1 incidents or complex technical issues</td>
+        </tr>
+        <tr>
+            <td><strong>L4</strong></td>
+            <td>CTO / Senior Management</td>
+            <td>[Name/Email/Phone]</td>
+            <td>Extended outages or strategic decisions needed</td>
+        </tr>
+    </table>
+
+    <h3>7.2 Automatic Escalation Triggers</h3>
+    <p>Incidents are automatically escalated when:</p>
+    <ul>
+        <li><strong>P1 Critical:</strong> Not resolved within 4 hours - escalate to L3</li>
+        <li><strong>P2 High:</strong> Not resolved within 8 business hours - escalate to L2</li>
+        <li><strong>P3 Medium:</strong> Not resolved within 5 business days - review with Service Manager</li>
+        <li><strong>Any Priority:</strong> SLA breach imminent or occurred - notify both parties' management</li>
+        <li><strong>Recurring Issues:</strong> Same issue occurs 3+ times in a month - root cause analysis initiated</li>
+    </ul>
+
+    <h3>7.3 Client-Initiated Escalation</h3>
+    <p>Client may escalate at any time by:</p>
+    <ul>
+        <li>Requesting escalation through support portal or email</li>
+        <li>Contacting TallTree Service Manager directly: [Name, Email, Phone]</li>
+        <li>For urgent matters: [Emergency escalation contact]</li>
+    </ul>
+
+    <h3>7.4 Management Escalation Path</h3>
+    <p>For non-technical or relationship issues:</p>
+    <table>
+        <tr>
+            <th>Client Side</th>
+            <th>TallTree Side</th>
+        </tr>
+        <tr>
+            <td>[Client Service Owner]</td>
+            <td>[TallTree Service Manager]</td>
+        </tr>
+        <tr>
+            <td>[Client Executive]</td>
+            <td>[TallTree Director/CTO]</td>
+        </tr>
+    </table>
+
+    <h2>8. Performance Metrics and KPIs</h2>
+
+    <h3>8.1 Key Performance Indicators</h3>
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Target</th>
+            <th>Measurement</th>
+        </tr>
+        <tr>
+            <td>System Availability</td>
+            <td>[99.9]% uptime</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Response Time Adherence</td>
+            <td>[95]% within SLA targets</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resolution Time - P1</td>
+            <td>[90]% within 4 hours</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Resolution Time - P2</td>
+            <td>[85]% within 8 business hours</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>First Contact Resolution</td>
+            <td>[60]% for P3/P4 issues</td>
+            <td>Monthly</td>
+        </tr>
+        <tr>
+            <td>Customer Satisfaction (CSAT)</td>
+            <td>[4.5]/5.0 average</td>
+            <td>Per incident survey</td>
+        </tr>
+        <tr>
+            <td>Mean Time to Acknowledge (MTTA)</td>
+            <td>[30] minutes for P1</td>
+            <td>Monthly average</td>
+        </tr>
+        <tr>
+            <td>Mean Time to Resolve (MTTR)</td>
+            <td>[4] hours for P1, [8] hours for P2</td>
+            <td>Monthly average</td>
+        </tr>
+    </table>
+
+    <h3>8.2 Reporting</h3>
+    <p>TallTree will provide the following reports:</p>
+
+    <p><strong>Monthly SLA Report (due by 5th business day of following month):</strong></p>
+    <ul>
+        <li>Availability metrics and any downtime incidents</li>
+        <li>Incident summary by priority level</li>
+        <li>Response time and resolution time performance</li>
+        <li>SLA compliance summary (met/missed targets)</li>
+        <li>Top issues and recurring problems</li>
+        <li>Proactive maintenance activities completed</li>
+    </ul>
+
+    <p><strong>Quarterly Business Review (conducted within 15 days of quarter end):</strong></p>
+    <ul>
+        <li>Trend analysis and performance over quarter</li>
+        <li>Root cause analysis for any major incidents</li>
+        <li>Recommendations for improvements</li>
+        <li>Capacity and performance forecasting</li>
+        <li>SLA review and potential adjustments</li>
+    </ul>
+
+    <h3>8.3 Performance Reviews</h3>
+    <ul>
+        <li>Monthly reports reviewed by both parties' service managers</li>
+        <li>Quarterly business reviews attended by senior stakeholders</li>
+        <li>Annual comprehensive SLA review and adjustment as needed</li>
+        <li>Ad-hoc reviews may be requested by either party with 5 days' notice</li>
+    </ul>
+
+    <h2>9. Remedies for SLA Breaches</h2>
+
+    <h3>9.1 Service Credits</h3>
+    <p>If TallTree fails to meet the SLA commitments set forth in this agreement, Client may be eligible for service credits as follows:</p>
+
+    <p><strong>Availability Credits:</strong></p>
+    <table>
+        <tr>
+            <th>Monthly Availability</th>
+            <th>Service Credit</th>
+        </tr>
+        <tr>
+            <td>Below 99.9% but ≥99.5%</td>
+            <td>5% of monthly fees</td>
+        </tr>
+        <tr>
+            <td>Below 99.5% but ≥99.0%</td>
+            <td>10% of monthly fees</td>
+        </tr>
+        <tr>
+            <td>Below 99.0% but ≥98.0%</td>
+            <td>25% of monthly fees</td>
+        </tr>
+        <tr>
+            <td>Below 98.0%</td>
+            <td>50% of monthly fees</td>
+        </tr>
+    </table>
+
+    <p><strong>Response Time Credits:</strong></p>
+    <table>
+        <tr>
+            <th>Response Time Compliance</th>
+            <th>Service Credit</th>
+        </tr>
+        <tr>
+            <td>Below 95% but ≥90%</td>
+            <td>5% of monthly fees</td>
+        </tr>
+        <tr>
+            <td>Below 90% but ≥85%</td>
+            <td>10% of monthly fees</td>
+        </tr>
+        <tr>
+            <td>Below 85%</td>
+            <td>15% of monthly fees</td>
+        </tr>
+    </table>
+
+    <h3>9.2 Service Credit Conditions</h3>
+    <ul>
+        <li>Service credits are calculated as a percentage of the monthly support fees for the affected month</li>
+        <li>Maximum combined service credits in any month: 50% of monthly fees</li>
+        <li>Service credits are the sole and exclusive remedy for SLA breaches</li>
+        <li>Credits must be requested in writing within 30 days of receiving monthly report</li>
+        <li>Credits issued as a discount on the next month's invoice, not cash refunds</li>
+        <li>No credits for downtime caused by Client actions, third-party failures, or force majeure</li>
+    </ul>
+
+    <h3>9.3 SLA Exclusions</h3>
+    <p>SLA commitments do not apply during:</p>
+    <ul>
+        <li>Scheduled maintenance windows with proper advance notice</li>
+        <li>Emergency maintenance to address critical security vulnerabilities</li>
+        <li>Client-caused issues (unauthorized changes, failure to follow procedures, etc.)</li>
+        <li>Third-party service provider outages beyond TallTree's control</li>
+        <li>Force majeure events</li>
+        <li>Network or infrastructure issues on Client's side</li>
+        <li>Beta features or services explicitly marked as "not covered by SLA"</li>
+    </ul>
+
+    <h3>9.4 Termination for Persistent SLA Failures</h3>
+    <p>If TallTree fails to meet SLA commitments for three consecutive months:</p>
+    <ul>
+        <li>Client may request an improvement plan within 10 business days</li>
+        <li>If SLA failures continue for two additional months after plan implementation, Client may terminate the agreement with 30 days' notice without penalty</li>
+    </ul>
+
+    <h2>10. Client Responsibilities</h2>
+
+    <h3>10.1 To Enable SLA Compliance</h3>
+    <p>Client must:</p>
+    <ul>
+        <li>Provide accurate and complete information when logging incidents</li>
+        <li>Assign appropriate priority levels to incidents</li>
+        <li>Provide timely access to systems, logs, and environments as needed</li>
+        <li>Respond promptly to requests for information or testing</li>
+        <li>Designate authorized contacts and keep the list current</li>
+        <li>Follow documented procedures and change control processes</li>
+        <li>Not make unauthorized changes to systems under support</li>
+        <li>Provide adequate notice before planned changes that may affect services</li>
+    </ul>
+
+    <h3>10.2 Client-Side Infrastructure</h3>
+    <ul>
+        <li>Maintain adequate network connectivity and bandwidth</li>
+        <li>Ensure Client-managed infrastructure meets minimum requirements</li>
+        <li>Provide and maintain VPN or secure access for TallTree engineers</li>
+        <li>Maintain current backups of critical data</li>
+    </ul>
+
+    <h3>10.3 Impact of Non-Compliance</h3>
+    <p>If Client fails to meet these responsibilities:</p>
+    <ul>
+        <li>SLA timers may be paused during delays caused by Client</li>
+        <li>TallTree may be unable to meet SLA commitments</li>
+        <li>No service credits will be issued for SLA breaches caused by Client actions or inaction</li>
+    </ul>
+
+    <h2>11. Change Management</h2>
+
+    <h3>11.1 Changes to Systems Under Support</h3>
+    <ul>
+        <li>All changes to production systems must follow documented change control process</li>
+        <li>Standard changes: [X] business days' notice required</li>
+        <li>Emergency changes: Post-implementation notification within [Y] hours</li>
+        <li>Client must not make changes without notifying TallTree that could affect service levels</li>
+    </ul>
+
+    <h3>11.2 Changes to SLA</h3>
+    <ul>
+        <li>SLA may be reviewed and updated quarterly or annually</li>
+        <li>Either party may propose changes with 30 days' notice</li>
+        <li>Material changes require mutual written agreement</li>
+        <li>Minor clarifications or updates to contact information may be made with email confirmation</li>
+    </ul>
+
+    <h2>12. Term and Termination</h2>
+
+    <h3>12.1 SLA Term</h3>
+    <p>This SLA is effective from <strong>[Start Date]</strong> and remains in effect as long as the underlying service agreement (MSA or SOW) is active.</p>
+
+    <h3>12.2 Termination</h3>
+    <ul>
+        <li>This SLA terminates automatically when the underlying service agreement terminates</li>
+        <li>May be terminated for persistent SLA failures as described in Section 9.4</li>
+        <li>Either party may request renegotiation with 60 days' notice</li>
+    </ul>
+
+    <h2>13. Additional Provisions</h2>
+
+    <h3>13.1 Disaster Recovery</h3>
+    <p>[If applicable: Specify disaster recovery commitments, RPO/RTO targets]</p>
+
+    <h3>13.2 Security Incident Response</h3>
+    <ul>
+        <li>Security incidents treated as minimum P2 priority</li>
+        <li>Dedicated security incident response procedures in effect</li>
+        <li>Notification to Client within [timeframe] of confirmed security incident</li>
+    </ul>
+
+    <h3>13.3 Continuous Improvement</h3>
+    <ul>
+        <li>TallTree will proactively identify and recommend service improvements</li>
+        <li>Post-incident reviews conducted for all P1 incidents</li>
+        <li>Lessons learned shared and incorporated into procedures</li>
+    </ul>
+
+    <h2>14. Master Services Agreement Incorporation</h2>
+    <p>This SLA is subject to and incorporates by reference all terms and conditions of the Master Services Agreement dated <strong>[MSA Date]</strong> and the related Statement of Work <strong>[SOW Number]</strong>. In case of conflict, the MSA governs for legal and commercial terms, while this SLA governs for operational service commitments.</p>
+
+    <div class="warning">
+        <strong>Important:</strong> This SLA defines operational commitments only. It does not modify the liability limitations, warranties, or other legal protections set forth in the Master Services Agreement. Service credits are the sole remedy for SLA breaches and do not increase TallTree's liability beyond the limits in the MSA.
+    </div>
+
+    <h2>Signatures</h2>
+    <p>By signing below, the parties agree to the service commitments and terms of this Service Level Agreement.</p>
+
+    <div class="signature-block">
+        <div class="signature-section">
+            <h4>TallTree® Technologies</h4>
+            <div class="field">
+                <strong>Signature:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+        </div>
+
+        <div class="signature-section">
+            <h4>[Client Legal Name]</h4>
+            <div class="field">
+                <strong>Signature:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Software Systems Limited. All rights reserved.</p>
+        <p>Trading as TallTree® Technologies.</p>
+        <p>Registered in England and Wales. Company No. 14466340.</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">
+            <strong>SLA Reference:</strong> [SLA-YYYY-###] | <strong>Effective:</strong> [Start Date] | <strong>Version:</strong> 1.0
+        </p>
+    </footer>
+    </div>
+</body>
+</html>

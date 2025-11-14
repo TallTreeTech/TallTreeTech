@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Services Quote</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .header-left, .header-right {
+            flex: 1;
+        }
+        .header-right {
+            text-align: right;
+        }
+        .signature-block {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .signature-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .field {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .total-row {
+            background-color: #e7f3ff;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .subtotal-row {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .summary-box {
+            background-color: #e7f3ff;
+            border: 2px solid #0056b3;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .summary-box .amount {
+            font-size: 2em;
+            color: #0056b3;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Quote</h1>
+    <p class="subtitle">Professional Services Quotation</p>
+
+    <div class="header-info">
+        <div class="header-left">
+            <p><strong>TallTree® Technologies</strong><br>
+            Software Systems Limited<br>
+            7 Bell Yard<br>
+            London, England<br>
+            WC2A 2JR<br>
+            United Kingdom</p>
+            <p>
+                Email: hello@talltree.tech<br>
+                Phone: [Phone Number]<br>
+                Company No: 14466340<br>
+                VAT No: [VAT Number]
+            </p>
+        </div>
+        <div class="header-right">
+            <p><strong>Quote Number:</strong> QUO-[YYYY]-[###]</p>
+            <p><strong>Date:</strong> [Date]</p>
+            <p><strong>Valid Until:</strong> [Date + 30 days]</p>
+            <p><strong>Prepared For:</strong><br>
+            <strong>[Client Company Name]</strong><br>
+            [Client Contact Name]<br>
+            [Client Address Line 1]<br>
+            [Client Address Line 2]<br>
+            [City, Postcode]</p>
+        </div>
+    </div>
+
+    <h2>Project Overview</h2>
+    <table>
+        <tr>
+            <th style="width: 30%">Project Name</th>
+            <td>[Project/Service Name]</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>[Brief 1-2 sentence description of the work to be performed]</td>
+        </tr>
+        <tr>
+            <th>Estimated Duration</th>
+            <td>[X weeks / Y months]</td>
+        </tr>
+        <tr>
+            <th>Estimated Start Date</th>
+            <td>[Date]</td>
+        </tr>
+        <tr>
+            <th>Your Reference</th>
+            <td>[Client's PO or reference number if applicable]</td>
+        </tr>
+    </table>
+
+    <h2>Scope of Work</h2>
+    <p>This quote covers the following services:</p>
+    <ul>
+        <li>[Service or deliverable 1 - brief description]</li>
+        <li>[Service or deliverable 2 - brief description]</li>
+        <li>[Service or deliverable 3 - brief description]</li>
+        <li>[Service or deliverable 4 - brief description]</li>
+    </ul>
+
+    <h2>Pricing</h2>
+    <table>
+        <tr>
+            <th style="width: 10%">Item</th>
+            <th style="width: 40%">Description</th>
+            <th style="width: 15%">Quantity</th>
+            <th style="width: 15%">Unit Price</th>
+            <th style="width: 20%">Total (exc. VAT)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>[Service/Phase/Component description]</td>
+            <td>[X hours / days / fixed]</td>
+            <td>£[Rate]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>[Service/Phase/Component description]</td>
+            <td>[X hours / days / fixed]</td>
+            <td>£[Rate]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>[Service/Phase/Component description]</td>
+            <td>[X hours / days / fixed]</td>
+            <td>£[Rate]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>[Service/Phase/Component description]</td>
+            <td>[X hours / days / fixed]</td>
+            <td>£[Rate]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr class="subtotal-row">
+            <td colspan="4" style="text-align: right;">Subtotal:</td>
+            <td>£[Subtotal]</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: right;">VAT (20%):</td>
+            <td>£[VAT Amount]</td>
+        </tr>
+        <tr class="total-row">
+            <td colspan="4" style="text-align: right;">TOTAL (inc. VAT):</td>
+            <td>£[Total]</td>
+        </tr>
+    </table>
+
+    <div class="summary-box">
+        <p style="font-size: 1.2em; margin: 0;">Total Investment</p>
+        <div class="amount">£[Total Amount]</div>
+        <p style="margin: 0; color: #666;">(including VAT)</p>
+    </div>
+
+    <h2>Pricing Details</h2>
+    <h3>What's Included</h3>
+    <ul>
+        <li>All services and deliverables as described above</li>
+        <li>Project management and coordination</li>
+        <li>Standard documentation and reporting</li>
+        <li>Email and video call support during the engagement</li>
+        <li>[X] days of post-delivery support</li>
+        <li>[Other inclusions specific to this quote]</li>
+    </ul>
+
+    <h3>What's Not Included</h3>
+    <ul>
+        <li>Third-party software licenses or subscriptions</li>
+        <li>Cloud infrastructure or hosting costs</li>
+        <li>Travel expenses outside [region] (billed separately if required)</li>
+        <li>Ongoing support beyond [X] days (available under separate agreement)</li>
+        <li>[Other exclusions]</li>
+    </ul>
+
+    <h3>Pricing Notes</h3>
+    <ul>
+        <li><strong>Pricing Type:</strong> [Fixed Price / Time & Materials / Day Rate]</li>
+        <li><strong>Currency:</strong> British Pounds Sterling (GBP)</li>
+        <li><strong>Expenses:</strong> [Included / Billed separately at cost with receipts]</li>
+        <li><strong>Rate Lock:</strong> Rates guaranteed if project commences by [Date]</li>
+    </ul>
+
+    <h2>Payment Terms</h2>
+    <table>
+        <tr>
+            <th style="width: 40%">Payment Schedule</th>
+            <th style="width: 60%">Terms</th>
+        </tr>
+        <tr>
+            <td><strong>Payment Terms</strong></td>
+            <td>14 days from invoice date</td>
+        </tr>
+        <tr>
+            <td><strong>Deposit</strong></td>
+            <td>[X]% deposit required to commence work: £[Amount]</td>
+        </tr>
+        <tr>
+            <td><strong>Progress Payments</strong></td>
+            <td>[Monthly / Upon milestones / Other schedule]</td>
+        </tr>
+        <tr>
+            <td><strong>Final Payment</strong></td>
+            <td>Upon project completion and acceptance</td>
+        </tr>
+        <tr>
+            <td><strong>Payment Methods</strong></td>
+            <td>Bank transfer (preferred), cheque</td>
+        </tr>
+        <tr>
+            <td><strong>Late Payment</strong></td>
+            <td>Interest charged at 4% above Bank of England base rate</td>
+        </tr>
+    </table>
+
+    <h2>Terms and Conditions</h2>
+    <h3>Quote Validity</h3>
+    <ul>
+        <li>This quote is valid for <strong>30 days</strong> from the date shown above</li>
+        <li>Pricing may be subject to review if acceptance is delayed beyond this period</li>
+        <li>Rates assume project commencement within 60 days of acceptance</li>
+    </ul>
+
+    <h3>Acceptance and Commencement</h3>
+    <ul>
+        <li>To accept this quote, please sign the acceptance section below</li>
+        <li>Work will commence upon:
+            <ul>
+                <li>Receipt of signed acceptance, and</li>
+                <li>Execution of Master Services Agreement and Statement of Work (if not already in place), and</li>
+                <li>Receipt of deposit payment (if applicable)</li>
+            </ul>
+        </li>
+        <li>Estimated start date: [Date] (subject to availability and acceptance timeline)</li>
+    </ul>
+
+    <h3>Changes and Variations</h3>
+    <ul>
+        <li>This quote is based on the scope described above</li>
+        <li>Any changes to scope may affect pricing and timeline</li>
+        <li>Change requests will be quoted separately and require written approval</li>
+        <li>Additional hours beyond quoted amounts billed at £[Rate]/hour</li>
+    </ul>
+
+    <h3>Master Services Agreement</h3>
+    <div class="info">
+        <p><strong>Existing MSA Clients:</strong> If you have an existing Master Services Agreement with TallTree, this quote will be governed by the terms of that agreement. Upon acceptance, we will provide a Statement of Work incorporating this quote.</p>
+        <p><strong>New Clients:</strong> If you do not have an existing Master Services Agreement, we will provide our standard MSA and SOW for execution alongside this quote. All work is subject to the terms and conditions of the MSA.</p>
+    </div>
+
+    <h3>Key Terms Summary</h3>
+    <p>This quote is subject to TallTree's standard terms and conditions as set forth in our Master Services Agreement, including but not limited to:</p>
+    <ul>
+        <li><strong>Intellectual Property:</strong> Custom work transfers to Client upon payment; TallTree retains background IP</li>
+        <li><strong>Confidentiality:</strong> Both parties maintain confidentiality of proprietary information</li>
+        <li><strong>Liability:</strong> Limited to fees paid under the relevant Statement of Work</li>
+        <li><strong>Payment:</strong> 14-day payment terms; late payment interest applies</li>
+        <li><strong>Termination:</strong> Either party may terminate with notice as per MSA terms</li>
+    </ul>
+
+    <div class="warning">
+        <strong>Important:</strong> This quote is not a binding contract. Upon acceptance, formal agreements (MSA and SOW) will be executed before work commences. This quote represents our current understanding and may be refined during the formal contracting process.
+    </div>
+
+    <h2>Questions or Clarifications</h2>
+    <p>If you have any questions about this quote, please contact:</p>
+    <p>
+        <strong>[Contact Name]</strong><br>
+        [Title]<br>
+        Email: [email@talltree.tech]<br>
+        Phone: [Phone Number]<br>
+        Available: [Hours/Days]
+    </p>
+
+    <h2>Next Steps</h2>
+    <ol>
+        <li><strong>Review:</strong> Review this quote and ask any questions</li>
+        <li><strong>Accept:</strong> Sign the acceptance section below or reply with written acceptance</li>
+        <li><strong>Agreements:</strong> We'll provide MSA and SOW for execution (if needed)</li>
+        <li><strong>Deposit:</strong> Submit deposit payment to secure start date</li>
+        <li><strong>Kickoff:</strong> Schedule project kickoff meeting</li>
+    </ol>
+
+    <h2>Quote Acceptance</h2>
+    <p>By signing below, you accept this quote and authorize TallTree Technologies to proceed with the work described, subject to execution of the Master Services Agreement and Statement of Work, and receipt of deposit payment.</p>
+
+    <div class="signature-block">
+        <div class="signature-section">
+            <h4>Client Acceptance</h4>
+            <div class="field">
+                <strong>Company Name:</strong> [Client Legal Name]
+            </div>
+            <div class="field">
+                <strong>Authorized Signature:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Printed Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title/Position:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Purchase Order Number (if applicable):</strong> _________________________________
+            </div>
+        </div>
+
+        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+            <strong>Alternative Acceptance:</strong> You may also accept this quote by email confirmation to [email@talltree.tech] stating "I accept Quote QUO-[YYYY]-[###]" along with your name, title, and company name.
+        </p>
+    </div>
+
+    <footer>
+        <p>© 2025 Software Systems Limited. All rights reserved.</p>
+        <p>Trading as TallTree® Technologies.</p>
+        <p>Registered in England and Wales. Company No. 14466340.</p>
+        <p>VAT Registration No: [VAT Number]</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">
+            <strong>Quote Reference:</strong> QUO-[YYYY]-[###] | <strong>Date:</strong> [Date] | <strong>Valid Until:</strong> [Date + 30 days]
+        </p>
+        <p style="font-size: 0.8em; margin-top: 10px;">
+            Thank you for considering TallTree Technologies for your project.
+        </p>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Status Report Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #111;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .danger {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .metadata-table th {
+            width: 30%;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .rag-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+        }
+        .rag-green {
+            background-color: #28a745;
+        }
+        .rag-amber {
+            background-color: #ffc107;
+            color: #333;
+        }
+        .rag-red {
+            background-color: #dc3545;
+        }
+        .summary-box {
+            background-color: #e7f3ff;
+            border: 2px solid #0056b3;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .metric-card {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #0056b3;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Project Status Report</h1>
+    <p style="text-align: center;"><strong>[Project Name]</strong></p>
+
+    <h2>Report Information</h2>
+    <table class="metadata-table">
+        <tr>
+            <th>Project Name</th>
+            <td>[Full Project Name]</td>
+        </tr>
+        <tr>
+            <th>Client</th>
+            <td>[Client Name]</td>
+        </tr>
+        <tr>
+            <th>Reporting Period</th>
+            <td>[Start Date] - [End Date]</td>
+        </tr>
+        <tr>
+            <th>Report Date</th>
+            <td>[DD/MM/YYYY]</td>
+        </tr>
+        <tr>
+            <th>Report Type</th>
+            <td>[Weekly / Bi-Weekly / Monthly]</td>
+        </tr>
+        <tr>
+            <th>Prepared By</th>
+            <td>[Name, Title, TallTree Technologies]</td>
+        </tr>
+        <tr>
+            <th>Distribution</th>
+            <td>[List of recipients/stakeholders]</td>
+        </tr>
+    </table>
+
+    <h2>Executive Summary</h2>
+
+    <div class="summary-box">
+        <h3 style="margin-top: 0;">Overall Project Status (RAG)</h3>
+        <table>
+            <tr>
+                <th style="width: 25%">Category</th>
+                <th style="width: 15%">Status</th>
+                <th style="width: 60%">Comments</th>
+            </tr>
+            <tr>
+                <td><strong>Overall Status</strong></td>
+                <td><span class="rag-status rag-green">GREEN</span></td>
+                <td>[Brief explanation of overall status]</td>
+            </tr>
+            <tr>
+                <td><strong>Schedule</strong></td>
+                <td><span class="rag-status rag-green">GREEN</span></td>
+                <td>[On track / Ahead / Behind - explanation]</td>
+            </tr>
+            <tr>
+                <td><strong>Budget</strong></td>
+                <td><span class="rag-status rag-green">GREEN</span></td>
+                <td>[Within budget / Over / Under - explanation]</td>
+            </tr>
+            <tr>
+                <td><strong>Scope</strong></td>
+                <td><span class="rag-status rag-amber">AMBER</span></td>
+                <td>[Any scope changes or concerns]</td>
+            </tr>
+            <tr>
+                <td><strong>Quality</strong></td>
+                <td><span class="rag-status rag-green">GREEN</span></td>
+                <td>[Quality metrics and status]</td>
+            </tr>
+            <tr>
+                <td><strong>Resources</strong></td>
+                <td><span class="rag-status rag-green">GREEN</span></td>
+                <td>[Resource availability and utilization]</td>
+            </tr>
+        </table>
+    </div>
+
+    <p><strong>Summary:</strong> [2-3 paragraph executive summary of the project status, highlighting key achievements, current focus, and any critical issues requiring attention.]</p>
+
+    <h2>Key Metrics</h2>
+    <div class="metric-grid">
+        <div class="metric-card">
+            <div class="metric-value">[XX]%</div>
+            <div class="metric-label">Overall Completion</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">[XX]%</div>
+            <div class="metric-label">Budget Utilized</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">[XX]</div>
+            <div class="metric-label">Days Remaining</div>
+        </div>
+    </div>
+
+    <h2>Accomplishments This Period</h2>
+    <div class="success">
+        <strong>Key Achievements:</strong>
+        <ul>
+            <li><strong>[Accomplishment 1]:</strong> [Description of what was completed and its significance]</li>
+            <li><strong>[Accomplishment 2]:</strong> [Description of what was completed and its significance]</li>
+            <li><strong>[Accomplishment 3]:</strong> [Description of what was completed and its significance]</li>
+            <li><strong>[Accomplishment 4]:</strong> [Description of what was completed and its significance]</li>
+        </ul>
+    </div>
+
+    <h3>Deliverables Completed</h3>
+    <table>
+        <tr>
+            <th style="width: 15%">Deliverable ID</th>
+            <th style="width: 40%">Deliverable Name</th>
+            <th style="width: 20%">Planned Date</th>
+            <th style="width: 20%">Actual Date</th>
+            <th style="width: 5%">Status</th>
+        </tr>
+        <tr>
+            <td>D[X]</td>
+            <td>[Deliverable Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+            <td>D[X]</td>
+            <td>[Deliverable Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>✓</td>
+        </tr>
+    </table>
+
+    <h2>Planned Activities for Next Period</h2>
+    <div class="info">
+        <strong>Upcoming Focus Areas:</strong>
+        <ol>
+            <li><strong>[Activity/Focus Area 1]:</strong> [Description and expected outcomes]</li>
+            <li><strong>[Activity/Focus Area 2]:</strong> [Description and expected outcomes]</li>
+            <li><strong>[Activity/Focus Area 3]:</strong> [Description and expected outcomes]</li>
+            <li><strong>[Activity/Focus Area 4]:</strong> [Description and expected outcomes]</li>
+        </ol>
+    </div>
+
+    <h3>Deliverables Due Next Period</h3>
+    <table>
+        <tr>
+            <th style="width: 15%">Deliverable ID</th>
+            <th style="width: 40%">Deliverable Name</th>
+            <th style="width: 20%">Due Date</th>
+            <th style="width: 25%">Status/Progress</th>
+        </tr>
+        <tr>
+            <td>D[X]</td>
+            <td>[Deliverable Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[On track / In progress / At risk]</td>
+        </tr>
+        <tr>
+            <td>D[X]</td>
+            <td>[Deliverable Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[On track / In progress / At risk]</td>
+        </tr>
+    </table>
+
+    <h2>Milestones Status</h2>
+    <table>
+        <tr>
+            <th style="width: 10%">ID</th>
+            <th style="width: 30%">Milestone</th>
+            <th style="width: 15%">Target Date</th>
+            <th style="width: 15%">Forecast Date</th>
+            <th style="width: 15%">Status</th>
+            <th style="width: 15%">Variance</th>
+        </tr>
+        <tr>
+            <td>M1</td>
+            <td>[Milestone Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="rag-status rag-green" style="padding: 3px 10px; font-size: 0.9em;">Complete</span></td>
+            <td>On time</td>
+        </tr>
+        <tr>
+            <td>M2</td>
+            <td>[Milestone Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="rag-status rag-green" style="padding: 3px 10px; font-size: 0.9em;">On Track</span></td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>M3</td>
+            <td>[Milestone Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="rag-status rag-amber" style="padding: 3px 10px; font-size: 0.9em;">At Risk</span></td>
+            <td>+5 days</td>
+        </tr>
+        <tr>
+            <td>M4</td>
+            <td>[Milestone Name]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td>[DD/MM/YYYY]</td>
+            <td><span class="rag-status rag-green" style="padding: 3px 10px; font-size: 0.9em;">On Track</span></td>
+            <td>—</td>
+        </tr>
+    </table>
+
+    <h2>Budget Status</h2>
+    <table>
+        <tr>
+            <th style="width: 40%">Category</th>
+            <th style="width: 20%">Budget</th>
+            <th style="width: 20%">Actual to Date</th>
+            <th style="width: 20%">Remaining</th>
+        </tr>
+        <tr>
+            <td><strong>Total Project Budget</strong></td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>Professional Services</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>Expenses</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+        </tr>
+        <tr>
+            <td>Third-Party Costs</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+            <td>£[Amount]</td>
+        </tr>
+    </table>
+
+    <p><strong>Budget Notes:</strong> [Any explanation of budget variances, change orders, or forecast adjustments]</p>
+
+    <h3>Effort/Hours Summary</h3>
+    <table>
+        <tr>
+            <th style="width: 40%">Resource/Role</th>
+            <th style="width: 20%">Planned Hours</th>
+            <th style="width: 20%">Actual Hours</th>
+            <th style="width: 20%">Remaining</th>
+        </tr>
+        <tr>
+            <td>[Role/Resource Name]</td>
+            <td>[Hours]</td>
+            <td>[Hours]</td>
+            <td>[Hours]</td>
+        </tr>
+        <tr>
+            <td>[Role/Resource Name]</td>
+            <td>[Hours]</td>
+            <td>[Hours]</td>
+            <td>[Hours]</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>[Hours]</strong></td>
+            <td><strong>[Hours]</strong></td>
+            <td><strong>[Hours]</strong></td>
+        </tr>
+    </table>
+
+    <h2>Risks and Issues</h2>
+
+    <h3>Active Risks</h3>
+    <table>
+        <tr>
+            <th style="width: 8%">ID</th>
+            <th style="width: 30%">Risk Description</th>
+            <th style="width: 12%">Impact</th>
+            <th style="width: 12%">Probability</th>
+            <th style="width: 38%">Mitigation Strategy</th>
+        </tr>
+        <tr>
+            <td>R1</td>
+            <td>[Description of risk]</td>
+            <td><span class="rag-status rag-red" style="padding: 3px 10px; font-size: 0.85em;">High</span></td>
+            <td><span class="rag-status rag-amber" style="padding: 3px 10px; font-size: 0.85em;">Medium</span></td>
+            <td>[Mitigation plan and owner]</td>
+        </tr>
+        <tr>
+            <td>R2</td>
+            <td>[Description of risk]</td>
+            <td><span class="rag-status rag-amber" style="padding: 3px 10px; font-size: 0.85em;">Medium</span></td>
+            <td><span class="rag-status rag-green" style="padding: 3px 10px; font-size: 0.85em;">Low</span></td>
+            <td>[Mitigation plan and owner]</td>
+        </tr>
+    </table>
+
+    <h3>Current Issues</h3>
+    <div class="warning">
+        <table style="margin: 0;">
+            <tr>
+                <th style="width: 8%">ID</th>
+                <th style="width: 35%">Issue Description</th>
+                <th style="width: 12%">Priority</th>
+                <th style="width: 20%">Owner</th>
+                <th style="width: 25%">Resolution Plan</th>
+            </tr>
+            <tr>
+                <td>I1</td>
+                <td>[Description of issue]</td>
+                <td><span class="rag-status rag-red" style="padding: 3px 10px; font-size: 0.85em;">High</span></td>
+                <td>[Name]</td>
+                <td>[Resolution plan and timeline]</td>
+            </tr>
+            <tr>
+                <td>I2</td>
+                <td>[Description of issue]</td>
+                <td><span class="rag-status rag-amber" style="padding: 3px 10px; font-size: 0.85em;">Medium</span></td>
+                <td>[Name]</td>
+                <td>[Resolution plan and timeline]</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Recently Closed Risks/Issues</h3>
+    <ul>
+        <li><strong>[Risk/Issue ID]:</strong> [Brief description] - Closed on [Date]</li>
+        <li><strong>[Risk/Issue ID]:</strong> [Brief description] - Closed on [Date]</li>
+    </ul>
+
+    <h2>Decisions Needed</h2>
+    <div class="warning">
+        <strong>Pending Decisions Required from Stakeholders:</strong>
+        <ol>
+            <li><strong>[Decision Topic]:</strong> [Description of what needs to be decided, by whom, and by when]</li>
+            <li><strong>[Decision Topic]:</strong> [Description of what needs to be decided, by whom, and by when]</li>
+            <li><strong>[Decision Topic]:</strong> [Description of what needs to be decided, by whom, and by when]</li>
+        </ol>
+    </div>
+
+    <h2>Change Requests</h2>
+    <table>
+        <tr>
+            <th style="width: 8%">CR ID</th>
+            <th style="width: 35%">Description</th>
+            <th style="width: 12%">Impact</th>
+            <th style="width: 20%">Status</th>
+            <th style="width: 25%">Decision/Notes</th>
+        </tr>
+        <tr>
+            <td>CR-001</td>
+            <td>[Description of change request]</td>
+            <td>Schedule: +[X] days<br>Budget: £[Amount]</td>
+            <td>[Submitted / Under Review / Approved / Rejected]</td>
+            <td>[Decision and notes]</td>
+        </tr>
+    </table>
+
+    <h2>Dependencies and Blockers</h2>
+    <h3>External Dependencies</h3>
+    <ul>
+        <li><strong>[Dependency Description]:</strong> [Status, owner, and expected resolution date]</li>
+        <li><strong>[Dependency Description]:</strong> [Status, owner, and expected resolution date]</li>
+    </ul>
+
+    <h3>Current Blockers</h3>
+    <div class="danger">
+        <ul style="margin: 5px 0;">
+            <li><strong>[Blocker Description]:</strong> [Impact and required action]</li>
+        </ul>
+    </div>
+
+    <h2>Next Steps</h2>
+    <div class="info">
+        <strong>Immediate Priorities:</strong>
+        <ol>
+            <li>[Priority action or focus for next period]</li>
+            <li>[Priority action or focus for next period]</li>
+            <li>[Priority action or focus for next period]</li>
+        </ol>
+    </div>
+
+    <h2>Stakeholder Feedback/Notes</h2>
+    <p>[Any feedback from client or stakeholders, concerns raised, or additional context relevant to the project status]</p>
+
+    <h2>Attachments/Supporting Documents</h2>
+    <ul>
+        <li>[Attachment 1 - e.g., Detailed schedule, burn-down chart]</li>
+        <li>[Attachment 2 - e.g., Technical documentation]</li>
+        <li>[Attachment 3 - e.g., Test results]</li>
+    </ul>
+
+    <footer>
+        <p>© 2025 Software Systems Limited. All rights reserved.</p>
+        <p>Trading as TallTree® Technologies.</p>
+        <p>Registered in England and Wales. Company No. 14466340.</p>
+        <p style="margin-top: 15px; font-size: 0.85em;">
+            <strong>Project:</strong> [Project Name] | <strong>Period:</strong> [Start Date] - [End Date] | <strong>Report Date:</strong> [DD/MM/YYYY]
+        </p>
+    </footer>
+    </div>
+</body>
+</html>
