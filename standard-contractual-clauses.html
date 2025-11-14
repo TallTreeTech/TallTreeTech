@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Contractual Clauses for International Data Transfers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #111;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .signature-block {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+        }
+        .signature-section {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .field {
+            margin: 10px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .warning {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .info {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .critical {
+            background-color: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #666;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .annex {
+            background-color: #f8f9fa;
+            border: 2px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .clause {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    <h1>Standard Contractual Clauses (SCCs)</h1>
+    <p style="text-align: center;"><strong>For International Data Transfers from the UK/EEA</strong></p>
+    <p style="text-align: center;"><em>EU Commission Implementing Decision 2021/914 - Module 2: Controller to Processor</em></p>
+
+    <div class="critical">
+        <strong>Critical Notice - UK to EU/EEA Data Transfers Post-Brexit:</strong>
+        <p>Following the UK's exit from the European Union, personal data transfers from the UK to the EU/EEA (and vice versa) are now considered international data transfers that require appropriate safeguards under UK GDPR and EU GDPR.</p>
+        <p><strong>When these SCCs are required:</strong></p>
+        <ul>
+            <li><strong>UK to EU/EEA transfers:</strong> Required when TallTree (UK-based) processes personal data on behalf of EU/EEA-based clients</li>
+            <li><strong>EU/EEA to UK transfers:</strong> May be required until UK adequacy decision is renewed or if EU adequacy for UK is withdrawn</li>
+            <li><strong>UK to third countries:</strong> Required for transfers to countries without UK adequacy decisions</li>
+            <li><strong>EU to third countries:</strong> Required for transfers to countries without EU adequacy decisions</li>
+        </ul>
+        <p><strong>Alternative for UK transfers:</strong> The UK International Data Transfer Agreement (IDTA) or International Data Transfer Addendum to EU SCCs can be used for UK-specific transfers. See Section 10 for UK IDTA option.</p>
+    </div>
+
+    <div class="info">
+        <h3>Purpose of This Document</h3>
+        <p>These Standard Contractual Clauses (SCCs) provide appropriate safeguards for international transfers of personal data, as required by:</p>
+        <ul>
+            <li>Article 46 of the EU General Data Protection Regulation (EU GDPR)</li>
+            <li>Article 46 of the UK GDPR (as incorporated by the Data Protection Act 2018)</li>
+        </ul>
+        <p><strong>Module 2 Configuration:</strong> This document uses Module 2 (Controller to Processor), which is appropriate for consulting engagements where:</p>
+        <ul>
+            <li>The Client acts as a data controller (determines purposes and means of processing)</li>
+            <li>TallTree acts as a data processor (processes personal data on behalf of the Client)</li>
+        </ul>
+    </div>
+
+    <h2>Section 1: Parties</h2>
+
+    <h3>Data Exporter (Controller)</h3>
+    <p><strong>Name:</strong> [Client Legal Name]<br>
+    <strong>Address:</strong> [Client Address]<br>
+    <strong>Contact Person:</strong> [Name, Position, Email]<br>
+    <strong>Role:</strong> Data Controller<br>
+    <strong>Signature:</strong> _________________ <strong>Date:</strong> _________</p>
+
+    <h3>Data Importer (Processor)</h3>
+    <p><strong>Name:</strong> Software Systems Limited, trading as TallTree® Technologies<br>
+    <strong>Address:</strong> 7 Bell Yard, London, England, WC2A 2JR<br>
+    <strong>Company Number:</strong> 14466340<br>
+    <strong>Contact Person:</strong> Data Protection Officer<br>
+    <strong>Email:</strong> dpo@talltree.tech<br>
+    <strong>Role:</strong> Data Processor<br>
+    <strong>Signature:</strong> _________________ <strong>Date:</strong> _________</p>
+
+    <div class="info">
+        <strong>Note on Terminology:</strong> In the context of UK-EU data transfers:
+        <ul>
+            <li>If Client is in EU/EEA and TallTree (UK) is processor: Client is "data exporter", TallTree is "data importer"</li>
+            <li>If Client is in UK and processor is in EU/EEA: Client is "data exporter", EU/EEA processor is "data importer"</li>
+            <li>The "importer" is the party receiving data in the jurisdiction requiring additional safeguards</li>
+        </ul>
+    </div>
+
+    <h2>Section 2: Description of Transfer</h2>
+    <p>The transfer is necessary for the performance of professional consulting services as described in the Master Services Agreement and associated Statement(s) of Work between the parties.</p>
+
+    <h3>Categories of Data Subjects</h3>
+    <p>The personal data transferred may concern the following categories of data subjects (to be specified in Annex I.A):</p>
+    <ul>
+        <li>Employees, contractors, and agents of the data exporter</li>
+        <li>Customers, clients, and end-users of the data exporter's services</li>
+        <li>Business contacts and potential customers</li>
+        <li>[Other categories as specified in the services agreement]</li>
+    </ul>
+
+    <h3>Categories of Personal Data</h3>
+    <p>The personal data transferred may include (to be specified in Annex I.A):</p>
+    <ul>
+        <li>Contact information (names, email addresses, telephone numbers)</li>
+        <li>Professional information (job titles, company affiliations)</li>
+        <li>Technical data (IP addresses, system logs, user credentials)</li>
+        <li>Usage data and analytics</li>
+        <li>[Other categories as specified in the services agreement]</li>
+    </ul>
+
+    <h3>Sensitive Data (if applicable)</h3>
+    <p>Special categories of data as defined in Article 9(1) of the GDPR: [To be specified if applicable, or state "Not applicable"]</p>
+
+    <h3>Frequency of Transfer</h3>
+    <p>[ ] One-off transfer<br>
+    [X] Continuous or repeated transfers throughout the duration of the services</p>
+
+    <h3>Nature and Purpose of Processing</h3>
+    <p>The data importer will process personal data as necessary to provide professional consulting services as described in the Master Services Agreement and Statement(s) of Work, which may include:</p>
+    <ul>
+        <li>Technical consulting and advisory services</li>
+        <li>Security assessments and implementations</li>
+        <li>Software development and integration services</li>
+        <li>Edge computing and IoT solutions</li>
+        <li>Project management and delivery</li>
+        <li>[Other services as specified]</li>
+    </ul>
+
+    <h3>Duration of Processing</h3>
+    <p>Processing will continue for the duration of the Master Services Agreement and relevant Statement(s) of Work, plus any retention period required by law or agreed in the data processing agreement.</p>
+
+    <h2>Section 3: Standard Contractual Clauses (Module 2: Controller to Processor)</h2>
+
+    <div class="clause">
+        <h3>Clause 1: Purpose and Scope</h3>
+        <ol type="a">
+            <li>The purpose of these standard contractual clauses is to ensure compliance with the requirements of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation) for the transfer of personal data to a third country.</li>
+            <li>The Parties:
+                <ol type="i">
+                    <li>the natural or legal person(s), public authority/ies, agency/ies or other body/ies (hereinafter 'entity/ies') transferring the personal data, as listed in Annex I.A (hereinafter each 'data exporter'), and</li>
+                    <li>the entity/ies in a third country receiving the personal data from the data exporter, directly or indirectly via another entity also Party to these Clauses, as listed in Annex I.A (hereinafter each 'data importer')</li>
+                </ol>
+                have agreed to these standard contractual clauses (hereinafter: 'Clauses').
+            </li>
+            <li>These Clauses apply with respect to the transfer of personal data as specified in Annex I.B.</li>
+            <li>The Appendix to these Clauses containing the Annexes referred to therein forms an integral part of these Clauses.</li>
+        </ol>
+    </div>
+
+    <div class="clause">
+        <h3>Clause 2: Effect and Invariability of the Clauses</h3>
+        <ol type="a">
+            <li>These Clauses set out appropriate safeguards, including enforceable data subject rights and effective legal remedies, pursuant to Article 46(1) and Article 46(2)(c) of Regulation (EU) 2016/679 and, with respect to data transfers from controllers to processors and/or processors to processors, standard contractual clauses pursuant to Article 28(7) of Regulation (EU) 2016/679, provided they are not modified, except to select the appropriate Module(s) or to add or update information in the Appendix.</li>
+            <li>These Clauses are without prejudice to obligations to which the data exporter is subject by virtue of Regulation (EU) 2016/679.</li>
+        </ol>
+    </div>
+
+    <div class="clause">
+        <h3>Clause 3: Third-Party Beneficiaries</h3>
+        <ol type="a">
+            <li>Data subjects may invoke and enforce these Clauses, as third-party beneficiaries, against the data exporter and/or data importer, with the following exceptions:</li>
+            <li>Clause 1, Clause 2, Clause 3, Clause 6, Clause 7;</li>
+            <li>Clause 8.1(b), 8.9(a), (c), (d) and (e);</li>
+            <li>Clause 9(a), (c), (d) and (e);</li>
+            <li>Clause 12(a), (d) and (f);</li>
+            <li>Clause 13;</li>
+            <li>Clause 15.1(c), (d) and (e);</li>
+            <li>Clause 16(e);</li>
+            <li>Clause 18(a) and (b).</li>
+        </ol>
+    </div>
+
+    <div class="clause">
+        <h3>Clause 4: Interpretation</h3>
+        <ol type="a">
+            <li>Where these Clauses use terms that are defined in Regulation (EU) 2016/679, those terms shall have the same meaning as in that Regulation.</li>
+            <li>These Clauses shall be read and interpreted in the light of the provisions of Regulation (EU) 2016/679.</li>
+            <li>These Clauses shall not be interpreted in a way that conflicts with rights and obligations provided for in Regulation (EU) 2016/679.</li>
+        </ol>
+    </div>
+
+    <div class="clause">
+        <h3>Clause 5: Hierarchy</h3>
+        <p>In the event of a contradiction between these Clauses and the provisions of related agreements between the Parties, existing at the time these Clauses are agreed or entered into thereafter, these Clauses shall prevail.</p>
+    </div>
+
+    <div class="clause">
+        <h3>Clause 6: Description of the Transfer(s)</h3>
+        <p>The details of the transfer(s), and in particular the categories of personal data that are transferred and the purpose(s) for which they are transferred, are specified in Annex I.B.</p>
+    </div>
+
+    <div class="clause">
+        <h3>Clause 7: Docking Clause</h3>
+        <ol type="a">
+            <li>An entity that is not a Party to these Clauses may, with the agreement of the Parties, accede to these Clauses at any time, either as a data exporter or as a data importer, by completing the Appendix and signing Annex I.A.</li>
+            <li>Once it has completed the Appendix and signed Annex I.A, the acceding entity shall become a Party to these Clauses and have the rights and obligations of a data exporter or data importer in accordance with its designation in Annex I.A.</li>
+            <li>The acceding entity shall have no rights or obligations arising under these Clauses from the period prior to becoming a Party.</li>
+        </ol>
+    </div>
+
+    <div class="warning">
+        <strong>Note:</strong> Clauses 8-18 contain detailed obligations for data protection, security, data subject rights, liability, supervision, and dispute resolution. The full text of the EU Commission's Standard Contractual Clauses (Decision 2021/914) is incorporated by reference and can be found at:
+        <p><a href="https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj" target="_blank">https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj</a></p>
+        <p>Key obligations include:</p>
+        <ul>
+            <li><strong>Clause 8:</strong> Data protection safeguards - Processor obligations, assistance to controller, security measures</li>
+            <li><strong>Clause 9:</strong> Use of sub-processors - Authorization, contracts, liability</li>
+            <li><strong>Clause 10:</strong> Data subject rights - Assistance with data subject requests</li>
+            <li><strong>Clause 11:</strong> Redress - Cooperation with supervisory authorities, indemnification</li>
+            <li><strong>Clause 12:</strong> Liability - Joint and several liability for damages</li>
+            <li><strong>Clause 13:</strong> Supervision - Right to contact supervisory authority</li>
+            <li><strong>Clause 14:</strong> Local laws - Disclosure requirements, inability to comply</li>
+            <li><strong>Clause 15:</strong> Obligations of data importer - Access by public authorities</li>
+            <li><strong>Clause 16:</strong> Non-compliance and termination</li>
+            <li><strong>Clause 17:</strong> Governing law - Law of EU Member State where data exporter is established</li>
+            <li><strong>Clause 18:</strong> Choice of forum and jurisdiction - Courts of EU Member State</li>
+        </ul>
+    </div>
+
+    <h2>Section 4: Key Processor Obligations (Summary)</h2>
+
+    <h3>Data Processing (Clause 8)</h3>
+    <p>The data importer (TallTree) shall:</p>
+    <ul>
+        <li>Process personal data only on documented instructions from the data exporter (Client)</li>
+        <li>Ensure persons authorized to process personal data are subject to confidentiality obligations</li>
+        <li>Take appropriate technical and organizational measures to ensure security (see Annex II)</li>
+        <li>Respect conditions for engaging sub-processors (see Annex III)</li>
+        <li>Assist the data exporter in responding to data subject requests</li>
+        <li>Assist the data exporter in ensuring compliance with security, breach notification, and impact assessment obligations</li>
+        <li>Delete or return all personal data after the end of services (at data exporter's choice)</li>
+        <li>Make available information necessary to demonstrate compliance</li>
+    </ul>
+
+    <h3>Sub-Processors (Clause 9)</h3>
+    <p>The data importer shall:</p>
+    <ul>
+        <li>Not engage sub-processors without prior specific or general written authorization from the data exporter</li>
+        <li>Where general authorization is given, inform the data exporter of any changes and allow objection</li>
+        <li>Ensure sub-processors are bound by the same data protection obligations via contract</li>
+        <li>Remain fully liable to the data exporter for performance of sub-processor obligations</li>
+    </ul>
+    <p><strong>Current authorized sub-processors are listed in Annex III.</strong></p>
+
+    <h3>Data Subject Rights (Clause 10)</h3>
+    <p>The data importer shall promptly inform the data exporter of any request received directly from a data subject and shall not respond to the request unless authorized to do so by the data exporter.</p>
+
+    <h3>Government Access Requests (Clause 15)</h3>
+    <p>The data importer shall:</p>
+    <ul>
+        <li>Notify the data exporter and data subjects (unless prohibited by law) of any legally binding request for disclosure by a public authority</li>
+        <li>Challenge the request if it believes there are reasonable grounds to consider it unlawful</li>
+        <li>Provide minimum amount of information permissible when responding to the request</li>
+        <li>Document all requests and responses and make information available to the data exporter</li>
+    </ul>
+
+    <h2>Section 5: Annexes</h2>
+
+    <div class="annex">
+        <h3>Annex I.A: List of Parties</h3>
+
+        <h4>Data Exporter(s):</h4>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>[Client Legal Name]</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>[Client Address, including country]</td>
+            </tr>
+            <tr>
+                <td>Contact Person</td>
+                <td>[Name, position, email, phone]</td>
+            </tr>
+            <tr>
+                <td>Activities relevant to transfer</td>
+                <td>Data controller engaging processor for professional consulting services</td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td>Controller</td>
+            </tr>
+        </table>
+
+        <h4>Data Importer(s):</h4>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Software Systems Limited, trading as TallTree® Technologies</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>7 Bell Yard, London, England, WC2A 2JR, United Kingdom</td>
+            </tr>
+            <tr>
+                <td>Contact Person</td>
+                <td>Data Protection Officer, dpo@talltree.tech</td>
+            </tr>
+            <tr>
+                <td>Activities relevant to transfer</td>
+                <td>Professional consulting services including security, edge computing, IoT solutions, technical advisory, and software development</td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td>Processor</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="annex">
+        <h3>Annex I.B: Description of Transfer</h3>
+
+        <h4>Categories of Data Subjects</h4>
+        <p>Personal data transferred may concern the following categories of data subjects:</p>
+        <ul>
+            <li>Employees, officers, contractors, and agents of the data exporter</li>
+            <li>Customers and end-users of the data exporter's products or services</li>
+            <li>Business contacts, leads, and prospects</li>
+            <li>Suppliers and partners of the data exporter</li>
+            <li>[Add specific categories as relevant to the services]</li>
+        </ul>
+
+        <h4>Categories of Personal Data</h4>
+        <ul>
+            <li><strong>Contact Data:</strong> Names, email addresses, telephone numbers, postal addresses</li>
+            <li><strong>Identification Data:</strong> User IDs, account credentials, employee IDs</li>
+            <li><strong>Professional Data:</strong> Job titles, employer information, professional qualifications</li>
+            <li><strong>Technical Data:</strong> IP addresses, device information, browser type, system logs, cookies</li>
+            <li><strong>Usage Data:</strong> Application usage patterns, feature utilization, performance metrics</li>
+            <li><strong>Communication Data:</strong> Email contents, chat messages, support tickets (if applicable)</li>
+            <li><strong>Financial Data:</strong> Payment information, transaction history (if applicable)</li>
+            <li>[Add specific categories as relevant to the services]</li>
+        </ul>
+
+        <h4>Special Categories of Data (if applicable)</h4>
+        <p>[ ] No special categories of data are transferred</p>
+        <p>[X] The following special categories of data may be transferred:</p>
+        <ul>
+            <li>[Specify if applicable, e.g., health data, biometric data, etc.]</li>
+            <li>[State "None" if no special categories are involved]</li>
+        </ul>
+
+        <h4>Processing Operations</h4>
+        <p>The personal data will be subject to the following processing activities:</p>
+        <ul>
+            <li>Collection, recording, and storage of personal data</li>
+            <li>Organization and structuring of data for service delivery</li>
+            <li>Consultation and use of data to perform consulting services</li>
+            <li>Analysis and evaluation as required for service delivery</li>
+            <li>Transmission and disclosure to authorized sub-processors (see Annex III)</li>
+            <li>Storage for the duration of the service agreement plus retention period</li>
+            <li>Erasure or return at the end of services</li>
+            <li>[Add specific processing operations as relevant]</li>
+        </ul>
+    </div>
+
+    <div class="annex">
+        <h3>Annex II: Technical and Organizational Measures (TOMs)</h3>
+        <p>The data importer has implemented and will maintain the following technical and organizational measures to ensure an appropriate level of security:</p>
+
+        <h4>1. Access Control</h4>
+        <ul>
+            <li>Multi-factor authentication (MFA) for all system access</li>
+            <li>Role-based access control (RBAC) with principle of least privilege</li>
+            <li>Regular access reviews and revocation of unnecessary permissions</li>
+            <li>Secure authentication mechanisms and password policies</li>
+            <li>Logging and monitoring of all access to personal data</li>
+        </ul>
+
+        <h4>2. Transmission Control</h4>
+        <ul>
+            <li>Encryption of data in transit using TLS 1.3 or higher</li>
+            <li>Secure file transfer protocols (SFTP, HTTPS)</li>
+            <li>VPN for remote access where applicable</li>
+            <li>Logging of all data transmissions</li>
+        </ul>
+
+        <h4>3. Storage and Isolation Control</h4>
+        <ul>
+            <li>Encryption of data at rest using AES-256 or equivalent</li>
+            <li>Logical separation of client data (multi-tenancy security)</li>
+            <li>Secure backup and recovery procedures</li>
+            <li>Data retention and secure deletion policies</li>
+        </ul>
+
+        <h4>4. Physical Security</h4>
+        <ul>
+            <li>Access controls to office premises (key card, biometric)</li>
+            <li>Secure areas for processing sensitive data</li>
+            <li>Clean desk and clear screen policies</li>
+            <li>Secure disposal of physical media (shredding, degaussing)</li>
+        </ul>
+
+        <h4>5. Organizational Measures</h4>
+        <ul>
+            <li>Data protection and security policies and procedures</li>
+            <li>Confidentiality agreements for all personnel</li>
+            <li>Regular security awareness training</li>
+            <li>Background checks for employees with access to personal data</li>
+            <li>Incident response and breach notification procedures</li>
+            <li>Regular security assessments and penetration testing</li>
+        </ul>
+
+        <h4>6. Development and Maintenance</h4>
+        <ul>
+            <li>Security by design and by default principles</li>
+            <li>Secure development lifecycle (SDLC) processes</li>
+            <li>Regular security patching and updates</li>
+            <li>Vulnerability management program</li>
+            <li>Code review and security testing</li>
+        </ul>
+
+        <h4>7. Incident Response</h4>
+        <ul>
+            <li>24/7 security monitoring and alerting</li>
+            <li>Documented incident response procedures</li>
+            <li>Breach notification procedures (72-hour notification to data exporter)</li>
+            <li>Forensic investigation capabilities</li>
+            <li>Post-incident review and remediation</li>
+        </ul>
+
+        <h4>8. Business Continuity</h4>
+        <ul>
+            <li>Regular data backups with encryption</li>
+            <li>Disaster recovery plan tested annually</li>
+            <li>Business continuity procedures</li>
+            <li>Redundant systems and failover capabilities</li>
+        </ul>
+
+        <div class="info">
+            <strong>Certification and Compliance:</strong>
+            <p>TallTree maintains the following security certifications and standards:</p>
+            <ul>
+                <li>ISO 27001 Information Security Management (target: [date])</li>
+                <li>Cyber Essentials Plus certification</li>
+                <li>UK GDPR and Data Protection Act 2018 compliance</li>
+                <li>[Add other relevant certifications]</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="annex">
+        <h3>Annex III: List of Sub-Processors</h3>
+
+        <h4>Authorization for Sub-Processors</h4>
+        <p>The data exporter provides the following authorization for sub-processors:</p>
+        <p>[ ] <strong>Specific authorization:</strong> The data importer may only engage the sub-processors specifically listed below and must obtain prior written consent for any changes.</p>
+        <p>[X] <strong>General authorization:</strong> The data importer may engage new sub-processors subject to the notification and objection procedure in Clause 9. The data importer shall inform the data exporter at least 30 days in advance of any intended changes and the data exporter may object within 14 days.</p>
+
+        <h4>Current Sub-Processors</h4>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Description of Processing</th>
+                <th>Location</th>
+                <th>Safeguards</th>
+            </tr>
+            <tr>
+                <td>Amazon Web Services (AWS)</td>
+                <td>AWS EMEA SARL, 38 Avenue John F. Kennedy, L-1855 Luxembourg</td>
+                <td>Cloud infrastructure and hosting services</td>
+                <td>EU (Ireland), UK</td>
+                <td>AWS Data Processing Addendum, EU SCCs</td>
+            </tr>
+            <tr>
+                <td>Microsoft Azure</td>
+                <td>Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Ireland</td>
+                <td>Cloud services and collaboration tools</td>
+                <td>EU (Netherlands), UK</td>
+                <td>Microsoft Data Protection Addendum, EU SCCs</td>
+            </tr>
+            <tr>
+                <td>Google Cloud Platform</td>
+                <td>Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland</td>
+                <td>Cloud services and email</td>
+                <td>EU, UK</td>
+                <td>Google Cloud Data Processing Addendum, EU SCCs</td>
+            </tr>
+            <tr>
+                <td>[Client to add others as needed]</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <div class="warning">
+            <strong>Important:</strong> This list is current as of the date of signature. For the most up-to-date list of sub-processors, please contact dpo@talltree.tech or visit our website at www.talltree.tech/sub-processors
+        </div>
+    </div>
+
+    <h2>Section 6: Data Exporter's Rights</h2>
+
+    <h3>Audit Rights</h3>
+    <p>The data exporter (or an independent auditor mandated by the data exporter) may conduct audits, including inspections, to verify compliance with these Clauses. Such audits shall be conducted:</p>
+    <ul>
+        <li>Upon reasonable notice (at least 30 days)</li>
+        <li>During normal business hours</li>
+        <li>No more than once per year (unless required by supervisory authority or following a data breach)</li>
+        <li>Subject to confidentiality obligations</li>
+        <li>At data exporter's expense (unless non-compliance is found)</li>
+    </ul>
+
+    <h3>Right to Suspend or Terminate</h3>
+    <p>The data exporter may suspend the transfer of personal data and/or terminate these Clauses if:</p>
+    <ul>
+        <li>The data importer is in substantial or persistent breach of these Clauses</li>
+        <li>The data importer is unable to comply with these Clauses due to legal obligations</li>
+        <li>A competent supervisory authority requires suspension or termination</li>
+    </ul>
+
+    <h2>Section 7: Liability and Indemnification</h2>
+
+    <h3>Liability (Clause 12)</h3>
+    <ul>
+        <li>Each Party is liable to the other Party for damages caused by breach of these Clauses</li>
+        <li>Data subjects may claim compensation from either the data exporter or data importer for material or non-material damage</li>
+        <li>If both Parties are responsible for the damage, they are jointly and severally liable</li>
+        <li>A Party is exempt from liability if it proves it is not responsible for the breach</li>
+    </ul>
+
+    <h3>Indemnification</h3>
+    <p>The data importer shall indemnify the data exporter for any costs, claims, damages, or expenses arising from breach of these Clauses by the data importer or its sub-processors.</p>
+
+    <h2>Section 8: Supervisory Authority</h2>
+
+    <h3>Competent Supervisory Authority</h3>
+    <p>The supervisory authority with responsibility for ensuring compliance by the data exporter with Regulation (EU) 2016/679 is:</p>
+    <ul>
+        <li><strong>For UK data exporters:</strong> Information Commissioner's Office (ICO), Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF, UK</li>
+        <li><strong>For EU data exporters:</strong> The supervisory authority in the EU Member State where the data exporter is established</li>
+    </ul>
+
+    <h3>Right to Lodge Complaint</h3>
+    <p>Data subjects have the right to lodge a complaint with the competent supervisory authority and/or claim compensation before the courts of the EU Member State or the UK (as applicable).</p>
+
+    <h2>Section 9: Governing Law and Jurisdiction</h2>
+
+    <h3>Governing Law</h3>
+    <p>These Clauses shall be governed by:</p>
+    <ul>
+        <li>For UK data exporters: The laws of England and Wales</li>
+        <li>For EU data exporters: The law of the EU Member State where the data exporter is established</li>
+    </ul>
+
+    <h3>Jurisdiction</h3>
+    <p>Any dispute arising from these Clauses shall be resolved by the courts of:</p>
+    <ul>
+        <li>For UK data exporters: England and Wales</li>
+        <li>For EU data exporters: The EU Member State where the data exporter is established</li>
+    </ul>
+    <p>Data subjects may also bring legal proceedings before the courts of the Member State or the UK where they have their habitual residence.</p>
+
+    <h2>Section 10: UK International Data Transfer Agreement (IDTA) Alternative</h2>
+
+    <div class="info">
+        <h3>UK IDTA Option</h3>
+        <p>As an alternative to these EU SCCs for UK-specific data transfers, the parties may elect to use the UK International Data Transfer Agreement (IDTA) approved by the ICO, or the International Data Transfer Addendum to the EU SCCs.</p>
+
+        <p><strong>When to use UK IDTA:</strong></p>
+        <ul>
+            <li>When the data exporter is subject to UK GDPR (established in the UK or targeting UK data subjects)</li>
+            <li>When transferring personal data from the UK to any jurisdiction outside the UK (including EU/EEA)</li>
+            <li>When UK adequacy regulations do not apply to the transfer</li>
+        </ul>
+
+        <p><strong>IDTA Components:</strong></p>
+        <ul>
+            <li>Part 1: Tables (parties, details, audits)</li>
+            <li>Part 2: Mandatory Clauses (21 clauses covering obligations, warranties, rights, liability)</li>
+            <li>Annexes: Similar to SCCs (details of transfer, security measures, sub-processors)</li>
+        </ul>
+
+        <p><strong>Resources:</strong></p>
+        <ul>
+            <li>UK IDTA template: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/international-transfers/international-data-transfer-agreement-and-guidance/" target="_blank">ICO Website</a></li>
+            <li>IDTA and Addendum: <a href="https://ico.org.uk/media/for-organisations/documents/4019539/international-data-transfer-addendum.pdf" target="_blank">Download from ICO</a></li>
+        </ul>
+
+        <p><strong>Selection:</strong></p>
+        <p>[ ] We elect to use these EU SCCs for this data transfer</p>
+        <p>[ ] We elect to use the UK IDTA for this data transfer</p>
+        <p>[ ] We elect to use the International Data Transfer Addendum to these EU SCCs</p>
+    </div>
+
+    <h2>Section 11: Acceptance and Signatures</h2>
+
+    <div class="signature-block">
+        <p>By signing below, the parties agree to be bound by these Standard Contractual Clauses and the Annexes forming part of them.</p>
+
+        <div class="signature-section">
+            <h4>Data Exporter (Controller)</h4>
+            <div class="field">
+                <strong>Legal Name:</strong> [Client Legal Name]
+            </div>
+            <div class="field">
+                <strong>Signature:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+        </div>
+
+        <div class="signature-section">
+            <h4>Data Importer (Processor)</h4>
+            <div class="field">
+                <strong>Legal Name:</strong> Software Systems Limited, trading as TallTree® Technologies
+            </div>
+            <div class="field">
+                <strong>Signature:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Name:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Title:</strong> _________________________________
+            </div>
+            <div class="field">
+                <strong>Date:</strong> _________________________________
+            </div>
+        </div>
+    </div>
+
+    <div class="warning">
+        <h3>Important Implementation Notes</h3>
+        <ul>
+            <li><strong>Transfer Impact Assessment (TIA):</strong> Before implementing these SCCs, the data exporter should conduct a Transfer Impact Assessment to evaluate whether the SCCs provide adequate protection in light of the data importer's jurisdiction and local laws.</li>
+            <li><strong>Supplementary Measures:</strong> If the TIA identifies risks, consider implementing supplementary technical or organizational measures (e.g., encryption, pseudonymization, data minimization).</li>
+            <li><strong>Documentation:</strong> Maintain records of the TIA, SCCs, and any supplementary measures as part of your accountability obligations under Article 5(2) GDPR.</li>
+            <li><strong>Review:</strong> Review these SCCs and the adequacy of protections at least annually or when circumstances change.</li>
+            <li><strong>Integration:</strong> These SCCs should be read together with the Master Services Agreement, Data Processing Agreement, and relevant Statement(s) of Work.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2025 Software Systems Limited. All rights reserved.</p>
+        <p>Trading as TallTree® Technologies.</p>
+        <p>Registered in England and Wales. Company No. 14466340.</p>
+        <p style="margin-top: 20px; font-size: 0.85em; color: #999;">
+            <strong>Legal References:</strong><br>
+            EU Commission Implementing Decision 2021/914 of 4 June 2021<br>
+            Regulation (EU) 2016/679 (General Data Protection Regulation)<br>
+            UK GDPR (as incorporated by the Data Protection Act 2018)<br>
+            UK International Data Transfer Agreement and Addendum (ICO, 2022)
+        </p>
+        <p style="margin-top: 10px; font-size: 0.85em; color: #999;">
+            <strong>Disclaimer:</strong> This document is provided as a template based on the EU Commission's Standard Contractual Clauses.
+            Both parties should seek independent legal advice before signing. This is a legally binding contract.
+            TallTree Technologies accepts no liability for the use of this template.
+        </p>
+    </footer>
+    </div>
+</body>
+</html>
