@@ -2,10 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://talltree.tech">
-    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TallTree Technologies - Legal & Operational Document Portal</title>
+    <link rel="stylesheet" href="css/portal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://talltree.tech">link to talltree.tech</a>.</p>
+    <header class="portal-header">
+        <div class="header-content">
+            <h1>🌲 TallTree Technologies</h1>
+            <p class="tagline">Legal & Operational Document Portal</p>
+        </div>
+    </header>
+
+    <main class="portal-main">
+        <div class="portal-container">
+            <section class="welcome-section">
+                <h2>Welcome to the Document Portal</h2>
+                <p>Access all legal, operational, and policy documents for TallTree Technologies. Browse by category or use the search function to find specific documents.</p>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search documents..." class="search-input">
+                    <button onclick="searchDocuments()" class="search-button">Search</button>
+                </div>
+            </section>
+
+            <section class="categories-section">
+                <h2>Document Categories</h2>
+
+                <div class="category-grid">
+                    <div class="category-card" onclick="window.location.href='categories/client-documents.html'">
+                        <div class="category-icon">📋</div>
+                        <h3>Client Documents</h3>
+                        <p>Agreements, contracts, and client-facing documents</p>
+                        <span class="doc-count">10 documents</span>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories/employee-documents.html'">
+                        <div class="category-icon">👥</div>
+                        <h3>Employee Documents</h3>
+                        <p>Employment contracts, handbooks, and policies</p>
+                        <span class="doc-count">7 documents</span>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories/security-policies.html'">
+                        <div class="category-icon">🔒</div>
+                        <h3>Security & IT Policies</h3>
+                        <p>Cyber Essentials, access control, and IT governance</p>
+                        <span class="doc-count">5 documents</span>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories/hr-policies.html'">
+                        <div class="category-icon">📚</div>
+                        <h3>HR Policies</h3>
+                        <p>DE&I, benefits, whistleblowing, and HR procedures</p>
+                        <span class="doc-count">6 documents</span>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories/international.html'">
+                        <div class="category-icon">🌍</div>
+                        <h3>International Framework</h3>
+                        <p>EU, US, and Australian client documentation</p>
+                        <span class="doc-count">5 documents</span>
+                    </div>
+
+                    <div class="category-card" onclick="window.location.href='categories/operational.html'">
+                        <div class="category-icon">⚙️</div>
+                        <h3>Operational Documents</h3>
+                        <p>Templates, procedures, and operational policies</p>
+                        <span class="doc-count">8 documents</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quick-access-section">
+                <h2>Quick Access - Most Used Documents</h2>
+                <div class="quick-access-list">
+                    <a href="master-services-agreement.html" class="quick-link">
+                        <span class="link-icon">📄</span>
+                        <span class="link-text">Master Services Agreement</span>
+                        <span class="link-action">View →</span>
+                    </a>
+                    <a href="mutual-nda.html" class="quick-link">
+                        <span class="link-icon">🤝</span>
+                        <span class="link-text">Mutual Non-Disclosure Agreement</span>
+                        <span class="link-action">View →</span>
+                    </a>
+                    <a href="employment-contract-template.html" class="quick-link">
+                        <span class="link-icon">✍️</span>
+                        <span class="link-text">Employment Contract Template</span>
+                        <span class="link-action">View →</span>
+                    </a>
+                    <a href="data-processing-agreement.html" class="quick-link">
+                        <span class="link-icon">🔐</span>
+                        <span class="link-text">Data Processing Agreement (GDPR)</span>
+                        <span class="link-action">View →</span>
+                    </a>
+                    <a href="proposal-template.html" class="quick-link">
+                        <span class="link-icon">💼</span>
+                        <span class="link-text">Proposal Template</span>
+                        <span class="link-action">View →</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h3>📥 Export to PDF</h3>
+                        <p>All documents can be exported to PDF format using the "Export PDF" button on each document page.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🔄 Always Up-to-Date</h3>
+                        <p>Documents are regularly reviewed and updated to ensure compliance with current UK legislation.</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>🌐 International Ready</h3>
+                        <p>Comprehensive framework for working with EU, US, and Australian clients.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="portal-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Software Systems Limited trading as TallTree Technologies</p>
+            <p>Company No. 14466340 | Registered in England and Wales</p>
+            <p class="footer-links">
+                <a href="data-protection-policy.html">Privacy Policy</a> |
+                <a href="legal-documents-checklist.html">Document Index</a> |
+                <a href="mailto:legal@talltreetech.com">Contact Legal</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/portal.js"></script>
 </body>
 </html>
